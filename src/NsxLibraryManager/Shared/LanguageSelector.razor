@@ -1,3 +1,4 @@
+@using System.Globalization
 @using Microsoft.AspNetCore.Localization
 @using Microsoft.Extensions.Localization
 @using NsxLibraryManager.Resources
@@ -23,11 +24,12 @@
         new LanguageOption { Code = "ko", Name = "한국어" }
     };
 
-    protected override async Task OnInitializedAsync()
+    protected override Task OnInitializedAsync()
     {
         // 현재 문화권 정보를 가져와서 선택된 언어 설정
         var culture = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
         selectedLanguage = languages.Any(l => l.Code == culture) ? culture : "en";
+        return Task.CompletedTask;
     }
 
     private async Task OnLanguageChanged(object value)

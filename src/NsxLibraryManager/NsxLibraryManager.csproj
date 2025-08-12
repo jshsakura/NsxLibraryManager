@@ -2,7 +2,7 @@
 
     <PropertyGroup>
         <TargetFramework>net8.0</TargetFramework>
-        <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+        <SatelliteResourceLanguages>en;ko</SatelliteResourceLanguages>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
         <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
