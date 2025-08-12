@@ -1,12 +1,12 @@
 ﻿@page "/dashboard"
 @using Microsoft.Extensions.Localization
-@using NsxLibraryManager.Resources.Localization
-@inject IStringLocalizer<SharedResources> Localizer
+@using NsxLibraryManager.Resources
+@inject IStringLocalizer<SharedResource> Localizer
 
-<PageTitle>@Localizer["Nav.Dashboard"]</PageTitle>
+<PageTitle>@Localizer["Dashboard"]</PageTitle>
 <RadzenRow>
     <RadzenColumn Size="12">
-        <RadzenText Text="@Localizer["Nav.Dashboard"]" TextStyle="TextStyle.H3" TagName="TagName.H1"/>
+        <RadzenText Text="@Localizer["Dashboard"]" TextStyle="TextStyle.H3" TagName="TagName.H1"/>
     </RadzenColumn>
 </RadzenRow>
 <RadzenRow Gap="5px">

@@ -1,21 +1,19 @@
 @using System.Globalization
 @using Microsoft.AspNetCore.Localization
 @using Microsoft.Extensions.Localization
-@using NsxLibraryManager.Resources.Localization
-@using NsxLibraryManager.Services.Interface
-@inject IStringLocalizer<SharedResources> Localizer
-@inject ILocalizationService LocalizationService
+@using NsxLibraryManager.Resources
+@inject IStringLocalizer<SharedResource> Localizer
 @inject NavigationManager Navigation
 @inject IJSRuntime JSRuntime
 
-<div class="language-selector" title="@Localizer["Language.SelectLanguage"]">
+<div class="language-selector" title="@Localizer["SelectLanguage"]">
     <RadzenDropDown @bind-Value="@selectedLanguage" 
                     Data="@languages" 
                     TextProperty="DisplayName" 
                     ValueProperty="Code"
                     Change="@OnLanguageChanged"
                     Style="width: 140px;"
-                    Placeholder="@Localizer["Language.SelectLanguage"]" />
+                    Placeholder="@Localizer["SelectLanguage"]" />
 </div>
 
 @code {
@@ -25,31 +23,18 @@
 
     protected override Task OnInitializedAsync()
     {
-        // 지원되는 언어 목록 동적 생성
-        languages = LocalizationService.SupportedCultures
-            .Select(culture => new LanguageOption 
-            { 
-                Code = culture.TwoLetterISOLanguageName,
-                DisplayName = GetLanguageDisplayName(culture.TwoLetterISOLanguageName),
-                NativeName = culture.NativeName
-            })
-            .ToList();
+        // 지원되는 언어 목록 생성
+        languages = new List<LanguageOption>
+        {
+            new LanguageOption { Code = "en", DisplayName = Localizer["English"] },
+            new LanguageOption { Code = "ko", DisplayName = Localizer["Korean"] }
+        };
 
         // 현재 문화권 정보를 가져와서 선택된 언어 설정
-        var currentCulture = LocalizationService.CurrentUICulture.TwoLetterISOLanguageName;
-        selectedLanguage = LocalizationService.IsCultureSupported(currentCulture) ? currentCulture : "en";
+        var currentCulture = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
+        selectedLanguage = languages.Any(l => l.Code == currentCulture) ? currentCulture : "en";
         
         return Task.CompletedTask;
-    }
-
-    private string GetLanguageDisplayName(string languageCode)
-    {
-        return languageCode.ToLower() switch
-        {
-            "en" => Localizer["Language.English"],
-            "ko" => Localizer["Language.Korean"],
-            _ => languageCode.ToUpper()
-        };
     }
 
     private async Task OnLanguageChanged(object value)

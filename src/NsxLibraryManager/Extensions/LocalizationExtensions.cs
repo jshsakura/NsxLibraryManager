@@ -2,9 +2,7 @@ using System.Globalization;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.Extensions.Localization;
 
-using NsxLibraryManager.Resources.Localization;
-using NsxLibraryManager.Services;
-using NsxLibraryManager.Services.Interface;
+
 
 namespace NsxLibraryManager.Extensions;
 
@@ -21,11 +19,8 @@ public static class LocalizationExtensions
         // 기본 지역화 서비스 등록
         services.AddLocalization(options => 
         {
-            options.ResourcesPath = "Resources/Localization";
+            options.ResourcesPath = "Resources";
         });
-
-        // 커스텀 지역화 서비스 등록
-        services.AddScoped<ILocalizationService, LocalizationService>();
 
         // 요청 지역화 옵션 구성
         services.Configure<RequestLocalizationOptions>(options =>
@@ -40,7 +35,7 @@ public static class LocalizationExtensions
             options.SupportedCultures = supportedCultures;
             options.SupportedUICultures = supportedCultures;
 
-            // 문화권 제공자 우선순위 설정 (안전한 기본 제공자 사용)
+            // 문화권 제공자 우선순위 설정
             options.RequestCultureProviders.Clear();
             options.RequestCultureProviders.Add(new QueryStringRequestCultureProvider());
             options.RequestCultureProviders.Add(new CookieRequestCultureProvider());

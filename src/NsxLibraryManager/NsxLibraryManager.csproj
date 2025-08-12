@@ -45,6 +45,16 @@
       <Folder Include="Migrations\Titledb\" />
     </ItemGroup>
 
+    <ItemGroup>
+      <EmbeddedResource Include="Resources\SharedResource.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>SharedResource.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Include="Resources\SharedResource.ko.resx">
+        <DependentUpon>SharedResource.resx</DependentUpon>
+      </EmbeddedResource>
+    </ItemGroup>
+
 
 
 </Project>
