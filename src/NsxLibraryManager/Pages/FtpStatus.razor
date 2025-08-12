@@ -1,6 +1,11 @@
 @page "/ftpStatus"
 @using NsxLibraryManager.Extensions
 @using NsxLibraryManager.Shared.Dto
+@using Microsoft.Extensions.Localization
+@using NsxLibraryManager.Resources
+@inject IStringLocalizer<SharedResource> Localizer
+
+<PageTitle>@Localizer["FtpStatus"]</PageTitle>
 <RadzenDataGrid 
     @ref="grid" 
     Data="@data" 

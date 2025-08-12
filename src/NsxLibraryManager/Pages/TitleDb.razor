@@ -1,7 +1,11 @@
 ﻿@page "/titledb"
 @using NsxLibraryManager.Extensions
 @using NsxLibraryManager.Shared.Dto
-<PageTitle>Title From DbTitle</PageTitle>
+@using Microsoft.Extensions.Localization
+@using NsxLibraryManager.Resources
+@inject IStringLocalizer<SharedResource> Localizer
+
+<PageTitle>@Localizer["TitleDb"]</PageTitle>
 <RadzenStack Orientation="Orientation.Vertical" AlignItems="AlignItems.Normal" Wrap="FlexWrap.NoWrap" Gap="1rem">
 
     <RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Normal" Wrap="FlexWrap.NoWrap" Gap="1rem">

@@ -2,10 +2,14 @@
 @using NsxLibraryManager.Core.Models
 @using NsxLibraryManager.Shared.Dto
 @using NsxLibraryManager.Shared.Enums
-<PageTitle>Renamer</PageTitle>
+@using Microsoft.Extensions.Localization
+@using NsxLibraryManager.Resources
+@inject IStringLocalizer<SharedResource> Localizer
+
+<PageTitle>@Localizer["PackageRenamer"]</PageTitle>
 <RadzenTabs @bind-SelectedIndex=@selectedTabIndex>
 <Tabs>
-<RadzenTabsItem Text="Renamer">
+<RadzenTabsItem Text="@Localizer["Renamer"]">
     <RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" Wrap="FlexWrap.Wrap" Gap="1rem">
         <RadzenDataGrid @ref="_renameGrid" Data="@_renameTitles" TItem="RenameTitleDto" AllowSorting="true" AllowPaging="true" PageSize="100"
                         AllowFiltering="true" FilterMode="FilterMode.SimpleWithMenu" FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive"

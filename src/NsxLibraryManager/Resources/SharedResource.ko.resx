@@ -72,4 +72,395 @@
   <data name="SelectLanguage" xml:space="preserve">
     <value>언어 선택</value>
   </data>
+
+  <!-- Page Titles -->
+  <data name="BundleRenamer" xml:space="preserve">
+    <value>번들 이름 일괄변경</value>
+  </data>
+  <data name="PackageRenamer" xml:space="preserve">
+    <value>패키지 이름 일괄변경</value>
+  </data>
+  <data name="CollectionRenamer" xml:space="preserve">
+    <value>컬렉션 이름 일괄변경</value>
+  </data>
+  <data name="DuplicateTitles" xml:space="preserve">
+    <value>중복 게임 목록</value>
+  </data>
+  <data name="MissingUpdates" xml:space="preserve">
+    <value>업데이트 누락 목록</value>
+  </data>
+  <data name="MissingDlc" xml:space="preserve">
+    <value>DLC 누락 목록</value>
+  </data>
+  <data name="MissingDlcUpdates" xml:space="preserve">
+    <value>DLC 업데이트 누락 목록</value>
+  </data>
+  <data name="Collections" xml:space="preserve">
+    <value>컬렉션</value>
+  </data>
+  <data name="FtpStatus" xml:space="preserve">
+    <value>FTP 상태</value>
+  </data>
+  <data name="TaskStatus" xml:space="preserve">
+    <value>작업 상태</value>
+  </data>
+
+  <!-- Common UI Elements -->
+  <data name="Renamer" xml:space="preserve">
+    <value>이름 변경</value>
+  </data>
+  <data name="Configuration" xml:space="preserve">
+    <value>옵션</value>
+  </data>
+  <data name="ScanInputFolder" xml:space="preserve">
+    <value>폴더 검색</value>
+  </data>
+  <data name="RenameFiles" xml:space="preserve">
+    <value>파일명 일괄변경</value>
+  </data>
+  <data name="InputPath" xml:space="preserve">
+    <value>입력 경로</value>
+  </data>
+  <data name="OutputPath" xml:space="preserve">
+    <value>출력 경로</value>
+  </data>
+  <data name="SourceFile" xml:space="preserve">
+    <value>원본 파일</value>
+  </data>
+  <data name="Destination" xml:space="preserve">
+    <value>대상</value>
+  </data>
+  <data name="TitleId" xml:space="preserve">
+    <value>타이틀 ID</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>오류</value>
+  </data>
+  <data name="ErrorMessage" xml:space="preserve">
+    <value>오류 내용</value>
+  </data>
+
+  <!-- Form Fields -->
+  <data name="Input" xml:space="preserve">
+    <value>입력</value>
+  </data>
+  <data name="Output" xml:space="preserve">
+    <value>출력</value>
+  </data>
+  <data name="BasePath" xml:space="preserve">
+    <value>기본 경로</value>
+  </data>
+  <data name="Application" xml:space="preserve">
+    <value>애플리케이션</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>업데이트</value>
+  </data>
+  <data name="DLCs" xml:space="preserve">
+    <value>DLC</value>
+  </data>
+  <data name="UnknownPlaceholder" xml:space="preserve">
+    <value>알 수 없음 표시</value>
+  </data>
+
+  <!-- Checkboxes and Options -->
+  <data name="DeleteEmptyFoldersAfterRename" xml:space="preserve">
+    <value>빈 폴더 자동 삭제</value>
+  </data>
+  <data name="RecursiveSubdirectories" xml:space="preserve">
+    <value>하위 폴더 포함</value>
+  </data>
+  <data name="TryToUseEnglishNaming" xml:space="preserve">
+    <value>영어 제목 우선 사용</value>
+  </data>
+  <data name="TitleNameAndAppNameToTitleCase" xml:space="preserve">
+    <value>제목 첫글자 대문자로</value>
+  </data>
+
+  <!-- Template Fields -->
+  <data name="TemplateFields" xml:space="preserve">
+    <value>파일명 형식</value>
+  </data>
+  <data name="FileOrganizerByBundle" xml:space="preserve">
+    <value>번들 단위 파일 정리</value>
+  </data>
+  <data name="FileOrganizerByPackage" xml:space="preserve">
+    <value>패키지 단위 파일 정리</value>
+  </data>
+
+  <!-- Grid Actions -->
+  <data name="List" xml:space="preserve">
+    <value>목록</value>
+  </data>
+  <data name="Card" xml:space="preserve">
+    <value>카드</value>
+  </data>
+  <data name="Grid" xml:space="preserve">
+    <value>그리드</value>
+  </data>
+
+  <!-- Status Messages -->
+  <data name="Loading" xml:space="preserve">
+    <value>로딩 중...</value>
+  </data>
+  <data name="NoDataFound" xml:space="preserve">
+    <value>데이터가 없습니다</value>
+  </data>
+  <data name="ProcessingComplete" xml:space="preserve">
+    <value>처리 완료</value>
+  </data>
+
+  <!-- File Types -->
+  <data name="NSP" xml:space="preserve">
+    <value>NSP</value>
+  </data>
+  <data name="NSZ" xml:space="preserve">
+    <value>NSZ</value>
+  </data>
+  <data name="XCI" xml:space="preserve">
+    <value>XCI</value>
+  </data>
+  <data name="XCZ" xml:space="preserve">
+    <value>XCZ</value>
+  </data>
+
+  <!-- Common Terms -->
+  <data name="Publisher" xml:space="preserve">
+    <value>퍼블리셔</value>
+  </data>
+  <data name="Developer" xml:space="preserve">
+    <value>개발자</value>
+  </data>
+  <data name="ReleaseDate" xml:space="preserve">
+    <value>출시일</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>버전</value>
+  </data>
+  <data name="Size" xml:space="preserve">
+    <value>크기</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>유형</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>상태</value>
+  </data>
+  <data name="Progress" xml:space="preserve">
+    <value>진행률</value>
+  </data>
+
+  <!-- Additional UI Elements -->
+  <data name="Refresh" xml:space="preserve">
+    <value>새로고침</value>
+  </data>
+  <data name="Filter" xml:space="preserve">
+    <value>필터</value>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>지우기</value>
+  </data>
+  <data name="Reset" xml:space="preserve">
+    <value>재설정</value>
+  </data>
+  <data name="Apply" xml:space="preserve">
+    <value>적용</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>닫기</value>
+  </data>
+  <data name="Open" xml:space="preserve">
+    <value>열기</value>
+  </data>
+  <data name="Download" xml:space="preserve">
+    <value>다운로드</value>
+  </data>
+  <data name="Upload" xml:space="preserve">
+    <value>업로드</value>
+  </data>
+  <data name="Import" xml:space="preserve">
+    <value>가져오기</value>
+  </data>
+  <data name="Export" xml:space="preserve">
+    <value>내보내기</value>
+  </data>
+
+  <!-- Library Management -->
+  <data name="ScanLibrary" xml:space="preserve">
+    <value>라이브러리 검색</value>
+  </data>
+  <data name="RefreshLibrary" xml:space="preserve">
+    <value>라이브러리 갱신</value>
+  </data>
+  <data name="LibraryPath" xml:space="preserve">
+    <value>라이브러리 경로</value>
+  </data>
+  <data name="TotalTitles" xml:space="preserve">
+    <value>총 게임 수</value>
+  </data>
+  <data name="TotalSize" xml:space="preserve">
+    <value>총 크기</value>
+  </data>
+
+  <!-- Game Information -->
+  <data name="GameTitle" xml:space="preserve">
+    <value>게임명</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>설명</value>
+  </data>
+  <data name="Screenshots" xml:space="preserve">
+    <value>스크린샷</value>
+  </data>
+  <data name="Icon" xml:space="preserve">
+    <value>아이콘</value>
+  </data>
+  <data name="Rating" xml:space="preserve">
+    <value>등급</value>
+  </data>
+  <data name="Players" xml:space="preserve">
+    <value>플레이어</value>
+  </data>
+
+  <!-- File Operations -->
+  <data name="FileName" xml:space="preserve">
+    <value>파일명</value>
+  </data>
+  <data name="FilePath" xml:space="preserve">
+    <value>파일 경로</value>
+  </data>
+  <data name="FileSize" xml:space="preserve">
+    <value>파일 크기</value>
+  </data>
+  <data name="LastModified" xml:space="preserve">
+    <value>마지막 수정</value>
+  </data>
+  <data name="Created" xml:space="preserve">
+    <value>생성됨</value>
+  </data>
+
+  <!-- Settings -->
+  <data name="GeneralSettings" xml:space="preserve">
+    <value>기본 설정</value>
+  </data>
+  <data name="LibrarySettings" xml:space="preserve">
+    <value>라이브러리</value>
+  </data>
+  <data name="FtpSettings" xml:space="preserve">
+    <value>FTP</value>
+  </data>
+  <data name="AdvancedSettings" xml:space="preserve">
+    <value>고급</value>
+  </data>
+
+  <!-- FTP -->
+  <data name="FtpServer" xml:space="preserve">
+    <value>FTP 서버</value>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>사용자명</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>비밀번호</value>
+  </data>
+  <data name="Port" xml:space="preserve">
+    <value>포트</value>
+  </data>
+  <data name="Connect" xml:space="preserve">
+    <value>연결</value>
+  </data>
+  <data name="Disconnect" xml:space="preserve">
+    <value>연결 해제</value>
+  </data>
+  <data name="Connected" xml:space="preserve">
+    <value>연결됨</value>
+  </data>
+  <data name="Disconnected" xml:space="preserve">
+    <value>연결 해제됨</value>
+  </data>
+
+  <!-- Tasks -->
+  <data name="TaskName" xml:space="preserve">
+    <value>작업명</value>
+  </data>
+  <data name="StartTime" xml:space="preserve">
+    <value>시작 시간</value>
+  </data>
+  <data name="EndTime" xml:space="preserve">
+    <value>종료 시간</value>
+  </data>
+  <data name="Duration" xml:space="preserve">
+    <value>소요 시간</value>
+  </data>
+  <data name="Completed" xml:space="preserve">
+    <value>완료됨</value>
+  </data>
+  <data name="Failed" xml:space="preserve">
+    <value>실패</value>
+  </data>
+  <data name="Running" xml:space="preserve">
+    <value>실행 중</value>
+  </data>
+  <data name="Pending" xml:space="preserve">
+    <value>대기 중</value>
+  </data>
+
+  <!-- Collections -->
+  <data name="CreateCollection" xml:space="preserve">
+    <value>새 컬렉션</value>
+  </data>
+  <data name="CollectionName" xml:space="preserve">
+    <value>컬렉션 이름</value>
+  </data>
+  <data name="AddToCollection" xml:space="preserve">
+    <value>컬렉션 추가</value>
+  </data>
+  <data name="RemoveFromCollection" xml:space="preserve">
+    <value>컬렉션 제거</value>
+  </data>
+
+  <!-- Validation Messages -->
+  <data name="FieldRequired" xml:space="preserve">
+    <value>필수 입력</value>
+  </data>
+  <data name="InvalidPath" xml:space="preserve">
+    <value>잘못된 경로</value>
+  </data>
+  <data name="PathNotFound" xml:space="preserve">
+    <value>경로 없음</value>
+  </data>
+  <data name="InvalidFormat" xml:space="preserve">
+    <value>잘못된 형식</value>
+  </data>
+
+  <!-- Tooltips and Help -->
+  <data name="Help" xml:space="preserve">
+    <value>도움말</value>
+  </data>
+  <data name="About" xml:space="preserve">
+    <value>정보</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>버전</value>
+  </data>
+  <data name="Documentation" xml:space="preserve">
+    <value>사용법</value>
+  </data>
+
+  <!-- Confirmation Messages -->
+  <data name="AreYouSure" xml:space="preserve">
+    <value>계속하시겠습니까?</value>
+  </data>
+  <data name="ConfirmDelete" xml:space="preserve">
+    <value>삭제하시겠습니까?</value>
+  </data>
+  <data name="ConfirmRename" xml:space="preserve">
+    <value>파일명을 변경하시겠습니까?</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>예</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>아니오</value>
+  </data>
 </root>

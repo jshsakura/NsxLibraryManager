@@ -72,4 +72,395 @@
   <data name="SelectLanguage" xml:space="preserve">
     <value>Select Language</value>
   </data>
+
+  <!-- Page Titles -->
+  <data name="BundleRenamer" xml:space="preserve">
+    <value>Bundle Renamer</value>
+  </data>
+  <data name="PackageRenamer" xml:space="preserve">
+    <value>Package Renamer</value>
+  </data>
+  <data name="CollectionRenamer" xml:space="preserve">
+    <value>Collection Renamer</value>
+  </data>
+  <data name="DuplicateTitles" xml:space="preserve">
+    <value>Duplicate Titles</value>
+  </data>
+  <data name="MissingUpdates" xml:space="preserve">
+    <value>Missing Updates</value>
+  </data>
+  <data name="MissingDlc" xml:space="preserve">
+    <value>Missing DLC</value>
+  </data>
+  <data name="MissingDlcUpdates" xml:space="preserve">
+    <value>Missing DLC Updates</value>
+  </data>
+  <data name="Collections" xml:space="preserve">
+    <value>Collections</value>
+  </data>
+  <data name="FtpStatus" xml:space="preserve">
+    <value>FTP Status</value>
+  </data>
+  <data name="TaskStatus" xml:space="preserve">
+    <value>Task Status</value>
+  </data>
+
+  <!-- Common UI Elements -->
+  <data name="Renamer" xml:space="preserve">
+    <value>Renamer</value>
+  </data>
+  <data name="Configuration" xml:space="preserve">
+    <value>Configuration</value>
+  </data>
+  <data name="ScanInputFolder" xml:space="preserve">
+    <value>Scan Input Folder</value>
+  </data>
+  <data name="RenameFiles" xml:space="preserve">
+    <value>Rename Files</value>
+  </data>
+  <data name="InputPath" xml:space="preserve">
+    <value>Input Path</value>
+  </data>
+  <data name="OutputPath" xml:space="preserve">
+    <value>Output Path</value>
+  </data>
+  <data name="SourceFile" xml:space="preserve">
+    <value>Source File</value>
+  </data>
+  <data name="Destination" xml:space="preserve">
+    <value>Destination</value>
+  </data>
+  <data name="TitleId" xml:space="preserve">
+    <value>Title ID</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="ErrorMessage" xml:space="preserve">
+    <value>Error Message</value>
+  </data>
+
+  <!-- Form Fields -->
+  <data name="Input" xml:space="preserve">
+    <value>Input</value>
+  </data>
+  <data name="Output" xml:space="preserve">
+    <value>Output</value>
+  </data>
+  <data name="BasePath" xml:space="preserve">
+    <value>Base Path</value>
+  </data>
+  <data name="Application" xml:space="preserve">
+    <value>Application</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="DLCs" xml:space="preserve">
+    <value>DLCs</value>
+  </data>
+  <data name="UnknownPlaceholder" xml:space="preserve">
+    <value>Unknown Placeholder</value>
+  </data>
+
+  <!-- Checkboxes and Options -->
+  <data name="DeleteEmptyFoldersAfterRename" xml:space="preserve">
+    <value>Delete empty folders after rename</value>
+  </data>
+  <data name="RecursiveSubdirectories" xml:space="preserve">
+    <value>Recursive Subdirectories</value>
+  </data>
+  <data name="TryToUseEnglishNaming" xml:space="preserve">
+    <value>Try to use english naming</value>
+  </data>
+  <data name="TitleNameAndAppNameToTitleCase" xml:space="preserve">
+    <value>TitleName and AppName to TitleCase</value>
+  </data>
+
+  <!-- Template Fields -->
+  <data name="TemplateFields" xml:space="preserve">
+    <value>Template Fields</value>
+  </data>
+  <data name="FileOrganizerByBundle" xml:space="preserve">
+    <value>File Organizer by Bundle</value>
+  </data>
+  <data name="FileOrganizerByPackage" xml:space="preserve">
+    <value>File Organizer by Package</value>
+  </data>
+
+  <!-- Grid Actions -->
+  <data name="List" xml:space="preserve">
+    <value>List</value>
+  </data>
+  <data name="Card" xml:space="preserve">
+    <value>Card</value>
+  </data>
+  <data name="Grid" xml:space="preserve">
+    <value>Grid</value>
+  </data>
+
+  <!-- Status Messages -->
+  <data name="Loading" xml:space="preserve">
+    <value>Loading...</value>
+  </data>
+  <data name="NoDataFound" xml:space="preserve">
+    <value>No data found</value>
+  </data>
+  <data name="ProcessingComplete" xml:space="preserve">
+    <value>Processing complete</value>
+  </data>
+
+  <!-- File Types -->
+  <data name="NSP" xml:space="preserve">
+    <value>NSP</value>
+  </data>
+  <data name="NSZ" xml:space="preserve">
+    <value>NSZ</value>
+  </data>
+  <data name="XCI" xml:space="preserve">
+    <value>XCI</value>
+  </data>
+  <data name="XCZ" xml:space="preserve">
+    <value>XCZ</value>
+  </data>
+
+  <!-- Common Terms -->
+  <data name="Publisher" xml:space="preserve">
+    <value>Publisher</value>
+  </data>
+  <data name="Developer" xml:space="preserve">
+    <value>Developer</value>
+  </data>
+  <data name="ReleaseDate" xml:space="preserve">
+    <value>Release Date</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="Size" xml:space="preserve">
+    <value>Size</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="Progress" xml:space="preserve">
+    <value>Progress</value>
+  </data>
+
+  <!-- Additional UI Elements -->
+  <data name="Refresh" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="Filter" xml:space="preserve">
+    <value>Filter</value>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>Clear</value>
+  </data>
+  <data name="Reset" xml:space="preserve">
+    <value>Reset</value>
+  </data>
+  <data name="Apply" xml:space="preserve">
+    <value>Apply</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="Open" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="Download" xml:space="preserve">
+    <value>Download</value>
+  </data>
+  <data name="Upload" xml:space="preserve">
+    <value>Upload</value>
+  </data>
+  <data name="Import" xml:space="preserve">
+    <value>Import</value>
+  </data>
+  <data name="Export" xml:space="preserve">
+    <value>Export</value>
+  </data>
+
+  <!-- Library Management -->
+  <data name="ScanLibrary" xml:space="preserve">
+    <value>Scan Library</value>
+  </data>
+  <data name="RefreshLibrary" xml:space="preserve">
+    <value>Refresh Library</value>
+  </data>
+  <data name="LibraryPath" xml:space="preserve">
+    <value>Library Path</value>
+  </data>
+  <data name="TotalTitles" xml:space="preserve">
+    <value>Total Titles</value>
+  </data>
+  <data name="TotalSize" xml:space="preserve">
+    <value>Total Size</value>
+  </data>
+
+  <!-- Game Information -->
+  <data name="GameTitle" xml:space="preserve">
+    <value>Game Title</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="Screenshots" xml:space="preserve">
+    <value>Screenshots</value>
+  </data>
+  <data name="Icon" xml:space="preserve">
+    <value>Icon</value>
+  </data>
+  <data name="Rating" xml:space="preserve">
+    <value>Rating</value>
+  </data>
+  <data name="Players" xml:space="preserve">
+    <value>Players</value>
+  </data>
+
+  <!-- File Operations -->
+  <data name="FileName" xml:space="preserve">
+    <value>File Name</value>
+  </data>
+  <data name="FilePath" xml:space="preserve">
+    <value>File Path</value>
+  </data>
+  <data name="FileSize" xml:space="preserve">
+    <value>File Size</value>
+  </data>
+  <data name="LastModified" xml:space="preserve">
+    <value>Last Modified</value>
+  </data>
+  <data name="Created" xml:space="preserve">
+    <value>Created</value>
+  </data>
+
+  <!-- Settings -->
+  <data name="GeneralSettings" xml:space="preserve">
+    <value>General Settings</value>
+  </data>
+  <data name="LibrarySettings" xml:space="preserve">
+    <value>Library Settings</value>
+  </data>
+  <data name="FtpSettings" xml:space="preserve">
+    <value>FTP Settings</value>
+  </data>
+  <data name="AdvancedSettings" xml:space="preserve">
+    <value>Advanced Settings</value>
+  </data>
+
+  <!-- FTP -->
+  <data name="FtpServer" xml:space="preserve">
+    <value>FTP Server</value>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>Username</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="Port" xml:space="preserve">
+    <value>Port</value>
+  </data>
+  <data name="Connect" xml:space="preserve">
+    <value>Connect</value>
+  </data>
+  <data name="Disconnect" xml:space="preserve">
+    <value>Disconnect</value>
+  </data>
+  <data name="Connected" xml:space="preserve">
+    <value>Connected</value>
+  </data>
+  <data name="Disconnected" xml:space="preserve">
+    <value>Disconnected</value>
+  </data>
+
+  <!-- Tasks -->
+  <data name="TaskName" xml:space="preserve">
+    <value>Task Name</value>
+  </data>
+  <data name="StartTime" xml:space="preserve">
+    <value>Start Time</value>
+  </data>
+  <data name="EndTime" xml:space="preserve">
+    <value>End Time</value>
+  </data>
+  <data name="Duration" xml:space="preserve">
+    <value>Duration</value>
+  </data>
+  <data name="Completed" xml:space="preserve">
+    <value>Completed</value>
+  </data>
+  <data name="Failed" xml:space="preserve">
+    <value>Failed</value>
+  </data>
+  <data name="Running" xml:space="preserve">
+    <value>Running</value>
+  </data>
+  <data name="Pending" xml:space="preserve">
+    <value>Pending</value>
+  </data>
+
+  <!-- Collections -->
+  <data name="CreateCollection" xml:space="preserve">
+    <value>Create Collection</value>
+  </data>
+  <data name="CollectionName" xml:space="preserve">
+    <value>Collection Name</value>
+  </data>
+  <data name="AddToCollection" xml:space="preserve">
+    <value>Add to Collection</value>
+  </data>
+  <data name="RemoveFromCollection" xml:space="preserve">
+    <value>Remove from Collection</value>
+  </data>
+
+  <!-- Validation Messages -->
+  <data name="FieldRequired" xml:space="preserve">
+    <value>This field is required</value>
+  </data>
+  <data name="InvalidPath" xml:space="preserve">
+    <value>Invalid path</value>
+  </data>
+  <data name="PathNotFound" xml:space="preserve">
+    <value>Path not found</value>
+  </data>
+  <data name="InvalidFormat" xml:space="preserve">
+    <value>Invalid format</value>
+  </data>
+
+  <!-- Tooltips and Help -->
+  <data name="Help" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="About" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="Documentation" xml:space="preserve">
+    <value>Documentation</value>
+  </data>
+
+  <!-- Confirmation Messages -->
+  <data name="AreYouSure" xml:space="preserve">
+    <value>Are you sure?</value>
+  </data>
+  <data name="ConfirmDelete" xml:space="preserve">
+    <value>Are you sure you want to delete this item?</value>
+  </data>
+  <data name="ConfirmRename" xml:space="preserve">
+    <value>Are you sure you want to rename these files?</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>No</value>
+  </data>
 </root>

@@ -1,12 +1,14 @@
 ﻿@page "/settings"
 @using NsxLibraryManager.Shared.Enums
 @using NsxLibraryManager.Shared.Settings
-
+@using Microsoft.Extensions.Localization
+@using NsxLibraryManager.Resources
+@inject IStringLocalizer<SharedResource> Localizer
 
 <NavigationLock ConfirmExternalNavigation="false"
                 OnBeforeInternalNavigation="OnBeforeInternalNavigation" />
 
-<PageTitle>Settings</PageTitle>
+<PageTitle>@Localizer["Settings"]</PageTitle>
 <RadzenRow>
     <RadzenColumn Size="12">
         @if (Configuration.GetValue<string>("IsDefaultConfigCreated") == "True")
@@ -16,7 +18,7 @@
 
     </RadzenColumn>
 </RadzenRow>
-<RadzenFieldset Text="Library">
+<RadzenFieldset Text="@Localizer["LibrarySettings"]">
     <RadzenRow Gap="1rem">
         <RadzenColumn Size="12" SizeSM="12">
             <RadzenStack>

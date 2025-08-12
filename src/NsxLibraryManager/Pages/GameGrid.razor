@@ -1,7 +1,12 @@
 ﻿@page "/gameGrid"
+@using Microsoft.Extensions.Localization
+@using NsxLibraryManager.Resources
+@inject IStringLocalizer<SharedResource> Localizer
+
+<PageTitle>@Localizer["Games"] - @Localizer["Grid"]</PageTitle>
 
 <RadzenCard>
-    <RadzenText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">Filter by Name or TitleId</RadzenText>
+    <RadzenText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">@Localizer["Filter"] @Localizer["Name"] @Localizer["TitleId"]</RadzenText>
     <RadzenTextBox @oninput=@(args => OnFilterChange(args.Value?.ToString() ?? string.Empty)) Style="width: 100%" aria-label="Search by TitleId Or Name" />
 </RadzenCard>
 <RadzenStack>

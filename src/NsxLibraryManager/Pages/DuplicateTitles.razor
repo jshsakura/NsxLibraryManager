@@ -1,5 +1,10 @@
 ﻿@page "/DuplicateTitles"
 @using NsxLibraryManager.Shared.Dto
+@using Microsoft.Extensions.Localization
+@using NsxLibraryManager.Resources
+@inject IStringLocalizer<SharedResource> Localizer
+
+<PageTitle>@Localizer["DuplicateTitles"]</PageTitle>
 <RadzenTabs @bind-SelectedIndex="@selectedTabIndex">
     <Tabs>
         <RadzenTabsItem Text="Duplicates Base">
