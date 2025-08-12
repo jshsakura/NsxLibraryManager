@@ -2,7 +2,7 @@
 
     <PropertyGroup>
         <TargetFramework>net8.0</TargetFramework>
-        <SatelliteResourceLanguages>en;ko</SatelliteResourceLanguages>
+        <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
         <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
@@ -43,9 +43,7 @@
       <Folder Include="Migrations\Titledb\" />
     </ItemGroup>
 
-    <ItemGroup>
-      <EmbeddedResource Include="Resources\*.resx" />
-    </ItemGroup>
+
 
 </Project>
 
