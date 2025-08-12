@@ -1,0 +1,22 @@
+@page "/test-localization"
+@using Microsoft.Extensions.Localization
+@using NsxLibraryManager.Resources
+@inject IStringLocalizer<SharedResource> Localizer
+
+<h3>Localization Test</h3>
+
+<p>Dashboard: @Localizer["Dashboard"]</p>
+<p>Games: @Localizer["Games"]</p>
+<p>Library: @Localizer["Library"]</p>
+
+<p>Current Culture: @System.Globalization.CultureInfo.CurrentCulture.Name</p>
+<p>Current UI Culture: @System.Globalization.CultureInfo.CurrentUICulture.Name</p>
+
+<p>Available Keys:</p>
+<ul>
+@foreach(var key in new[] { "Dashboard", "Games", "Library", "Korean", "English" })
+{
+    var value = Localizer[key];
+    <li>@key: @value (ResourceNotFound: @value.ResourceNotFound)</li>
+}
+</ul>
