@@ -1,6 +1,9 @@
 using System.Diagnostics;
+using System.Globalization;
 using System.Text;
 using Common.Contracts;
+using Microsoft.AspNetCore.Localization;
+using Microsoft.Extensions.Localization;
 using NsxLibraryManager.Core.FileLoading;
 using NsxLibraryManager.Core.FileLoading.Interface;
 using NsxLibraryManager.Core.Services;
@@ -87,6 +90,24 @@ builder.Services.AddSwaggerGen(options =>
     options.EnableAnnotations();
 });
 
+// 다국어 지원 설정
+builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
+builder.Services.Configure<RequestLocalizationOptions>(options =>
+{
+    var supportedCultures = new[]
+    {
+        new CultureInfo("en"),
+        new CultureInfo("ko")
+    };
+    
+    options.DefaultRequestCulture = new RequestCulture("en");
+    options.SupportedCultures = supportedCultures;
+    options.SupportedUICultures = supportedCultures;
+    
+    options.RequestCultureProviders.Insert(0, new QueryStringRequestCultureProvider());
+    options.RequestCultureProviders.Insert(1, new CookieRequestCultureProvider());
+});
+
 //nsx services
 if (validatorResult.valid)
 {
@@ -159,6 +180,7 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseStaticFiles();
+app.UseRequestLocalization();
 app.UseRouting();
 app.UseAntiforgery();
 app.MapRazorPages();

@@ -49,6 +49,15 @@ that I could run on a server and access it from any device.
 > Please use absolute paths, relative paths might not work because the function to build paths is a little wonky for example `~/Library` will not work as expected on linux, as the final result will be `/ApplicationPath/~/Library` instead of `/home/user/Library`
 
 ## Docker
+
+### Docker Hub (Recommended)
+- To run the container from Docker Hub registry:
+  ```bash
+  docker run --name nsxlibrarymanager -p 8080:8080 \
+    --mount type=bind,source=/path/to/your/library,target=/app/library \
+    [YOUR_DOCKERHUB_USERNAME]/nsxlibrarymanager:latest
+  ```
+
 ### GHCR
 - To run the container from the ghcr registry you need to mount the library folder, for example:
   - `docker run --name nsxlibrarymanager -p 8080:8080 --mount type=bind,source=/home/ivan/roms/library,target=/app/library ghcr.io/ivaano/nsxlibrarymanager:latest` 

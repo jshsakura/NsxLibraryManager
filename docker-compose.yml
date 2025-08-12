@@ -1,9 +1,11 @@
 ﻿services:
   nsxlibrarymanager:
     container_name: nsxlibrarymanager
-    image: nsxlibrarymanager:latest
-    build:
-      context: .
+    # Docker Hub에서 이미지 사용 (권장)
+    image: [YOUR_DOCKERHUB_USERNAME]/nsxlibrarymanager:latest
+    # 또는 로컬에서 빌드하려면 아래 주석을 해제하고 위 image 라인을 주석처리
+    # build:
+    #   context: .
     volumes:
       - /mnt/nfs/library:/app/library
       - /srv/nsxlibrarymanager/icon:/app/wwwroot/images/icon

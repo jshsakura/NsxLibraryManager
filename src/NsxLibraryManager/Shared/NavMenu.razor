@@ -1,4 +1,8 @@
-﻿<div class="layout-wrapper" style="display: flex; flex-direction: column; height: 100vh;">
+﻿@using Microsoft.Extensions.Localization
+@using NsxLibraryManager.Resources
+@inject IStringLocalizer<SharedResource> Localizer
+
+<div class="layout-wrapper" style="display: flex; flex-direction: column; height: 100vh;">
     <RadzenStack AlignItems="AlignItems.Center" class="rz-py-4 rz-py-lg-6" >
         <RadzenImage Path="images/logo.png" style="width: 54px; height: 39px;"></RadzenImage>
         <RadzenText Text="Nsx Library Manager" TextStyle="TextStyle.Subtitle1" class="rz-mb-0" />

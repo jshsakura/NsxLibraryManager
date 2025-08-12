@@ -1,0 +1,59 @@
+@using Microsoft.AspNetCore.Localization
+@using Microsoft.Extensions.Localization
+@using NsxLibraryManager.Resources
+@inject IStringLocalizer<SharedResource> Localizer
+@inject NavigationManager Navigation
+@inject IJSRuntime JSRuntime
+
+<div class="language-selector">
+    <RadzenDropDown @bind-Value="@selectedLanguage" 
+                    Data="@languages" 
+                    TextProperty="Name" 
+                    ValueProperty="Code"
+                    Change="@OnLanguageChanged"
+                    Style="width: 120px;" />
+</div>
+
+@code {
+    private string selectedLanguage = "en";
+    
+    private List<LanguageOption> languages = new()
+    {
+        new LanguageOption { Code = "en", Name = "English" },
+        new LanguageOption { Code = "ko", Name = "한국어" }
+    };
+
+    protected override async Task OnInitializedAsync()
+    {
+        // 현재 문화권 정보를 가져와서 선택된 언어 설정
+        var culture = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
+        selectedLanguage = languages.Any(l => l.Code == culture) ? culture : "en";
+    }
+
+    private async Task OnLanguageChanged(object value)
+    {
+        if (value?.ToString() is string newLanguage && newLanguage != selectedLanguage)
+        {
+            selectedLanguage = newLanguage;
+            
+            // 쿠키에 언어 설정 저장
+            await JSRuntime.InvokeVoidAsync("eval", 
+                $"document.cookie = '{CookieRequestCultureProvider.DefaultCookieName}=c={newLanguage}|uic={newLanguage}; path=/; max-age=31536000'");
+            
+            // 페이지 새로고침
+            Navigation.NavigateTo(Navigation.Uri, forceLoad: true);
+        }
+    }
+
+    public class LanguageOption
+    {
+        public string Code { get; set; } = string.Empty;
+        public string Name { get; set; } = string.Empty;
+    }
+}
+
+<style>
+    .language-selector {
+        display: inline-block;
+    }
+</style>
