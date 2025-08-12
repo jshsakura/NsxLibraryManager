@@ -2,7 +2,7 @@ namespace NsxLibraryManager.Resources.Localization;
 
 /// <summary>
 /// 공유 리소스를 위한 더미 클래스
-/// 이 클래스는 IStringLocalizer<SharedResources>를 사용하기 위한 타입 참조용입니다.
+/// 이 클래스는 IStringLocalizer&lt;SharedResources&gt;를 사용하기 위한 타입 참조용입니다.
 /// </summary>
 public class SharedResources
 {
