@@ -44,7 +44,10 @@
 
 <script>
 function setCookie(lang) {
-    document.cookie = '.AspNetCore.Culture=c=' + lang + '|uic=' + lang + '; path=/; max-age=31536000';
+    var cookieValue = 'c=' + lang + '|uic=' + lang;
+    var expires = new Date(Date.now() + 31536000000).toUTCString();
+    document.cookie = '.AspNetCore.Culture=' + cookieValue + '; path=/; expires=' + expires;
     console.log('Cookie set for language: ' + lang);
+    console.log('Cookie value: ' + document.cookie);
 }
 </script>

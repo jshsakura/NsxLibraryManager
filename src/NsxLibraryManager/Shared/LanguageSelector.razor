@@ -45,13 +45,12 @@
             
             try
             {
-                // 쿠키에 언어 설정 저장 (더 안전한 방식)
+                // 쿠키에 언어 설정 저장
                 var cookieValue = $"c={newLanguage}|uic={newLanguage}";
-                var cookieName = CookieRequestCultureProvider.DefaultCookieName;
+                var cookieName = ".AspNetCore.Culture"; // 명시적으로 쿠키 이름 지정
                 
-                await JSRuntime.InvokeVoidAsync("localStorage.setItem", "preferredLanguage", newLanguage);
                 await JSRuntime.InvokeVoidAsync("eval", 
-                    $"document.cookie = '{cookieName}={cookieValue}; path=/; max-age=31536000; SameSite=Lax'");
+                    $"document.cookie = '{cookieName}={cookieValue}; path=/; max-age=31536000; expires=' + new Date(Date.now() + 31536000000).toUTCString()");
                 
                 // 페이지 새로고침
                 Navigation.NavigateTo(Navigation.Uri, forceLoad: true);

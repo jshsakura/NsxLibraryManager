@@ -35,11 +35,11 @@ public static class LocalizationExtensions
             options.SupportedCultures = supportedCultures;
             options.SupportedUICultures = supportedCultures;
 
-            // 문화권 제공자 우선순위 설정
+            // 문화권 제공자 우선순위 설정 (우선순위 순서가 중요!)
             options.RequestCultureProviders.Clear();
-            options.RequestCultureProviders.Add(new QueryStringRequestCultureProvider());
-            options.RequestCultureProviders.Add(new CookieRequestCultureProvider());
-            options.RequestCultureProviders.Add(new AcceptLanguageHeaderRequestCultureProvider());
+            options.RequestCultureProviders.Add(new QueryStringRequestCultureProvider()); // 1순위: ?culture=ko
+            options.RequestCultureProviders.Add(new CookieRequestCultureProvider());      // 2순위: 쿠키
+            // AcceptLanguageHeaderRequestCultureProvider 제거 (브라우저 언어가 덮어쓰는 것 방지)
         });
 
         return services;
