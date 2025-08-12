@@ -304,7 +304,7 @@
 
   <!-- Game Information -->
   <data name="GameTitle" xml:space="preserve">
-    <value>게임명</value>
+    <value>게임 제목</value>
   </data>
   <data name="Description" xml:space="preserve">
     <value>설명</value>
@@ -341,16 +341,16 @@
 
   <!-- Settings -->
   <data name="GeneralSettings" xml:space="preserve">
-    <value>기본 설정</value>
+    <value>일반 설정</value>
   </data>
   <data name="LibrarySettings" xml:space="preserve">
-    <value>라이브러리</value>
+    <value>라이브러리 설정</value>
   </data>
   <data name="FtpSettings" xml:space="preserve">
-    <value>FTP</value>
+    <value>FTP 설정</value>
   </data>
   <data name="AdvancedSettings" xml:space="preserve">
-    <value>고급</value>
+    <value>고급 설정</value>
   </data>
 
   <!-- FTP -->
@@ -421,13 +421,13 @@
 
   <!-- Validation Messages -->
   <data name="FieldRequired" xml:space="preserve">
-    <value>필수 입력</value>
+    <value>필수 입력 항목</value>
   </data>
   <data name="InvalidPath" xml:space="preserve">
     <value>잘못된 경로</value>
   </data>
   <data name="PathNotFound" xml:space="preserve">
-    <value>경로 없음</value>
+    <value>경로를 찾을 수 없음</value>
   </data>
   <data name="InvalidFormat" xml:space="preserve">
     <value>잘못된 형식</value>
@@ -452,10 +452,10 @@
     <value>계속하시겠습니까?</value>
   </data>
   <data name="ConfirmDelete" xml:space="preserve">
-    <value>삭제하시겠습니까?</value>
+    <value>이 항목을 삭제하시겠습니까?</value>
   </data>
   <data name="ConfirmRename" xml:space="preserve">
-    <value>파일명을 변경하시겠습니까?</value>
+    <value>파일 이름을 변경하시겠습니까?</value>
   </data>
   <data name="Yes" xml:space="preserve">
     <value>예</value>
