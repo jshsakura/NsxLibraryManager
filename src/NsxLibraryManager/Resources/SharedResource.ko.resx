@@ -440,11 +440,11 @@
   <data name="About" xml:space="preserve">
     <value>정보</value>
   </data>
-  <data name="Version" xml:space="preserve">
-    <value>버전</value>
-  </data>
   <data name="Documentation" xml:space="preserve">
     <value>사용법</value>
+  </data>
+  <data name="LibraryTitles" xml:space="preserve">
+    <value>라이브러리 게임 목록</value>
   </data>
 
   <!-- Confirmation Messages -->

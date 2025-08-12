@@ -440,11 +440,11 @@
   <data name="About" xml:space="preserve">
     <value>About</value>
   </data>
-  <data name="Version" xml:space="preserve">
-    <value>Version</value>
-  </data>
   <data name="Documentation" xml:space="preserve">
     <value>Documentation</value>
+  </data>
+  <data name="LibraryTitles" xml:space="preserve">
+    <value>Library Titles</value>
   </data>
 
   <!-- Confirmation Messages -->
