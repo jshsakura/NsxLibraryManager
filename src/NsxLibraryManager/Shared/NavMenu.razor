@@ -1,6 +1,6 @@
 ﻿@using Microsoft.Extensions.Localization
-@using NsxLibraryManager.Resources
-@inject IStringLocalizer<SharedResource> Localizer
+@using NsxLibraryManager.Resources.Localization
+@inject IStringLocalizer<SharedResources> Localizer
 
 <div class="layout-wrapper" style="display: flex; flex-direction: column; height: 100vh;">
     <RadzenStack AlignItems="AlignItems.Center" class="rz-py-4 rz-py-lg-6" >
@@ -9,12 +9,12 @@
     </RadzenStack>
     <div class="menu-container" style="flex: 1; overflow-y: auto;">
         <RadzenPanelMenu DisplayStyle="MenuItemDisplayStyle.IconAndText" Multiple="false">
-            <RadzenPanelMenuItem Visible="@_initialConfig" Text="Dashboard" Icon="analytics" Path="/dashboard"/>
-            <RadzenPanelMenuItem Visible="@_initialConfig" Text="Games" Icon="sports_esports">
+            <RadzenPanelMenuItem Visible="@_initialConfig" Text="@Localizer["Nav.Dashboard"]" Icon="analytics" Path="/dashboard"/>
+            <RadzenPanelMenuItem Visible="@_initialConfig" Text="@Localizer["Nav.Games"]" Icon="sports_esports">
                 <RadzenPanelMenuItem Text="List" Icon="view_list" Path="gameList"/>
                 <RadzenPanelMenuItem Text="Card" Icon="apps" Path="gameGrid"/>
             </RadzenPanelMenuItem>
-            <RadzenPanelMenuItem Visible="@_initialConfig" Text="Library" Icon="inventory_2">
+            <RadzenPanelMenuItem Visible="@_initialConfig" Text="@Localizer["Nav.Library"]" Icon="inventory_2">
                 <RadzenPanelMenuItem Text="Library Titles" Icon="library_books" Path="library"/>
                 <RadzenPanelMenuItem Text="Missing Updates" Icon="update" Path="MissingUpdates"/>
                 <RadzenPanelMenuItem Text="Missing DLC" Icon="deployed_code_history" Path="MissingDlc"/>

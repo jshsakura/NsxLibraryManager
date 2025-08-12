@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  
+  <!-- Navigation & Menu -->
+  <data name="Nav.Dashboard" xml:space="preserve">
+    <value>Dashboard</value>
+    <comment>Main dashboard navigation item</comment>
+  </data>
+  <data name="Nav.Games" xml:space="preserve">
+    <value>Games</value>
+    <comment>Games section navigation</comment>
+  </data>
+  <data name="Nav.Library" xml:space="preserve">
+    <value>Library</value>
+    <comment>Library section navigation</comment>
+  </data>
+  <data name="Nav.Settings" xml:space="preserve">
+    <value>Settings</value>
+    <comment>Settings navigation item</comment>
+  </data>
+  <data name="Nav.TitleDb" xml:space="preserve">
+    <value>Title DB</value>
+    <comment>Title database navigation</comment>
+  </data>
+  <data name="Nav.FileOrganizer" xml:space="preserve">
+    <value>File Organizer</value>
+    <comment>File organization tools</comment>
+  </data>
+
+  <!-- Common Actions -->
+  <data name="Action.Save" xml:space="preserve">
+    <value>Save</value>
+    <comment>Save button text</comment>
+  </data>
+  <data name="Action.Cancel" xml:space="preserve">
+    <value>Cancel</value>
+    <comment>Cancel button text</comment>
+  </data>
+  <data name="Action.Delete" xml:space="preserve">
+    <value>Delete</value>
+    <comment>Delete button text</comment>
+  </data>
+  <data name="Action.Edit" xml:space="preserve">
+    <value>Edit</value>
+    <comment>Edit button text</comment>
+  </data>
+  <data name="Action.Add" xml:space="preserve">
+    <value>Add</value>
+    <comment>Add button text</comment>
+  </data>
+  <data name="Action.Search" xml:space="preserve">
+    <value>Search</value>
+    <comment>Search button/placeholder text</comment>
+  </data>
+  <data name="Action.Filter" xml:space="preserve">
+    <value>Filter</value>
+    <comment>Filter button text</comment>
+  </data>
+  <data name="Action.Refresh" xml:space="preserve">
+    <value>Refresh</value>
+    <comment>Refresh button text</comment>
+  </data>
+
+  <!-- Common Labels -->
+  <data name="Label.Title" xml:space="preserve">
+    <value>Title</value>
+    <comment>Title field label</comment>
+  </data>
+  <data name="Label.Name" xml:space="preserve">
+    <value>Name</value>
+    <comment>Name field label</comment>
+  </data>
+  <data name="Label.Category" xml:space="preserve">
+    <value>Category</value>
+    <comment>Category field label</comment>
+  </data>
+  <data name="Label.Language" xml:space="preserve">
+    <value>Language</value>
+    <comment>Language field label</comment>
+  </data>
+  <data name="Label.Region" xml:space="preserve">
+    <value>Region</value>
+    <comment>Region field label</comment>
+  </data>
+  <data name="Label.Size" xml:space="preserve">
+    <value>Size</value>
+    <comment>File size label</comment>
+  </data>
+  <data name="Label.Publisher" xml:space="preserve">
+    <value>Publisher</value>
+    <comment>Game publisher label</comment>
+  </data>
+  <data name="Label.Type" xml:space="preserve">
+    <value>Type</value>
+    <comment>File type label</comment>
+  </data>
+
+  <!-- Status Messages -->
+  <data name="Status.Loading" xml:space="preserve">
+    <value>Loading...</value>
+    <comment>Loading status message</comment>
+  </data>
+  <data name="Status.Success" xml:space="preserve">
+    <value>Operation completed successfully</value>
+    <comment>Success status message</comment>
+  </data>
+  <data name="Status.Error" xml:space="preserve">
+    <value>An error occurred</value>
+    <comment>Generic error message</comment>
+  </data>
+  <data name="Status.NoData" xml:space="preserve">
+    <value>No data available</value>
+    <comment>No data found message</comment>
+  </data>
+
+  <!-- Validation Messages -->
+  <data name="Validation.Required" xml:space="preserve">
+    <value>This field is required</value>
+    <comment>Required field validation message</comment>
+  </data>
+  <data name="Validation.InvalidFormat" xml:space="preserve">
+    <value>Invalid format</value>
+    <comment>Invalid format validation message</comment>
+  </data>
+
+  <!-- Language Selector -->
+  <data name="Language.English" xml:space="preserve">
+    <value>English</value>
+    <comment>English language option</comment>
+  </data>
+  <data name="Language.Korean" xml:space="preserve">
+    <value>한국어</value>
+    <comment>Korean language option</comment>
+  </data>
+  <data name="Language.SelectLanguage" xml:space="preserve">
+    <value>Select Language</value>
+    <comment>Language selector tooltip</comment>
+  </data>
+</root>

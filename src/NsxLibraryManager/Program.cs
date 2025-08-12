@@ -90,23 +90,8 @@ builder.Services.AddSwaggerGen(options =>
     options.EnableAnnotations();
 });
 
-// 다국어 지원 설정
-builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
-builder.Services.Configure<RequestLocalizationOptions>(options =>
-{
-    var supportedCultures = new[]
-    {
-        new CultureInfo("en"),
-        new CultureInfo("ko")
-    };
-    
-    options.DefaultRequestCulture = new RequestCulture("en");
-    options.SupportedCultures = supportedCultures;
-    options.SupportedUICultures = supportedCultures;
-    
-    options.RequestCultureProviders.Insert(0, new QueryStringRequestCultureProvider());
-    options.RequestCultureProviders.Insert(1, new CookieRequestCultureProvider());
-});
+// 다국어 지원 설정 (베스트 프랙티스)
+builder.Services.AddCustomLocalization();
 
 //nsx services
 if (validatorResult.valid)

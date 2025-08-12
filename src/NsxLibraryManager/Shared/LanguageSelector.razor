@@ -1,35 +1,55 @@
 @using System.Globalization
 @using Microsoft.AspNetCore.Localization
 @using Microsoft.Extensions.Localization
-@using NsxLibraryManager.Resources
-@inject IStringLocalizer<SharedResource> Localizer
+@using NsxLibraryManager.Resources.Localization
+@using NsxLibraryManager.Services.Interface
+@inject IStringLocalizer<SharedResources> Localizer
+@inject ILocalizationService LocalizationService
 @inject NavigationManager Navigation
 @inject IJSRuntime JSRuntime
 
-<div class="language-selector">
+<div class="language-selector" title="@Localizer["Language.SelectLanguage"]">
     <RadzenDropDown @bind-Value="@selectedLanguage" 
                     Data="@languages" 
-                    TextProperty="Name" 
+                    TextProperty="DisplayName" 
                     ValueProperty="Code"
                     Change="@OnLanguageChanged"
-                    Style="width: 120px;" />
+                    Style="width: 140px;"
+                    Placeholder="@Localizer["Language.SelectLanguage"]" />
 </div>
 
 @code {
     private string selectedLanguage = "en";
     
-    private List<LanguageOption> languages = new()
-    {
-        new LanguageOption { Code = "en", Name = "English" },
-        new LanguageOption { Code = "ko", Name = "한국어" }
-    };
+    private List<LanguageOption> languages = new();
 
     protected override Task OnInitializedAsync()
     {
+        // 지원되는 언어 목록 동적 생성
+        languages = LocalizationService.SupportedCultures
+            .Select(culture => new LanguageOption 
+            { 
+                Code = culture.TwoLetterISOLanguageName,
+                DisplayName = GetLanguageDisplayName(culture.TwoLetterISOLanguageName),
+                NativeName = culture.NativeName
+            })
+            .ToList();
+
         // 현재 문화권 정보를 가져와서 선택된 언어 설정
-        var culture = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
-        selectedLanguage = languages.Any(l => l.Code == culture) ? culture : "en";
+        var currentCulture = LocalizationService.CurrentUICulture.TwoLetterISOLanguageName;
+        selectedLanguage = LocalizationService.IsCultureSupported(currentCulture) ? currentCulture : "en";
+        
         return Task.CompletedTask;
+    }
+
+    private string GetLanguageDisplayName(string languageCode)
+    {
+        return languageCode.ToLower() switch
+        {
+            "en" => Localizer["Language.English"],
+            "ko" => Localizer["Language.Korean"],
+            _ => languageCode.ToUpper()
+        };
     }
 
     private async Task OnLanguageChanged(object value)
@@ -38,24 +58,49 @@
         {
             selectedLanguage = newLanguage;
             
-            // 쿠키에 언어 설정 저장
-            await JSRuntime.InvokeVoidAsync("eval", 
-                $"document.cookie = '{CookieRequestCultureProvider.DefaultCookieName}=c={newLanguage}|uic={newLanguage}; path=/; max-age=31536000'");
-            
-            // 페이지 새로고침
-            Navigation.NavigateTo(Navigation.Uri, forceLoad: true);
+            try
+            {
+                // 쿠키에 언어 설정 저장 (더 안전한 방식)
+                var cookieValue = $"c={newLanguage}|uic={newLanguage}";
+                var cookieName = CookieRequestCultureProvider.DefaultCookieName;
+                
+                await JSRuntime.InvokeVoidAsync("localStorage.setItem", "preferredLanguage", newLanguage);
+                await JSRuntime.InvokeVoidAsync("eval", 
+                    $"document.cookie = '{cookieName}={cookieValue}; path=/; max-age=31536000; SameSite=Lax'");
+                
+                // 페이지 새로고침
+                Navigation.NavigateTo(Navigation.Uri, forceLoad: true);
+            }
+            catch (Exception ex)
+            {
+                // 로깅은 서버 사이드에서만 가능
+                Console.WriteLine($"Language change error: {ex.Message}");
+            }
         }
     }
 
     public class LanguageOption
     {
         public string Code { get; set; } = string.Empty;
-        public string Name { get; set; } = string.Empty;
+        public string DisplayName { get; set; } = string.Empty;
+        public string NativeName { get; set; } = string.Empty;
     }
 }
 
 <style>
     .language-selector {
-        display: inline-block;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+    }
+    
+    .language-selector .rz-dropdown {
+        min-width: 140px;
+    }
+    
+    .language-selector .rz-dropdown-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
     }
 </style>
