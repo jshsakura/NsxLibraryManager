@@ -2,7 +2,7 @@
 
     <PropertyGroup>
         <TargetFramework>net8.0</TargetFramework>
-        <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+        <SatelliteResourceLanguages>en;ko</SatelliteResourceLanguages>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
         <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
@@ -28,7 +28,6 @@
         <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="8.1.4" />
         <PackageReference Include="System.IO.Compression" Version="4.3.0" />
         <PackageReference Include="Microsoft.Extensions.Localization" Version="8.0.11" />
-        <PackageReference Include="Microsoft.AspNetCore.Localization" Version="2.2.0" />
     </ItemGroup>
     
     <ItemGroup>
@@ -42,6 +41,10 @@
     <ItemGroup>
       <Folder Include="Migrations\NsxLibrary\" />
       <Folder Include="Migrations\Titledb\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Include="Resources\*.resx" />
     </ItemGroup>
 
 </Project>
