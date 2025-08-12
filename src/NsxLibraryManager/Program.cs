@@ -4,6 +4,7 @@ using System.Text;
 using Common.Contracts;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.Extensions.Localization;
+using NsxLibraryManager.Services;
 using NsxLibraryManager.Core.FileLoading;
 using NsxLibraryManager.Core.FileLoading.Interface;
 using NsxLibraryManager.Core.Services;
@@ -90,8 +91,10 @@ builder.Services.AddSwaggerGen(options =>
     options.EnableAnnotations();
 });
 
-// 다국어 지원 설정 (베스트 프랙티스)
+// 다국어 지원 설정 (간단한 방식)
 builder.Services.AddCustomLocalization();
+builder.Services.AddScoped<SimpleLocalizationService>();
+builder.Services.AddScoped<SimpleStringLocalizer>();
 
 //nsx services
 if (validatorResult.valid)

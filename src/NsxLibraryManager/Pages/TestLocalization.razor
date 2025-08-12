@@ -1,8 +1,10 @@
 @page "/test-localization"
 @using Microsoft.Extensions.Localization
 @using NsxLibraryManager.Resources
+@using NsxLibraryManager.Services
 @using System.Globalization
 @inject IStringLocalizer<SharedResource> Localizer
+@inject SimpleStringLocalizer SimpleLocalizer
 
 <h3>🌍 Localization Test</h3>
 
@@ -14,7 +16,7 @@
 </div>
 
 <div style="background: #e8f4fd; padding: 20px; margin: 10px 0; border-radius: 5px;">
-    <h4>Resource Test:</h4>
+    <h4>IStringLocalizer Test:</h4>
     @foreach(var key in new[] { "Dashboard", "Games", "Library", "Settings", "Korean", "English" })
     {
         var value = Localizer[key];
@@ -22,6 +24,17 @@
            <span style="color: @(value.ResourceNotFound ? "red" : "green")">
                (@(value.ResourceNotFound ? "NOT FOUND" : "OK"))
            </span>
+        </p>
+    }
+</div>
+
+<div style="background: #e8ffe8; padding: 20px; margin: 10px 0; border-radius: 5px;">
+    <h4>Simple Localizer Test:</h4>
+    @foreach(var key in new[] { "Dashboard", "Games", "Library", "Settings", "Korean", "English" })
+    {
+        var value = SimpleLocalizer[key];
+        <p><strong>@key:</strong> "@value" 
+           <span style="color: green">(Simple)</span>
         </p>
     }
 </div>
