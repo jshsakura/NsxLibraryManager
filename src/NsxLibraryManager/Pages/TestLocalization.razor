@@ -1,0 +1,50 @@
+@page "/test-localization"
+@using Microsoft.Extensions.Localization
+@using NsxLibraryManager.Resources
+@using System.Globalization
+@inject IStringLocalizer<SharedResource> Localizer
+
+<h3>🌍 Localization Test</h3>
+
+<div style="background: #f5f5f5; padding: 20px; margin: 10px 0; border-radius: 5px;">
+    <h4>Current Culture Info:</h4>
+    <p><strong>Current Culture:</strong> @CultureInfo.CurrentCulture.Name</p>
+    <p><strong>Current UI Culture:</strong> @CultureInfo.CurrentUICulture.Name</p>
+    <p><strong>Two Letter ISO:</strong> @CultureInfo.CurrentUICulture.TwoLetterISOLanguageName</p>
+</div>
+
+<div style="background: #e8f4fd; padding: 20px; margin: 10px 0; border-radius: 5px;">
+    <h4>Resource Test:</h4>
+    @foreach(var key in new[] { "Dashboard", "Games", "Library", "Settings", "Korean", "English" })
+    {
+        var value = Localizer[key];
+        <p><strong>@key:</strong> "@value" 
+           <span style="color: @(value.ResourceNotFound ? "red" : "green")">
+               (@(value.ResourceNotFound ? "NOT FOUND" : "OK"))
+           </span>
+        </p>
+    }
+</div>
+
+<div style="background: #fff2e8; padding: 20px; margin: 10px 0; border-radius: 5px;">
+    <h4>Manual Culture Test:</h4>
+    <p>Try these URLs:</p>
+    <ul>
+        <li><a href="/test-localization?culture=en">English (?culture=en)</a></li>
+        <li><a href="/test-localization?culture=ko">Korean (?culture=ko)</a></li>
+    </ul>
+</div>
+
+<div style="background: #f0f8e8; padding: 20px; margin: 10px 0; border-radius: 5px;">
+    <h4>Cookie Test:</h4>
+    <button onclick="setCookie('en')">Set English Cookie</button>
+    <button onclick="setCookie('ko')">Set Korean Cookie</button>
+    <button onclick="location.reload()">Reload Page</button>
+</div>
+
+<script>
+function setCookie(lang) {
+    document.cookie = '.AspNetCore.Culture=c=' + lang + '|uic=' + lang + '; path=/; max-age=31536000';
+    console.log('Cookie set for language: ' + lang);
+}
+</script>
