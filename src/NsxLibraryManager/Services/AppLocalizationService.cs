@@ -44,7 +44,26 @@ public class AppLocalizationService
             ["ContentDistribution"] = "Content Distribution",
             ["PackageTypeDistribution"] = "Package Type Distribution",
             ["TopPublishers"] = "Top Publishers",
-            ["Content"] = "Content"
+            ["Content"] = "Content",
+            ["ReleaseDate"] = "Release Date",
+            ["NumberOfPlayers"] = "Number of Players",
+            ["Genre"] = "Genre",
+            ["Publisher"] = "Publisher",
+            ["ESRBRating"] = "ESRB Rating",
+            ["FileSize"] = "File Size",
+            ["Languages"] = "Languages",
+            ["Type"] = "Type",
+            ["InLibrary"] = "In Library",
+            ["ReadMore"] = "Read More",
+            ["ReadLess"] = "Read Less",
+            ["Name"] = "Name",
+            ["FileName"] = "File Name",
+            ["Size"] = "Size",
+            ["Date"] = "Date",
+            ["Version"] = "Version",
+            ["Owned"] = "Owned",
+            ["Updates"] = "Updates",
+            ["ShortVersion"] = "Short Version"
         },
         ["ko"] = new Dictionary<string, string>
         {
@@ -84,7 +103,26 @@ public class AppLocalizationService
             ["ContentDistribution"] = "콘텐츠 분포",
             ["PackageTypeDistribution"] = "패키지 유형 분포",
             ["TopPublishers"] = "주요 퍼블리셔",
-            ["Content"] = "콘텐츠"
+            ["Content"] = "콘텐츠",
+            ["ReleaseDate"] = "출시일",
+            ["NumberOfPlayers"] = "플레이어 수",
+            ["Genre"] = "장르",
+            ["Publisher"] = "퍼블리셔",
+            ["ESRBRating"] = "ESRB 등급",
+            ["FileSize"] = "파일 크기",
+            ["Languages"] = "언어",
+            ["Type"] = "유형",
+            ["InLibrary"] = "라이브러리에 있음",
+            ["ReadMore"] = "더 보기",
+            ["ReadLess"] = "간략히",
+            ["Name"] = "이름",
+            ["FileName"] = "파일명",
+            ["Size"] = "크기",
+            ["Date"] = "날짜",
+            ["Version"] = "버전",
+            ["Owned"] = "보유",
+            ["Updates"] = "업데이트",
+            ["ShortVersion"] = "짧은 버전"
         }
     };
 

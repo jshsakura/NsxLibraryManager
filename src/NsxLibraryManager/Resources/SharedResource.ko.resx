@@ -670,24 +670,6 @@
   <data name="After" xml:space="preserve">
     <value>변경 후:</value>
   </data>
-  <data name="TryToUseEnglishNaming" xml:space="preserve">
-    <value>영어 이름 사용 시도</value>
-  </data>
-  <data name="TitleNameAndAppNameToTitleCase" xml:space="preserve">
-    <value>TitleName과 AppName을 제목 형식으로</value>
-  </data>
-  <data name="DefaultConfiguration" xml:space="preserve">
-    <value>기본 설정</value>
-  </data>
-  <data name="ValidateConfiguration" xml:space="preserve">
-    <value>설정 검증</value>
-  </data>
-  <data name="SaveConfiguration" xml:space="preserve">
-    <value>설정 저장</value>
-  </data>
-  <data name="TemplateFields" xml:space="preserve">
-    <value>템플릿 필드</value>
-  </data>
   <data name="ScanInputFolder" xml:space="preserve">
     <value>입력 폴더 검색</value>
   </data>

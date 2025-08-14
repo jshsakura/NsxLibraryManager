@@ -237,24 +237,6 @@
   <data name="After" xml:space="preserve">
     <value>After:</value>
   </data>
-  <data name="TryToUseEnglishNaming" xml:space="preserve">
-    <value>Try to use english naming.</value>
-  </data>
-  <data name="TitleNameAndAppNameToTitleCase" xml:space="preserve">
-    <value>TitleName and AppName to TitleCase</value>
-  </data>
-  <data name="DefaultConfiguration" xml:space="preserve">
-    <value>Default Configuration</value>
-  </data>
-  <data name="ValidateConfiguration" xml:space="preserve">
-    <value>Validate Configuration</value>
-  </data>
-  <data name="SaveConfiguration" xml:space="preserve">
-    <value>Save Configuration</value>
-  </data>
-  <data name="TemplateFields" xml:space="preserve">
-    <value>Template Fields</value>
-  </data>
   <data name="ScanInputFolder" xml:space="preserve">
     <value>Scan Input Folder</value>
   </data>
