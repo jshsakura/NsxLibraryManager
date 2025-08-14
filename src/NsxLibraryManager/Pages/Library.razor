@@ -59,12 +59,12 @@
             <Columns>
                 <RadzenDataGridColumn Title="@Localizer["Select"]" UniqueID="Select" Width="60px" Sortable="false" Filterable="false" Visible="false" >
                     <HeaderTemplate>
-                        <RadzenCheckBox TabIndex="-1" TriState="false" TValue="bool?" InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", "Select all items" }})"
+                        <RadzenCheckBox TabIndex="-1" TriState="false" TValue="bool?" InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", Localizer["SelectAllItems"] }})"
                                         Value="@(_selectedTitles == null || _selectedTitles?.Any() != true ? false : !_libraryTitles.All(i => _selectedTitles.Contains(i)) ? null : _libraryTitles.Any(i => _selectedTitles.Contains(i)))"
                                         Change="@(args => _selectedTitles = args == true ? _libraryTitles.ToList() : null)" />
                     </HeaderTemplate>
                     <Template Context="data">
-                        <RadzenCheckBox TabIndex="-1" TriState="false" Value="@(_selectedTitles != null && _selectedTitles.Contains(data))" InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", "Select item" }})"
+                        <RadzenCheckBox TabIndex="-1" TriState="false" Value="@(_selectedTitles != null && _selectedTitles.Contains(data))" InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", Localizer["SelectItem"] }})"
                                         TValue="bool" Change=@(args => { _grid.SelectRow(data); }) />
                     </Template>
                 </RadzenDataGridColumn>
@@ -110,7 +110,7 @@
                 </RadzenDataGridColumn>
                 <RadzenDataGridColumn Property="Categories" Title="@Localizer["Categories"]" Sortable="false" Filterable="true">
                     <FilterTemplate>
-                        <RadzenDropDown @bind-Value="@_selectedCategories" Style="width:100%;" InputAttributes="@(new Dictionary<string, object>() { { "aria-label", "filter by Category" } })"
+                        <RadzenDropDown @bind-Value="@_selectedCategories" Style="width:100%;" InputAttributes="@(new Dictionary<string, object>() { { "aria-label", Localizer["FilterByCategory"] } })"
                                         Change=@OnSelectedCategoriesChange Data="@(_categories)" AllowClear="true" Multiple="true"/>
                     </FilterTemplate>
                     <Template>

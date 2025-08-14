@@ -6,7 +6,7 @@
 
 <RadzenCard>
     <RadzenText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">@Localizer["Filter"] @Localizer["Name"] @Localizer["TitleId"]</RadzenText>
-    <RadzenTextBox @oninput=@(args => OnFilterChange(args.Value?.ToString() ?? string.Empty)) Style="width: 100%" aria-label="Search by TitleId Or Name" />
+    <RadzenTextBox @oninput=@(args => OnFilterChange(args.Value?.ToString() ?? string.Empty)) Style="width: 100%" aria-label="@Localizer["SearchByTitleIdOrName"]" />
 </RadzenCard>
 <RadzenStack>
 @{

@@ -145,23 +145,23 @@
                                         <RadzenButton ButtonStyle="ButtonStyle.Success" Icon="add_circle" Text="@Localizer["AddNewLibraryPath"]" Click="@InsertRow" Disabled="@_newRecordInsertDisabled"/>
                                     </HeaderTemplate>
                                     <Columns>
-                                        <RadzenDataGridColumn Property="Path" Title="Library Path" Width="280px" SortOrder="SortOrder.Ascending">
+                                        <RadzenDataGridColumn Property="Path" Title="@Localizer["LibraryPath"]" Width="280px" SortOrder="SortOrder.Ascending">
                                             <EditTemplate Context="libraryData">
-                                                <RadzenTextBox @bind-Value="libraryData.Path"  Style="width:100%; display: block" Name="Name" aria-label="Enter name" />
+                                                <RadzenTextBox @bind-Value="libraryData.Path"  Style="width:100%; display: block" Name="Name" aria-label="@Localizer["EnterName"]" />
                                                 <RadzenCustomValidator Component="Name" Validator="@(() => ValidatePath(libraryData.Path))" Text="@_libraryPathValidationMessage" Popup="false" />
                                             </EditTemplate>
                                         </RadzenDataGridColumn>
-                                        <RadzenDataGridColumn Property="Recursive" Title="Recursive" Width="50px" FormatString="{0}" FormatProvider="@_myBooleanProvider">
+                                        <RadzenDataGridColumn Property="Recursive" Title="@Localizer["Recursive"]" Width="50px" FormatString="{0}" FormatProvider="@_myBooleanProvider">
                                             <EditTemplate Context="libraryData">
                                                 <RadzenCheckBox @bind-Value="@libraryData.Recursive" />
                                             </EditTemplate>
                                         </RadzenDataGridColumn>
 
 
-                                        <RadzenDataGridColumn Property="CollectionId" Title="Collection">
+                                        <RadzenDataGridColumn Property="CollectionId" Title="@Localizer["Collection"]">
                                             <EditTemplate Context="libraryData">
-                                                <RadzenDropDown @bind-Value="libraryData.CollectionId" Data="@_collections" ValueProperty="Id" TextProperty="Name" Placeholder="Select collection" Style="width:100%; display: block;"
-                                                                InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", "Select Collection" }})">
+                                                <RadzenDropDown @bind-Value="libraryData.CollectionId" Data="@_collections" ValueProperty="Id" TextProperty="Name" Placeholder="@Localizer["SelectCollection"]" Style="width:100%; display: block;"
+                                                                InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", Localizer["SelectCollection"] }})">
                                                 </RadzenDropDown>
                                             </EditTemplate>
                                             <Template Context="libraryData">
@@ -171,14 +171,14 @@
 
                                         <RadzenDataGridColumn Context="libraryData" Filterable="false" Sortable="false" TextAlign="TextAlign.Right" Frozen="true" FrozenPosition="FrozenColumnPosition.Right">
                                             <Template Context="libraryData">
-                                                <RadzenButton Icon="add_circle" ButtonStyle="ButtonStyle.Success" Variant="Variant.Flat" Size="ButtonSize.Medium" Shade="Shade.Lighter" Click="@(() => InsertNewLibraryLocation(libraryData))" title="Add new row after this row"  Disabled="@_newRecordInsertDisabled"/>
+                                                <RadzenButton Icon="add_circle" ButtonStyle="ButtonStyle.Success" Variant="Variant.Flat" Size="ButtonSize.Medium" Shade="Shade.Lighter" Click="@(() => InsertNewLibraryLocation(libraryData))" title="@Localizer["AddNewRowAfterThisRow"]"  Disabled="@_newRecordInsertDisabled"/>
                                                 <RadzenButton Icon="edit" ButtonStyle="ButtonStyle.Light" Variant="Variant.Flat" Size="ButtonSize.Medium" class="rz-my-1 rz-ms-1" Click="@(args => EditLibraryLocation(libraryData))" @onclick:stopPropagation="true" />
                                                 <RadzenButton Icon="delete" ButtonStyle="ButtonStyle.Danger" Variant="Variant.Flat" Size="ButtonSize.Medium" Shade="Shade.Lighter" class="rz-my-1 rz-ms-1" Click="@(args => DeleteLibraryLocation(libraryData))" @onclick:stopPropagation="true" />
                                             </Template>
                                             <EditTemplate Context="libraryData">
-                                                <RadzenButton Icon="check" ButtonStyle="ButtonStyle.Success" Variant="Variant.Flat" Size="ButtonSize.Medium" Click="@((args) => SaveNewLibraryLocation(libraryData))" aria-label="Save"/>
-                                                <RadzenButton Icon="close" ButtonStyle="ButtonStyle.Light" Variant="Variant.Flat" Size="ButtonSize.Medium" class="rz-my-1 rz-ms-1" Click="@((args) => CancelEdit(libraryData))" aria-label="Cancel"/>
-                                                <RadzenButton Icon="delete" ButtonStyle="ButtonStyle.Danger" Variant="Variant.Flat" Size="ButtonSize.Medium" Shade="Shade.Lighter" class="rz-my-1 rz-ms-1" Click="@(args => DeleteLibraryLocation(libraryData))" aria-label="Delete" />
+                                                <RadzenButton Icon="check" ButtonStyle="ButtonStyle.Success" Variant="Variant.Flat" Size="ButtonSize.Medium" Click="@((args) => SaveNewLibraryLocation(libraryData))" aria-label="@Localizer["Save"]"/>
+                                                <RadzenButton Icon="close" ButtonStyle="ButtonStyle.Light" Variant="Variant.Flat" Size="ButtonSize.Medium" class="rz-my-1 rz-ms-1" Click="@((args) => CancelEdit(libraryData))" aria-label="@Localizer["Cancel"]"/>
+                                                <RadzenButton Icon="delete" ButtonStyle="ButtonStyle.Danger" Variant="Variant.Flat" Size="ButtonSize.Medium" Shade="Shade.Lighter" class="rz-my-1 rz-ms-1" Click="@(args => DeleteLibraryLocation(libraryData))" aria-label="@Localizer["Delete"]" />
                                             </EditTemplate>
                                         </RadzenDataGridColumn>
                                     </Columns>
@@ -194,7 +194,7 @@
                         </RadzenColumn>
                     </RadzenRow>
                 </RadzenFieldset>
-                <RadzenFieldset Text="Library settings">
+                <RadzenFieldset Text="@Localizer["LibrarySettings"]">
                     <RadzenRow AlignItems="AlignItems.Center">
                         <RadzenColumn Size="12" SizeMD="6">
                             <RadzenRow>
@@ -208,7 +208,7 @@
                             <RadzenRow AlignItems="AlignItems.Center">
                                 <RadzenColumn Size="6">
                                     <RadzenButton 
-                                        Text="Clear persistent titles" 
+                                        Text="@Localizer["ClearPersistentTitles"]" 
                                         Click=@(args => ClearPersistentData()) 
                                         ButtonStyle="ButtonStyle.Danger" 
                                         MouseEnter="@(args => ShowTooltip("Used to persist user rating, collection, between library reloads.", args, new TooltipOptions() { Delay = 500, Duration = 5000, Position = TooltipPosition.Bottom }))"/>
@@ -217,22 +217,22 @@
                         </RadzenColumn>
                     </RadzenRow>
                 </RadzenFieldset>
-                <RadzenFieldset Text="Library events webhooks">
+                <RadzenFieldset Text="@Localizer["LibraryEventsWebhooks"]">
                     <RadzenRow AlignItems="AlignItems.Center">
                         <RadzenColumn Size="12" SizeMD="3">
                             <RadzenRow AlignItems="AlignItems.Center">
                                 <RadzenColumn Size="12">
-                                    <RadzenSwitch Name="ReloadWebhook" @bind-Value="@_config.LibraryReloadPostWebhook" Change=@(args => ConfigChanged()) InputAttributes="@(new Dictionary<string, object>() { { "aria-label", "Enable webhook" } })" MouseEnter="@(args => ShowTooltip("Enable webhook calls on library reload", args))"/>
-                                    <RadzenLabel Text="Library reload webhook" Component="ReloadWebhook" Style="margin-left: 8px; vertical-align: middle;"/>
+                                    <RadzenSwitch Name="ReloadWebhook" @bind-Value="@_config.LibraryReloadPostWebhook" Change=@(args => ConfigChanged()) InputAttributes="@(new Dictionary<string, object>() { { "aria-label", Localizer["EnableWebhook"] } })" MouseEnter="@(args => ShowTooltip("Enable webhook calls on library reload", args))"/>
+                                    <RadzenLabel Text="@Localizer["LibraryReloadWebhook"]" Component="ReloadWebhook" Style="margin-left: 8px; vertical-align: middle;"/>
                                 </RadzenColumn>
                             </RadzenRow>
                         </RadzenColumn>
                         <RadzenColumn Size="12" SizeMD="5">
                             <RadzenRow AlignItems="AlignItems.Center">
                                 <RadzenColumn Size="12">
-                                    <RadzenFormField Text="Webhook URL" Style="width: 100%;">
+                                    <RadzenFormField Text="@Localizer["WebhookURL"]" Style="width: 100%;">
                                         <ChildContent>
-                                            <RadzenTextBox Placeholder="Webhook URL" Name="ReloadWebhookUrl" @bind-Value="@_config.LibraryReloadWebhookUrl" Change=@(args => ConfigChanged()) Style="width: 100%;" Disabled="@(!_config.LibraryReloadPostWebhook)"/>
+                                            <RadzenTextBox Placeholder="@Localizer["WebhookURL"]" Name="ReloadWebhookUrl" @bind-Value="@_config.LibraryReloadWebhookUrl" Change=@(args => ConfigChanged()) Style="width: 100%;" Disabled="@(!_config.LibraryReloadPostWebhook)"/>
                                         </ChildContent>
                                         <Helper>
                                             @if (@_validationErrors["LibraryReloadWebhookUrl"] != string.Empty)
@@ -253,9 +253,9 @@
                                     <RadzenLabel Text="@Localizer["RequestMethod"]" Component="WebhookRequestMethod" Style="display: block; margin-bottom: 8px;"/>
                                     <RadzenRadioButtonList @bind-Value="@_config.LibraryReloadWebhookRequestMethod" TValue="int" Change=@(args => ConfigChanged()) Disabled="@(!_config.LibraryReloadPostWebhook)">
                                         <Items>
-                                            <RadzenRadioButtonListItem Text="POST" Value="@Convert.ToInt32(WebhookHttpMethod.Post)"/>
-                                            <RadzenRadioButtonListItem Text="PUT" Value="@Convert.ToInt32(WebhookHttpMethod.Put)"/>
-                                            <RadzenRadioButtonListItem Text="GET" Value="@Convert.ToInt32(WebhookHttpMethod.Get)"/>
+                                            <RadzenRadioButtonListItem Text="@Localizer["POST"]" Value="@Convert.ToInt32(WebhookHttpMethod.Post)"/>
+                                            <RadzenRadioButtonListItem Text="@Localizer["PUT"]" Value="@Convert.ToInt32(WebhookHttpMethod.Put)"/>
+                                            <RadzenRadioButtonListItem Text="@Localizer["GET"]" Value="@Convert.ToInt32(WebhookHttpMethod.Get)"/>
                                         </Items>
                                     </RadzenRadioButtonList>
                                 </RadzenColumn>

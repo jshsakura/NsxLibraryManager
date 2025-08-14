@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <resheader name="resmimetype">
     <value>text/microsoft-resx</value>
@@ -7,279 +7,831 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0,
-      Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0,
-      Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Dashboard" xml:space="preserve"><value>대시보드</value></data>
-  <data name="Games" xml:space="preserve"><value>게임</value></data>
-  <data name="Library" xml:space="preserve"><value>라이브러리</value></data>
-  <data name="Settings" xml:space="preserve"><value>설정</value></data>
-  <data name="TitleDb" xml:space="preserve"><value>타이틀 DB</value></data>
-  <data name="FileOrganizer" xml:space="preserve"><value>파일 정리</value></data>
-  <data name="Save" xml:space="preserve"><value>저장</value></data>
-  <data name="Cancel" xml:space="preserve"><value>취소</value></data>
-  <data name="Delete" xml:space="preserve"><value>삭제</value></data>
-  <data name="Edit" xml:space="preserve"><value>편집</value></data>
-  <data name="Add" xml:space="preserve"><value>추가</value></data>
-  <data name="Search" xml:space="preserve"><value>검색</value></data>
-  <data name="Title" xml:space="preserve"><value>제목</value></data>
-  <data name="Name" xml:space="preserve"><value>이름</value></data>
-  <data name="Category" xml:space="preserve"><value>카테고리</value></data>
-  <data name="Language" xml:space="preserve"><value>언어</value></data>
-  <data name="Region" xml:space="preserve"><value>지역</value></data>
-  <data name="English" xml:space="preserve"><value>English</value></data>
-  <data name="Korean" xml:space="preserve"><value>한국어</value></data>
-  <data name="SelectLanguage" xml:space="preserve"><value>언어 선택</value></data>
-  <data name="BundleRenamer" xml:space="preserve"><value>번들 이름 일괄변경</value></data>
-  <data name="PackageRenamer" xml:space="preserve"><value>패키지 이름 일괄변경</value></data>
-  <data name="CollectionRenamer" xml:space="preserve"><value>컬렉션 이름 일괄변경</value></data>
-  <data name="DuplicateTitles" xml:space="preserve"><value>중복 게임 목록</value></data>
-  <data name="MissingUpdates" xml:space="preserve"><value>업데이트 누락 목록</value></data>
-  <data name="MissingDlc" xml:space="preserve"><value>DLC 누락 목록</value></data>
-  <data name="MissingDlcUpdates" xml:space="preserve"><value>DLC 업데이트 누락 목록</value></data>
-  <data name="Collections" xml:space="preserve"><value>컬렉션</value></data>
-  <data name="FtpStatus" xml:space="preserve"><value>FTP 상태</value></data>
-  <data name="TaskStatus" xml:space="preserve"><value>작업 상태</value></data>
-  <data name="Renamer" xml:space="preserve"><value>이름 변경</value></data>
-  <data name="Configuration" xml:space="preserve"><value>옵션</value></data>
-  <data name="ScanInputFolder" xml:space="preserve"><value>폴더 검색</value></data>
-  <data name="RenameFiles" xml:space="preserve"><value>파일명 일괄변경</value></data>
-  <data name="InputPath" xml:space="preserve"><value>입력 경로</value></data>
-  <data name="OutputPath" xml:space="preserve"><value>출력 경로</value></data>
-  <data name="SourceFile" xml:space="preserve"><value>원본 파일</value></data>
-  <data name="Destination" xml:space="preserve"><value>대상</value></data>
-  <data name="TitleId" xml:space="preserve"><value>타이틀 ID</value></data>
-  <data name="Error" xml:space="preserve"><value>오류</value></data>
-  <data name="ErrorMessage" xml:space="preserve"><value>오류 내용</value></data>
-  <data name="Input" xml:space="preserve"><value>입력</value></data>
-  <data name="Output" xml:space="preserve"><value>출력</value></data>
-  <data name="BasePath" xml:space="preserve"><value>기본 경로</value></data>
-  <data name="Application" xml:space="preserve"><value>애플리케이션</value></data>
-  <data name="Update" xml:space="preserve"><value>업데이트</value></data>
-  <data name="DLCs" xml:space="preserve"><value>DLC</value></data>
-  <data name="UnknownPlaceholder" xml:space="preserve"><value>알 수 없음 표시</value></data>
-  <data name="DeleteEmptyFoldersAfterRename" xml:space="preserve"><value>빈 폴더 자동 삭제</value></data>
-  <data name="RecursiveSubdirectories" xml:space="preserve"><value>하위 폴더 포함</value></data>
-  <data name="TryToUseEnglishNaming" xml:space="preserve"><value>영어 제목 우선 사용</value></data>
-  <data name="TitleNameAndAppNameToTitleCase" xml:space="preserve"><value>제목 첫글자 대문자로</value></data>
-  <data name="TemplateFields" xml:space="preserve"><value>파일명 형식</value></data>
-  <data name="FileOrganizerByBundle" xml:space="preserve"><value>번들 단위 파일 정리</value></data>
-  <data name="FileOrganizerByPackage" xml:space="preserve"><value>패키지 단위 파일 정리</value></data>
-  <data name="List" xml:space="preserve"><value>목록</value></data>
-  <data name="Card" xml:space="preserve"><value>카드</value></data>
-  <data name="Grid" xml:space="preserve"><value>그리드</value></data>
-  <data name="Loading" xml:space="preserve"><value>로딩 중...</value></data>
-  <data name="NoDataFound" xml:space="preserve"><value>데이터가 없습니다</value></data>
-  <data name="ProcessingComplete" xml:space="preserve"><value>처리 완료</value></data>
-  <data name="NSP" xml:space="preserve"><value>NSP</value></data>
-  <data name="NSZ" xml:space="preserve"><value>NSZ</value></data>
-  <data name="XCI" xml:space="preserve"><value>XCI</value></data>
-  <data name="XCZ" xml:space="preserve"><value>XCZ</value></data>
-  <data name="Publisher" xml:space="preserve"><value>퍼블리셔</value></data>
-  <data name="Developer" xml:space="preserve"><value>개발자</value></data>
-  <data name="ReleaseDate" xml:space="preserve"><value>출시일</value></data>
-  <data name="Version" xml:space="preserve"><value>버전</value></data>
-  <data name="Size" xml:space="preserve"><value>크기</value></data>
-  <data name="Type" xml:space="preserve"><value>유형</value></data>
-  <data name="Status" xml:space="preserve"><value>상태</value></data>
-  <data name="Progress" xml:space="preserve"><value>진행률</value></data>
-  <data name="Refresh" xml:space="preserve"><value>새로고침</value></data>
-  <data name="Filter" xml:space="preserve"><value>필터</value></data>
-  <data name="Clear" xml:space="preserve"><value>지우기</value></data>
-  <data name="Reset" xml:space="preserve"><value>재설정</value></data>
-  <data name="Apply" xml:space="preserve"><value>적용</value></data>
-  <data name="Close" xml:space="preserve"><value>닫기</value></data>
-  <data name="Open" xml:space="preserve"><value>열기</value></data>
-  <data name="Download" xml:space="preserve"><value>다운로드</value></data>
-  <data name="Upload" xml:space="preserve"><value>업로드</value></data>
-  <data name="Import" xml:space="preserve"><value>가져오기</value></data>
-  <data name="Export" xml:space="preserve"><value>내보내기</value></data>
-  <data name="ScanLibrary" xml:space="preserve"><value>라이브러리 검색</value></data>
-  <data name="RefreshLibrary" xml:space="preserve"><value>라이브러리 갱신</value></data>
-  <data name="LibraryPath" xml:space="preserve"><value>라이브러리 경로</value></data>
-  <data name="TotalTitles" xml:space="preserve"><value>총 게임 수</value></data>
-  <data name="TotalSize" xml:space="preserve"><value>총 크기</value></data>
-  <data name="GameTitle" xml:space="preserve"><value>게임 제목</value></data>
-  <data name="Description" xml:space="preserve"><value>설명</value></data>
-  <data name="Screenshots" xml:space="preserve"><value>스크린샷</value></data>
-  <data name="Icon" xml:space="preserve"><value>아이콘</value></data>
-  <data name="Rating" xml:space="preserve"><value>등급</value></data>
-  <data name="Players" xml:space="preserve"><value>플레이어</value></data>
-  <data name="FileName" xml:space="preserve"><value>파일명</value></data>
-  <data name="FilePath" xml:space="preserve"><value>파일 경로</value></data>
-  <data name="FileSize" xml:space="preserve"><value>파일 크기</value></data>
-  <data name="LastModified" xml:space="preserve"><value>마지막 수정</value></data>
-  <data name="Created" xml:space="preserve"><value>생성됨</value></data>
-  <data name="GeneralSettings" xml:space="preserve"><value>일반 설정</value></data>
-  <data name="LibrarySettings" xml:space="preserve"><value>라이브러리 설정</value></data>
-  <data name="FtpSettings" xml:space="preserve"><value>FTP 설정</value></data>
-  <data name="AdvancedSettings" xml:space="preserve"><value>고급 설정</value></data>
-  <data name="FtpServer" xml:space="preserve"><value>FTP 서버</value></data>
-  <data name="Username" xml:space="preserve"><value>사용자명</value></data>
-  <data name="Password" xml:space="preserve"><value>비밀번호</value></data>
-  <data name="Port" xml:space="preserve"><value>포트</value></data>
-  <data name="Connect" xml:space="preserve"><value>연결</value></data>
-  <data name="Disconnect" xml:space="preserve"><value>연결 해제</value></data>
-  <data name="Connected" xml:space="preserve"><value>연결됨</value></data>
-  <data name="Disconnected" xml:space="preserve"><value>연결 해제됨</value></data>
-  <data name="TaskName" xml:space="preserve"><value>작업명</value></data>
-  <data name="StartTime" xml:space="preserve"><value>시작 시간</value></data>
-  <data name="EndTime" xml:space="preserve"><value>종료 시간</value></data>
-  <data name="Duration" xml:space="preserve"><value>소요 시간</value></data>
-  <data name="Completed" xml:space="preserve"><value>완료됨</value></data>
-  <data name="Failed" xml:space="preserve"><value>실패</value></data>
-  <data name="Running" xml:space="preserve"><value>실행 중</value></data>
-  <data name="Pending" xml:space="preserve"><value>대기 중</value></data>
-  <data name="CreateCollection" xml:space="preserve"><value>새 컬렉션</value></data>
-  <data name="CollectionName" xml:space="preserve"><value>컬렉션 이름</value></data>
-  <data name="AddToCollection" xml:space="preserve"><value>컬렉션 추가</value></data>
-  <data name="RemoveFromCollection" xml:space="preserve"><value>컬렉션 제거</value></data>
-  <data name="FieldRequired" xml:space="preserve"><value>필수 입력 항목</value></data>
-  <data name="InvalidPath" xml:space="preserve"><value>잘못된 경로</value></data>
-  <data name="PathNotFound" xml:space="preserve"><value>경로를 찾을 수 없음</value></data>
-  <data name="InvalidFormat" xml:space="preserve"><value>잘못된 형식</value></data>
-  <data name="Help" xml:space="preserve"><value>도움말</value></data>
-  <data name="About" xml:space="preserve"><value>정보</value></data>
-  <data name="Documentation" xml:space="preserve"><value>사용법</value></data>
-  <data name="LibraryTitles" xml:space="preserve"><value>라이브러리 게임 목록</value></data>
-  <data name="AreYouSure" xml:space="preserve"><value>계속하시겠습니까?</value></data>
-  <data name="ConfirmDelete" xml:space="preserve"><value>이 항목을 삭제하시겠습니까?</value></data>
-  <data name="ConfirmRename" xml:space="preserve"><value>파일 이름을 변경하시겠습니까?</value></data>
-  <data name="Yes" xml:space="preserve"><value>예</value></data>
-  <data name="No" xml:space="preserve"><value>아니오</value></data>
-  <data name="FilterNameTitleId" xml:space="preserve"><value>Title Id 또는 이름으로 검색</value></data>
-  <data name="DatabasePath" xml:space="preserve"><value>데이터베이스 경로</value></data>
-  <data name="ExportUserData" xml:space="preserve"><value>사용자 데이터 내보내기</value></data>
-  <data name="ImportUserData" xml:space="preserve"><value>사용자 데이터 가져오기</value></data>
-  <data name="Keys" xml:space="preserve"><value>키 파일</value></data>
-  <data name="ProdKeysFile" xml:space="preserve"><value>Prod Keys 파일</value></data>
-  <data name="TitleKeysFile" xml:space="preserve"><value>Title Keys 파일</value></data>
-  <data name="ConsoleKeysFile" xml:space="preserve"><value>Console Keys 파일</value></data>
-  <data name="DragAndDropKeys" xml:space="preserve"><value>키 파일을 드래그하거나 클릭하여 선택</value></data>
-  <data name="RemoveCurrentKeys" xml:space="preserve"><value>현재 키 파일 제거</value></data>
-  <data name="Paths" xml:space="preserve"><value>경로 설정</value></data>
-  <data name="BackupPath" xml:space="preserve"><value>백업 경로</value></data>
-  <data name="AddNewLibraryPath" xml:space="preserve"><value>새 라이브러리 경로 추가</value></data>
-  <data name="Recursive" xml:space="preserve"><value>하위 폴더 포함</value></data>
-  <data name="Collection" xml:space="preserve"><value>컬렉션</value></data>
-  <data name="SelectCollection" xml:space="preserve"><value>컬렉션 선택</value></data>
-  <data name="LibrarySettingsDesc" xml:space="preserve"><value>여러 위치의 라이브러리를 관리하려면 각 폴더를 개별적으로 추가하세요.
+  <data name="Dashboard" xml:space="preserve">
+    <value>대시보드</value>
+  </data>
+  <data name="Games" xml:space="preserve">
+    <value>게임</value>
+  </data>
+  <data name="Library" xml:space="preserve">
+    <value>라이브러리</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>설정</value>
+  </data>
+  <data name="TitleDb" xml:space="preserve">
+    <value>타이틀 DB</value>
+  </data>
+  <data name="FileOrganizer" xml:space="preserve">
+    <value>파일 정리</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>저장</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>취소</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>삭제</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>편집</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>추가</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>검색</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>제목</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>이름</value>
+  </data>
+  <data name="Category" xml:space="preserve">
+    <value>카테고리</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>언어</value>
+  </data>
+  <data name="Region" xml:space="preserve">
+    <value>지역</value>
+  </data>
+  <data name="English" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="Korean" xml:space="preserve">
+    <value>한국어</value>
+  </data>
+  <data name="SelectLanguage" xml:space="preserve">
+    <value>언어 선택</value>
+  </data>
+  <data name="BundleRenamer" xml:space="preserve">
+    <value>번들 이름 일괄변경</value>
+  </data>
+  <data name="PackageRenamer" xml:space="preserve">
+    <value>패키지 이름 일괄변경</value>
+  </data>
+  <data name="CollectionRenamer" xml:space="preserve">
+    <value>컬렉션 이름 일괄변경</value>
+  </data>
+  <data name="DuplicateTitles" xml:space="preserve">
+    <value>중복 게임 목록</value>
+  </data>
+  <data name="MissingUpdates" xml:space="preserve">
+    <value>업데이트 누락 목록</value>
+  </data>
+  <data name="MissingDlc" xml:space="preserve">
+    <value>DLC 누락 목록</value>
+  </data>
+  <data name="MissingDlcUpdates" xml:space="preserve">
+    <value>DLC 업데이트 누락 목록</value>
+  </data>
+  <data name="Collections" xml:space="preserve">
+    <value>컬렉션</value>
+  </data>
+  <data name="FtpStatus" xml:space="preserve">
+    <value>FTP 상태</value>
+  </data>
+  <data name="TaskStatus" xml:space="preserve">
+    <value>작업 상태</value>
+  </data>
+  <data name="Renamer" xml:space="preserve">
+    <value>이름 변경</value>
+  </data>
+  <data name="Configuration" xml:space="preserve">
+    <value>옵션</value>
+  </data>
+  <data name="ScanInputFolder" xml:space="preserve">
+    <value>폴더 검색</value>
+  </data>
+  <data name="RenameFiles" xml:space="preserve">
+    <value>파일명 일괄변경</value>
+  </data>
+  <data name="InputPath" xml:space="preserve">
+    <value>입력 경로</value>
+  </data>
+  <data name="OutputPath" xml:space="preserve">
+    <value>출력 경로</value>
+  </data>
+  <data name="SourceFile" xml:space="preserve">
+    <value>원본 파일</value>
+  </data>
+  <data name="Destination" xml:space="preserve">
+    <value>대상</value>
+  </data>
+  <data name="TitleId" xml:space="preserve">
+    <value>타이틀 ID</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>오류</value>
+  </data>
+  <data name="ErrorMessage" xml:space="preserve">
+    <value>오류 내용</value>
+  </data>
+  <data name="Input" xml:space="preserve">
+    <value>입력</value>
+  </data>
+  <data name="Output" xml:space="preserve">
+    <value>출력</value>
+  </data>
+  <data name="BasePath" xml:space="preserve">
+    <value>기본 경로</value>
+  </data>
+  <data name="Application" xml:space="preserve">
+    <value>애플리케이션</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>업데이트</value>
+  </data>
+  <data name="DLCs" xml:space="preserve">
+    <value>DLC</value>
+  </data>
+  <data name="UnknownPlaceholder" xml:space="preserve">
+    <value>알 수 없음 표시</value>
+  </data>
+  <data name="DeleteEmptyFoldersAfterRename" xml:space="preserve">
+    <value>빈 폴더 자동 삭제</value>
+  </data>
+  <data name="RecursiveSubdirectories" xml:space="preserve">
+    <value>하위 폴더 포함</value>
+  </data>
+  <data name="TryToUseEnglishNaming" xml:space="preserve">
+    <value>영어 제목 우선 사용</value>
+  </data>
+  <data name="TitleNameAndAppNameToTitleCase" xml:space="preserve">
+    <value>제목 첫글자 대문자로</value>
+  </data>
+  <data name="TemplateFields" xml:space="preserve">
+    <value>파일명 형식</value>
+  </data>
+  <data name="FileOrganizerByBundle" xml:space="preserve">
+    <value>번들 단위 파일 정리</value>
+  </data>
+  <data name="FileOrganizerByPackage" xml:space="preserve">
+    <value>패키지 단위 파일 정리</value>
+  </data>
+  <data name="List" xml:space="preserve">
+    <value>목록</value>
+  </data>
+  <data name="Card" xml:space="preserve">
+    <value>카드</value>
+  </data>
+  <data name="Grid" xml:space="preserve">
+    <value>그리드</value>
+  </data>
+  <data name="Loading" xml:space="preserve">
+    <value>로딩 중...</value>
+  </data>
+  <data name="NoDataFound" xml:space="preserve">
+    <value>데이터가 없습니다</value>
+  </data>
+  <data name="ProcessingComplete" xml:space="preserve">
+    <value>처리 완료</value>
+  </data>
+  <data name="NSP" xml:space="preserve">
+    <value>NSP</value>
+  </data>
+  <data name="NSZ" xml:space="preserve">
+    <value>NSZ</value>
+  </data>
+  <data name="XCI" xml:space="preserve">
+    <value>XCI</value>
+  </data>
+  <data name="XCZ" xml:space="preserve">
+    <value>XCZ</value>
+  </data>
+  <data name="Publisher" xml:space="preserve">
+    <value>퍼블리셔</value>
+  </data>
+  <data name="Developer" xml:space="preserve">
+    <value>개발자</value>
+  </data>
+  <data name="ReleaseDate" xml:space="preserve">
+    <value>출시일</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>버전</value>
+  </data>
+  <data name="Size" xml:space="preserve">
+    <value>크기</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>유형</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>상태</value>
+  </data>
+  <data name="Progress" xml:space="preserve">
+    <value>진행률</value>
+  </data>
+  <data name="Refresh" xml:space="preserve">
+    <value>새로고침</value>
+  </data>
+  <data name="Filter" xml:space="preserve">
+    <value>필터</value>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>지우기</value>
+  </data>
+  <data name="Reset" xml:space="preserve">
+    <value>재설정</value>
+  </data>
+  <data name="Apply" xml:space="preserve">
+    <value>적용</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>닫기</value>
+  </data>
+  <data name="Open" xml:space="preserve">
+    <value>열기</value>
+  </data>
+  <data name="Download" xml:space="preserve">
+    <value>다운로드</value>
+  </data>
+  <data name="Upload" xml:space="preserve">
+    <value>업로드</value>
+  </data>
+  <data name="Import" xml:space="preserve">
+    <value>가져오기</value>
+  </data>
+  <data name="Export" xml:space="preserve">
+    <value>내보내기</value>
+  </data>
+  <data name="ScanLibrary" xml:space="preserve">
+    <value>라이브러리 검색</value>
+  </data>
+  <data name="RefreshLibrary" xml:space="preserve">
+    <value>라이브러리 갱신</value>
+  </data>
+  <data name="LibraryPath" xml:space="preserve">
+    <value>라이브러리 경로</value>
+  </data>
+  <data name="TotalTitles" xml:space="preserve">
+    <value>총 게임 수</value>
+  </data>
+  <data name="TotalSize" xml:space="preserve">
+    <value>총 크기</value>
+  </data>
+  <data name="GameTitle" xml:space="preserve">
+    <value>게임 제목</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>설명</value>
+  </data>
+  <data name="Screenshots" xml:space="preserve">
+    <value>스크린샷</value>
+  </data>
+  <data name="Icon" xml:space="preserve">
+    <value>아이콘</value>
+  </data>
+  <data name="Rating" xml:space="preserve">
+    <value>등급</value>
+  </data>
+  <data name="Players" xml:space="preserve">
+    <value>플레이어</value>
+  </data>
+  <data name="FileName" xml:space="preserve">
+    <value>파일명</value>
+  </data>
+  <data name="FilePath" xml:space="preserve">
+    <value>파일 경로</value>
+  </data>
+  <data name="FileSize" xml:space="preserve">
+    <value>파일 크기</value>
+  </data>
+  <data name="LastModified" xml:space="preserve">
+    <value>마지막 수정</value>
+  </data>
+  <data name="Created" xml:space="preserve">
+    <value>생성됨</value>
+  </data>
+  <data name="GeneralSettings" xml:space="preserve">
+    <value>일반 설정</value>
+  </data>
+  <data name="LibrarySettings" xml:space="preserve">
+    <value>라이브러리 설정</value>
+  </data>
+  <data name="FtpSettings" xml:space="preserve">
+    <value>FTP 설정</value>
+  </data>
+  <data name="AdvancedSettings" xml:space="preserve">
+    <value>고급 설정</value>
+  </data>
+  <data name="FtpServer" xml:space="preserve">
+    <value>FTP 서버</value>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>사용자명</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>비밀번호</value>
+  </data>
+  <data name="Port" xml:space="preserve">
+    <value>포트</value>
+  </data>
+  <data name="Connect" xml:space="preserve">
+    <value>연결</value>
+  </data>
+  <data name="Disconnect" xml:space="preserve">
+    <value>연결 해제</value>
+  </data>
+  <data name="Connected" xml:space="preserve">
+    <value>연결됨</value>
+  </data>
+  <data name="Disconnected" xml:space="preserve">
+    <value>연결 해제됨</value>
+  </data>
+  <data name="TaskName" xml:space="preserve">
+    <value>작업명</value>
+  </data>
+  <data name="StartTime" xml:space="preserve">
+    <value>시작 시간</value>
+  </data>
+  <data name="EndTime" xml:space="preserve">
+    <value>종료 시간</value>
+  </data>
+  <data name="Duration" xml:space="preserve">
+    <value>소요 시간</value>
+  </data>
+  <data name="Completed" xml:space="preserve">
+    <value>완료됨</value>
+  </data>
+  <data name="Failed" xml:space="preserve">
+    <value>실패</value>
+  </data>
+  <data name="Running" xml:space="preserve">
+    <value>실행 중</value>
+  </data>
+  <data name="Pending" xml:space="preserve">
+    <value>대기 중</value>
+  </data>
+  <data name="CreateCollection" xml:space="preserve">
+    <value>새 컬렉션</value>
+  </data>
+  <data name="CollectionName" xml:space="preserve">
+    <value>컬렉션 이름</value>
+  </data>
+  <data name="AddToCollection" xml:space="preserve">
+    <value>컬렉션 추가</value>
+  </data>
+  <data name="RemoveFromCollection" xml:space="preserve">
+    <value>컬렉션 제거</value>
+  </data>
+  <data name="FieldRequired" xml:space="preserve">
+    <value>필수 입력 항목</value>
+  </data>
+  <data name="InvalidPath" xml:space="preserve">
+    <value>잘못된 경로</value>
+  </data>
+  <data name="PathNotFound" xml:space="preserve">
+    <value>경로를 찾을 수 없음</value>
+  </data>
+  <data name="InvalidFormat" xml:space="preserve">
+    <value>잘못된 형식</value>
+  </data>
+  <data name="Help" xml:space="preserve">
+    <value>도움말</value>
+  </data>
+  <data name="About" xml:space="preserve">
+    <value>정보</value>
+  </data>
+  <data name="Documentation" xml:space="preserve">
+    <value>사용법</value>
+  </data>
+  <data name="LibraryTitles" xml:space="preserve">
+    <value>라이브러리 게임 목록</value>
+  </data>
+  <data name="AreYouSure" xml:space="preserve">
+    <value>계속하시겠습니까?</value>
+  </data>
+  <data name="ConfirmDelete" xml:space="preserve">
+    <value>이 항목을 삭제하시겠습니까?</value>
+  </data>
+  <data name="ConfirmRename" xml:space="preserve">
+    <value>파일 이름을 변경하시겠습니까?</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>예</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>아니오</value>
+  </data>
+  <data name="FilterNameTitleId" xml:space="preserve">
+    <value>Title Id 또는 이름으로 검색</value>
+  </data>
+  <data name="DatabasePath" xml:space="preserve">
+    <value>데이터베이스 경로</value>
+  </data>
+  <data name="ExportUserData" xml:space="preserve">
+    <value>사용자 데이터 내보내기</value>
+  </data>
+  <data name="ImportUserData" xml:space="preserve">
+    <value>사용자 데이터 가져오기</value>
+  </data>
+  <data name="Keys" xml:space="preserve">
+    <value>키 파일</value>
+  </data>
+  <data name="ProdKeysFile" xml:space="preserve">
+    <value>Prod Keys 파일</value>
+  </data>
+  <data name="TitleKeysFile" xml:space="preserve">
+    <value>Title Keys 파일</value>
+  </data>
+  <data name="ConsoleKeysFile" xml:space="preserve">
+    <value>Console Keys 파일</value>
+  </data>
+  <data name="DragAndDropKeys" xml:space="preserve">
+    <value>키 파일을 드래그하거나 클릭하여 선택</value>
+  </data>
+  <data name="RemoveCurrentKeys" xml:space="preserve">
+    <value>현재 키 파일 제거</value>
+  </data>
+  <data name="Paths" xml:space="preserve">
+    <value>경로 설정</value>
+  </data>
+  <data name="BackupPath" xml:space="preserve">
+    <value>백업 경로</value>
+  </data>
+  <data name="AddNewLibraryPath" xml:space="preserve">
+    <value>새 라이브러리 경로 추가</value>
+  </data>
+  <data name="Recursive" xml:space="preserve">
+    <value>하위 폴더 포함</value>
+  </data>
+  <data name="Collection" xml:space="preserve">
+    <value>컬렉션</value>
+  </data>
+  <data name="SelectCollection" xml:space="preserve">
+    <value>컬렉션 선택</value>
+  </data>
+  <data name="LibrarySettingsDesc" xml:space="preserve">
+    <value>여러 위치의 라이브러리를 관리하려면 각 폴더를 개별적으로 추가하세요.
  선택적으로 특정 컬렉션을 폴더 위치에 할당할 수 있습니다. 해당 위치에 추가된 파일은 자동으로 해당 컬렉션에 포함됩니다.
- 라이브러리에 최소 하나의 폴더는 추가되어야 합니다.</value></data>
-  <data name="LibrarySettingsTitle" xml:space="preserve"><value>라이브러리 설정</value></data>
-  <data name="ClearPersistentTitles" xml:space="preserve"><value>지속 타이틀 데이터 지우기</value></data>
-  <data name="LibraryEventsWebhooks" xml:space="preserve"><value>라이브러리 이벤트 웹훅</value></data>
-  <data name="LibraryReloadWebhook" xml:space="preserve"><value>라이브러리 다시 로드 웹훅</value></data>
-  <data name="LibraryRefreshWebhook" xml:space="preserve"><value>라이브러리 새로고침 웹훅</value></data>
-  <data name="WebhookURL" xml:space="preserve"><value>웹훅 URL</value></data>
-  <data name="RequestMethod" xml:space="preserve"><value>요청 방법</value></data>
-  <data name="DownloadSettings" xml:space="preserve"><value>다운로드 설정</value></data>
-  <data name="TitleDbUrl" xml:space="preserve"><value>TitleDb URL</value></data>
-  <data name="TitleDbVersion" xml:space="preserve"><value>TitleDb 버전</value></data>
-  <data name="TitleDbPath" xml:space="preserve"><value>Title Db 경로</value></data>
-  <data name="Misc" xml:space="preserve"><value>기타</value></data>
-  <data name="UITheme" xml:space="preserve"><value>UI 테마</value></data>
-  <data name="SaveConfiguration" xml:space="preserve"><value>설정 저장</value></data>
-  <data name="DefaultConfigurationCreated" xml:space="preserve"><value>기본 설정이 생성되었습니다</value></data>
-  <data name="OnlyUserDataExported" xml:space="preserve"><value>사용자 데이터만 내보내집니다 (평점, 컬렉션)</value></data>
-  <data name="DatabaseChangeWarning" xml:space="preserve"><value>앱이 실행 중일 때는 데이터베이스를 변경할 수 없습니다.
- config.json에서 변경하고 앱을 다시 시작하세요.</value></data>
-  <data name="KeysDescription" xml:space="preserve"><value>누락된 키는 기존 키에서 파생됩니다.
- 키는 nsp 패키지를 읽는 데 필요하며, 키가 제공되지 않으면 시스템은 경로에서 키를 로드하려고 시도합니다.
- 키를 찾을 수 없으면 파일 이름을 사용하여 titledb에서 타이틀 정보를 가져오지만, 타이틀을 식별해야 하는 모든 작업이 제한됩니다.
- 대부분의 경우 prod.keys만으로도 패키지 정보를 얻을 수 있습니다.</value></data>
-  <data name="BackupPathDescription" xml:space="preserve"><value>중복 제거 시 삭제된 파일이 배치될 위치입니다.</value></data>
-  <data name="WebhookUrlDescription" xml:space="preserve"><value>스키마(http 또는 https), 포트, 사용자 정보 등을 포함한 완전한 URI를 사용하세요.</value></data>
-  <data name="TitleDbUrlDescription" xml:space="preserve"><value>SQL-TitleDb를 가져올 위치입니다.</value></data>
-  <data name="TitleDbVersionDescription" xml:space="preserve"><value>SQL-Titledb의 버전 파일 URL입니다.</value></data>
-  <data name="TitleDbPathDescription" xml:space="preserve"><value>SQL-TitleDb의 위치입니다.</value></data>
-  <data name="DuplicatesBase" xml:space="preserve"><value>중복 기본 게임</value></data>
-  <data name="DuplicatesUpdates" xml:space="preserve"><value>중복 업데이트</value></data>
-  <data name="DuplicatesDLC" xml:space="preserve"><value>중복 DLC</value></data>
-  <data name="DeleteSelectedTitles" xml:space="preserve"><value>선택된 타이틀 삭제</value></data>
-  <data name="BackupPathLabel" xml:space="preserve"><value>백업 경로:</value></data>
-  <data name="Id" xml:space="preserve"><value>ID</value></data>
-  <data name="ScanLibraryTitles" xml:space="preserve"><value>라이브러리 타이틀 검색</value></data>
-  <data name="InputPathLabel" xml:space="preserve"><value>입력 경로:</value></data>
-  <data name="OutputPathLabel" xml:space="preserve"><value>출력 경로:</value></data>
-  <data name="FileOrganizerByCollection" xml:space="preserve"><value>컬렉션별 파일 정리</value></data>
-  <data name="InputPathLibraryPath" xml:space="preserve"><value>입력 경로 (라이브러리 경로)</value></data>
-  <data name="UnknownPlaceholderDescription" xml:space="preserve"><value>파일 이름을 변경할 때 빈 TitleName 또는 AppName을 대체하는 데 사용됩니다.</value></data>
-  <data name="BasePathLibraryPath" xml:space="preserve"><value>기본 경로 (라이브러리 경로)</value></data>
-  <data name="DefaultConfiguration" xml:space="preserve"><value>기본 설정</value></data>
-  <data name="ValidateConfiguration" xml:space="preserve"><value>설정 검증</value></data>
-  <data name="Before" xml:space="preserve"><value>변경 전:</value></data>
-  <data name="After" xml:space="preserve"><value>변경 후:</value></data>
-  <data name="BasicInfo" xml:space="preserve"><value>기본 정보</value></data>
-  <data name="NSPPaths" xml:space="preserve"><value>NSP 경로</value></data>
-  <data name="NSZPaths" xml:space="preserve"><value>NSZ 경로</value></data>
-  <data name="XCIPaths" xml:space="preserve"><value>XCI 경로</value></data>
-  <data name="XCZPaths" xml:space="preserve"><value>XCZ 경로</value></data>
-  <data name="Base" xml:space="preserve"><value>기본</value></data>
-  <data name="DLC" xml:space="preserve"><value>DLC</value></data>
-  <data name="AddNewCollection" xml:space="preserve"><value>새 컬렉션 추가</value></data>
-  <data name="CollectionID" xml:space="preserve"><value>컬렉션 ID</value></data>
-  <data name="TitlesInCollection" xml:space="preserve"><value>컬렉션 내 타이틀</value></data>
-  <data name="BaseTitles" xml:space="preserve"><value>기본 타이틀</value></data>
-  <data name="DLCTitles" xml:space="preserve"><value>DLC 타이틀</value></data>
-  <data name="UpdateTitles" xml:space="preserve"><value>업데이트 타이틀</value></data>
-  <data name="NameIsRequired" xml:space="preserve"><value>이름은 필수입니다</value></data>
-  <data name="GamesByCategory" xml:space="preserve"><value>카테고리별 게임</value></data>
-  <data name="ContentDistribution" xml:space="preserve"><value>콘텐츠 분포</value></data>
-  <data name="Content" xml:space="preserve"><value>콘텐츠</value></data>
-  <data name="PackageTypeDistribution" xml:space="preserve"><value>패키지 유형 분포</value></data>
-  <data name="TopPublishers" xml:space="preserve"><value>상위 퍼블리셔</value></data>
-  <data name="TransferId" xml:space="preserve"><value>전송 ID</value></data>
-  <data name="TotalBytes" xml:space="preserve"><value>총 바이트</value></data>
-  <data name="TransferredBytes" xml:space="preserve"><value>전송된 바이트</value></data>
-  <data name="NoQueuedTransfers" xml:space="preserve"><value>대기 중인 전송 없음</value></data>
-  <data name="Actions" xml:space="preserve"><value>작업</value></data>
-  <data name="EditSelected" xml:space="preserve"><value>선택 항목 편집</value></data>
-  <data name="SendSelectedToFTP" xml:space="preserve"><value>선택 항목을 FTP로 전송</value></data>
-  <data name="ClearSelection" xml:space="preserve"><value>선택 해제</value></data>
-  <data name="ReloadLibrary" xml:space="preserve"><value>라이브러리 다시 로드</value></data>
-  <data name="LastUpdated" xml:space="preserve"><value>마지막 업데이트</value></data>
-  <data name="Select" xml:space="preserve"><value>선택</value></data>
-  <data name="OtherApplicationId" xml:space="preserve"><value>기타 애플리케이션 ID</value></data>
-  <data name="AgeRating" xml:space="preserve"><value>연령 등급</value></data>
-  <data name="PackageType" xml:space="preserve"><value>패키지 유형</value></data>
-  <data name="Categories" xml:space="preserve"><value>카테고리</value></data>
-  <data name="DateModified" xml:space="preserve"><value>수정 날짜</value></data>
-  <data name="LatestVersion" xml:space="preserve"><value>최신 버전</value></data>
-  <data name="UserRating" xml:space="preserve"><value>사용자 평점</value></data>
-  <data name="OwnedDlcs" xml:space="preserve"><value>보유 DLC</value></data>
-  <data name="AvailableDlcs" xml:space="preserve"><value>사용 가능한 DLC</value></data>
-  <data name="ShortVersion" xml:space="preserve"><value>짧은 버전</value></data>
-  <data name="ShortLatestVersion" xml:space="preserve"><value>짧은 최신 버전</value></data>
-  <data name="AvailableUpdates" xml:space="preserve"><value>사용 가능한 업데이트</value></data>
-  <data name="OwnedUpdates" xml:space="preserve"><value>보유 업데이트</value></data>
-  <data name="TaskId" xml:space="preserve"><value>작업 ID</value></data>
-  <data name="TaskType" xml:space="preserve"><value>작업 유형</value></data>
-  <data name="CompletedItems" xml:space="preserve"><value>완료된 항목</value></data>
-  <data name="TotalItems" xml:space="preserve"><value>총 항목</value></data>
-  <data name="ReceivedTime" xml:space="preserve"><value>수신 시간</value></data>
-  <data name="CompletionTime" xml:space="preserve"><value>완료 시간</value></data>
-  <data name="CleanupOldTasks" xml:space="preserve"><value>오래된 작업 정리</value></data>
-  <data name="NoQueuedTasks" xml:space="preserve"><value>대기 중인 작업 없음</value></data>
-  <data name="NumberOfPlayers" xml:space="preserve"><value>플레이어 수:</value></data>
-  <data name="Genre" xml:space="preserve"><value>장르:</value></data>
-  <data name="ESRBRating" xml:space="preserve"><value>ESRB 등급:</value></data>
-  <data name="Languages" xml:space="preserve"><value>언어:</value></data>
-  <data name="InLibrary" xml:space="preserve"><value>라이브러리에 있음:</value></data>
-  <data name="ReadMore" xml:space="preserve"><value>더 보기</value></data>
-  <data name="ReadLess" xml:space="preserve"><value>간략히</value></data>
-  <data name="Updates" xml:space="preserve"><value>업데이트</value></data>
-  <data name="Owned" xml:space="preserve"><value>보유</value></data>
-  <data name="Date" xml:space="preserve"><value>날짜</value></data>
-  <data name="DbVersion" xml:space="preserve"><value>DB 버전:</value></data>
-  <data name="ContentType" xml:space="preserve"><value>콘텐츠 유형</value></data>
-  <data name="GamesInLibrary" xml:space="preserve"><value>게임, 업데이트 및 DLC가 라이브러리에 있음</value></data>
-  <data name="RatingContent" xml:space="preserve"><value>등급 내용</value></data>
-  <data name="Available" xml:space="preserve"><value>사용 가능</value></data>
-  <data name="LatestUpdate" xml:space="preserve"><value>최신 업데이트</value></data>
-  <data name="File" xml:space="preserve"><value>파일</value></data>
+라이브러리에 최소 하나의 폴더는 추가되어야 합니다.</value>
+  </data>
+  <data name="LibrarySettingsTitle" xml:space="preserve">
+    <value>라이브러리 설정</value>
+  </data>
+  <data name="ClearPersistentTitles" xml:space="preserve">
+    <value>지속 타이틀 데이터 지우기</value>
+  </data>
+  <data name="LibraryEventsWebhooks" xml:space="preserve">
+    <value>라이브러리 이벤트 웹훅</value>
+  </data>
+  <data name="LibraryReloadWebhook" xml:space="preserve">
+    <value>라이브러리 다시 로드 웹훅</value>
+  </data>
+  <data name="LibraryRefreshWebhook" xml:space="preserve">
+    <value>라이브러리 새로고침 웹훅</value>
+  </data>
+  <data name="WebhookURL" xml:space="preserve">
+    <value>웹훅 URL</value>
+  </data>
+  <data name="RequestMethod" xml:space="preserve">
+    <value>요청 방법</value>
+  </data>
+  <data name="DownloadSettings" xml:space="preserve">
+    <value>다운로드 설정</value>
+  </data>
+  <data name="TitleDbUrl" xml:space="preserve">
+    <value>TitleDb URL</value>
+  </data>
+  <data name="TitleDbVersion" xml:space="preserve">
+    <value>TitleDb 버전</value>
+  </data>
+  <data name="TitleDbPath" xml:space="preserve">
+    <value>Title Db 경로</value>
+  </data>
+  <data name="Misc" xml:space="preserve">
+    <value>기타</value>
+  </data>
+  <data name="UITheme" xml:space="preserve">
+    <value>UI 테마</value>
+  </data>
+  <data name="SaveConfiguration" xml:space="preserve">
+    <value>설정 저장</value>
+  </data>
+  <data name="DefaultConfigurationCreated" xml:space="preserve">
+    <value>기본 설정이 생성되었습니다</value>
+  </data>
+  <data name="OnlyUserDataExported" xml:space="preserve">
+    <value>사용자 데이터만 내보내집니다 (평점, 컬렉션)</value>
+  </data>
+  <data name="DatabaseChangeWarning" xml:space="preserve">
+    <value>앱이 실행 중일 때는 데이터베이스를 변경할 수 없습니다.
+ config.json에서 변경하고 앱을 다시 시작하세요.</value>
+  </data>
+  <data name="KeysDescription" xml:space="preserve">
+    <value>누락된 키는 기존 키에서 파생됩니다.
+키는 nsp 패키지를 읽는 데 필요하며, 키가 제공되지 않으면 시스템은 경로에서 키를 로드하려고 시도합니다.
+키를 찾을 수 없으면 파일 이름을 사용하여 titledb에서 타이틀 정보를 가져오지만, 타이틀을 식별해야 하는 모든 작업이 제한됩니다.
+대부분의 경우 prod.keys만으로도 패키지 정보를 얻을 수 있습니다.</value>
+  </data>
+  <data name="BackupPathDescription" xml:space="preserve">
+    <value>중복 제거 시 삭제된 파일이 배치될 위치입니다.</value>
+  </data>
+  <data name="WebhookUrlDescription" xml:space="preserve">
+    <value>스키마(http 또는 https), 포트, 사용자 정보 등을 포함한 완전한 URI를 사용하세요.</value>
+  </data>
+  <data name="TitleDbUrlDescription" xml:space="preserve">
+    <value>SQL-TitleDb를 가져올 위치입니다.</value>
+  </data>
+  <data name="TitleDbVersionDescription" xml:space="preserve">
+    <value>SQL-Titledb의 버전 파일 URL입니다.</value>
+  </data>
+  <data name="TitleDbPathDescription" xml:space="preserve">
+    <value>SQL-TitleDb의 위치입니다.</value>
+  </data>
+  <data name="DuplicatesBase" xml:space="preserve">
+    <value>중복 기본 게임</value>
+  </data>
+  <data name="DuplicatesUpdates" xml:space="preserve">
+    <value>중복 업데이트</value>
+  </data>
+  <data name="DuplicatesDLC" xml:space="preserve">
+    <value>중복 DLC</value>
+  </data>
+  <data name="DeleteSelectedTitles" xml:space="preserve">
+    <value>선택된 타이틀 삭제</value>
+  </data>
+  <data name="BackupPathLabel" xml:space="preserve">
+    <value>백업 경로:</value>
+  </data>
+  <data name="Id" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="ScanLibraryTitles" xml:space="preserve">
+    <value>라이브러리 타이틀 검색</value>
+  </data>
+  <data name="InputPathLabel" xml:space="preserve">
+    <value>입력 경로:</value>
+  </data>
+  <data name="OutputPathLabel" xml:space="preserve">
+    <value>출력 경로:</value>
+  </data>
+  <data name="FileOrganizerByCollection" xml:space="preserve">
+    <value>컬렉션별 파일 정리</value>
+  </data>
+  <data name="InputPathLibraryPath" xml:space="preserve">
+    <value>입력 경로 (라이브러리 경로)</value>
+  </data>
+  <data name="UnknownPlaceholderDescription" xml:space="preserve">
+    <value>파일 이름을 변경할 때 빈 TitleName 또는 AppName을 대체하는 데 사용됩니다.</value>
+  </data>
+  <data name="BasePathLibraryPath" xml:space="preserve">
+    <value>기본 경로 (라이브러리 경로)</value>
+  </data>
+  <data name="DefaultConfiguration" xml:space="preserve">
+    <value>기본 설정</value>
+  </data>
+  <data name="ValidateConfiguration" xml:space="preserve">
+    <value>설정 검증</value>
+  </data>
+  <data name="Before" xml:space="preserve">
+    <value>변경 전:</value>
+  </data>
+  <data name="After" xml:space="preserve">
+    <value>변경 후:</value>
+  </data>
+  <data name="BasicInfo" xml:space="preserve">
+    <value>기본 정보</value>
+  </data>
+  <data name="NSPPaths" xml:space="preserve">
+    <value>NSP 경로</value>
+  </data>
+  <data name="NSZPaths" xml:space="preserve">
+    <value>NSZ 경로</value>
+  </data>
+  <data name="XCIPaths" xml:space="preserve">
+    <value>XCI 경로</value>
+  </data>
+  <data name="XCZPaths" xml:space="preserve">
+    <value>XCZ 경로</value>
+  </data>
+  <data name="Base" xml:space="preserve">
+    <value>기본</value>
+  </data>
+  <data name="DLC" xml:space="preserve">
+    <value>DLC</value>
+  </data>
+  <data name="AddNewCollection" xml:space="preserve">
+    <value>새 컬렉션 추가</value>
+  </data>
+  <data name="CollectionID" xml:space="preserve">
+    <value>컬렉션 ID</value>
+  </data>
+  <data name="TitlesInCollection" xml:space="preserve">
+    <value>컬렉션 내 타이틀</value>
+  </data>
+  <data name="BaseTitles" xml:space="preserve">
+    <value>기본 타이틀</value>
+  </data>
+  <data name="DLCTitles" xml:space="preserve">
+    <value>DLC 타이틀</value>
+  </data>
+  <data name="UpdateTitles" xml:space="preserve">
+    <value>업데이트 타이틀</value>
+  </data>
+  <data name="NameIsRequired" xml:space="preserve">
+    <value>이름은 필수입니다</value>
+  </data>
+  <data name="GamesByCategory" xml:space="preserve">
+    <value>카테고리별 게임</value>
+  </data>
+  <data name="ContentDistribution" xml:space="preserve">
+    <value>콘텐츠 분포</value>
+  </data>
+  <data name="Content" xml:space="preserve">
+    <value>콘텐츠</value>
+  </data>
+  <data name="PackageTypeDistribution" xml:space="preserve">
+    <value>패키지 유형 분포</value>
+  </data>
+  <data name="TopPublishers" xml:space="preserve">
+    <value>상위 퍼블리셔</value>
+  </data>
+  <data name="TransferId" xml:space="preserve">
+    <value>전송 ID</value>
+  </data>
+  <data name="TotalBytes" xml:space="preserve">
+    <value>총 바이트</value>
+  </data>
+  <data name="TransferredBytes" xml:space="preserve">
+    <value>전송된 바이트</value>
+  </data>
+  <data name="NoQueuedTransfers" xml:space="preserve">
+    <value>대기 중인 전송 없음</value>
+  </data>
+  <data name="Actions" xml:space="preserve">
+    <value>작업</value>
+  </data>
+  <data name="EditSelected" xml:space="preserve">
+    <value>선택 항목 편집</value>
+  </data>
+  <data name="SendSelectedToFTP" xml:space="preserve">
+    <value>선택 항목을 FTP로 전송</value>
+  </data>
+  <data name="ClearSelection" xml:space="preserve">
+    <value>선택 해제</value>
+  </data>
+  <data name="ReloadLibrary" xml:space="preserve">
+    <value>라이브러리 다시 로드</value>
+  </data>
+  <data name="LastUpdated" xml:space="preserve">
+    <value>마지막 업데이트</value>
+  </data>
+  <data name="Select" xml:space="preserve">
+    <value>선택</value>
+  </data>
+  <data name="OtherApplicationId" xml:space="preserve">
+    <value>기타 애플리케이션 ID</value>
+  </data>
+  <data name="AgeRating" xml:space="preserve">
+    <value>연령 등급</value>
+  </data>
+  <data name="PackageType" xml:space="preserve">
+    <value>패키지 유형</value>
+  </data>
+  <data name="Categories" xml:space="preserve">
+    <value>카테고리</value>
+  </data>
+  <data name="DateModified" xml:space="preserve">
+    <value>수정 날짜</value>
+  </data>
+  <data name="LatestVersion" xml:space="preserve">
+    <value>최신 버전</value>
+  </data>
+  <data name="UserRating" xml:space="preserve">
+    <value>사용자 평점</value>
+  </data>
+  <data name="OwnedDlcs" xml:space="preserve">
+    <value>보유 DLC</value>
+  </data>
+  <data name="AvailableDlcs" xml:space="preserve">
+    <value>사용 가능한 DLC</value>
+  </data>
+  <data name="ShortVersion" xml:space="preserve">
+    <value>짧은 버전</value>
+  </data>
+  <data name="ShortLatestVersion" xml:space="preserve">
+    <value>짧은 최신 버전</value>
+  </data>
+  <data name="AvailableUpdates" xml:space="preserve">
+    <value>사용 가능한 업데이트</value>
+  </data>
+  <data name="OwnedUpdates" xml:space="preserve">
+    <value>보유 업데이트</value>
+  </data>
+  <data name="TaskId" xml:space="preserve">
+    <value>작업 ID</value>
+  </data>
+  <data name="TaskType" xml:space="preserve">
+    <value>작업 유형</value>
+  </data>
+  <data name="CompletedItems" xml:space="preserve">
+    <value>완료된 항목</value>
+  </data>
+  <data name="TotalItems" xml:space="preserve">
+    <value>총 항목</value>
+  </data>
+  <data name="ReceivedTime" xml:space="preserve">
+    <value>수신 시간</value>
+  </data>
+  <data name="CompletionTime" xml:space="preserve">
+    <value>완료 시간</value>
+  </data>
+  <data name="CleanupOldTasks" xml:space="preserve">
+    <value>오래된 작업 정리</value>
+  </data>
+  <data name="NoQueuedTasks" xml:space="preserve">
+    <value>대기 중인 작업 없음</value>
+  </data>
+  <data name="NumberOfPlayers" xml:space="preserve">
+    <value>플레이어 수:</value>
+  </data>
+  <data name="Genre" xml:space="preserve">
+    <value>장르:</value>
+  </data>
+  <data name="ESRBRating" xml:space="preserve">
+    <value>ESRB 등급:</value>
+  </data>
+  <data name="Languages" xml:space="preserve">
+    <value>언어:</value>
+  </data>
+  <data name="InLibrary" xml:space="preserve">
+    <value>라이브러리에 있음:</value>
+  </data>
+  <data name="ReadMore" xml:space="preserve">
+    <value>더 보기</value>
+  </data>
+  <data name="ReadLess" xml:space="preserve">
+    <value>간략히</value>
+  </data>
+  <data name="Updates" xml:space="preserve">
+    <value>업데이트</value>
+  </data>
+  <data name="Owned" xml:space="preserve">
+    <value>보유</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>날짜</value>
+  </data>
+  <data name="DbVersion" xml:space="preserve">
+    <value>DB 버전:</value>
+  </data>
+  <data name="ContentType" xml:space="preserve">
+    <value>콘텐츠 유형</value>
+  </data>
+  <data name="GamesInLibrary" xml:space="preserve">
+    <value>게임, 업데이트 및 DLC가 라이브러리에 있음</value>
+  </data>
+  <data name="RatingContent" xml:space="preserve">
+    <value>등급 내용</value>
+  </data>
+  <data name="Available" xml:space="preserve">
+    <value>사용 가능</value>
+  </data>
+  <data name="LatestUpdate" xml:space="preserve">
+    <value>최신 업데이트</value>
+  </data>
+  <data name="File" xml:space="preserve">
+    <value>파일</value>
+  </data>
+  <data name="SearchByTitleIdOrName" xml:space="preserve">
+    <value>타이틀 ID 또는 이름으로 검색</value>
+  </data>
+  <data name="SelectAllItems" xml:space="preserve">
+    <value>모든 항목 선택</value>
+  </data>
+  <data name="SelectItem" xml:space="preserve">
+    <value>항목 선택</value>
+  </data>
+  <data name="FilterByCategory" xml:space="preserve">
+    <value>카테고리로 필터</value>
+  </data>
+  <data name="EnterName" xml:space="preserve">
+    <value>이름 입력</value>
+  </data>
+  <data name="AddNewRowAfterThisRow" xml:space="preserve">
+    <value>이 행 다음에 새 행 추가</value>
+  </data>
+  <data name="EnableWebhook" xml:space="preserve">
+    <value>웹훅 활성화</value>
+  </data>
+  <data name="POST" xml:space="preserve">
+    <value>POST</value>
+  </data>
+  <data name="PUT" xml:space="preserve">
+    <value>PUT</value>
+  </data>
+  <data name="GET" xml:space="preserve">
+    <value>GET</value>
+  </data>
 </root>
