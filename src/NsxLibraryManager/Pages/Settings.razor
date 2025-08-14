@@ -1,9 +1,8 @@
 ﻿@page "/settings"
 @using NsxLibraryManager.Shared.Enums
 @using NsxLibraryManager.Shared.Settings
-@using Microsoft.Extensions.Localization
-@using NsxLibraryManager.Resources
-@inject IStringLocalizer<SharedResource> Localizer
+@using NsxLibraryManager.Services
+@inject AppLocalizer Localizer
 
 <NavigationLock ConfirmExternalNavigation="false"
                 OnBeforeInternalNavigation="OnBeforeInternalNavigation" />
@@ -385,7 +384,12 @@
                 <RadzenStack Orientation="Orientation.Horizontal" Wrap="FlexWrap.Wrap">
                     <RadzenStack Orientation="Orientation.Vertical" Gap="0.5rem" class="rz-p-sm-2">
                         <RadzenLabel Text="UI Theme" />
-                        <RadzenDropDown Name="ThemeDropDown" TValue="string"  Value="@ThemeService.Theme" ValueChanged="@ChangeTheme" Data="@Themes.Free" TextProperty=@nameof(Theme.Text) ValueProperty=@nameof(Theme.Value)>
+                        <RadzenDropDown Name="ThemeDropDown" TValue="string"  Value="@ThemeService.Theme" ValueChanged="@ChangeTheme" Data="@Themes.Free" TextProperty=@nameof(Theme.Text) ValueProperty=@nameof(Theme.Value)">
+                        </RadzenDropDown>
+                    </RadzenStack>
+                    <RadzenStack Orientation="Orientation.Vertical" Gap="0.5rem" class="rz-p-sm-2">
+                        <RadzenLabel Text="@Localizer["Language"]" />
+                        <RadzenDropDown Name="LanguageDropDown" TValue="string" Value="@_selectedLanguage" ValueChanged="@OnLanguageChanged" Data="@_languages" TextProperty="DisplayName" ValueProperty="Code">
                         </RadzenDropDown>
                     </RadzenStack>
                 </RadzenStack>

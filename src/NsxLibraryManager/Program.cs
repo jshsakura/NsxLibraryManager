@@ -93,8 +93,8 @@ builder.Services.AddSwaggerGen(options =>
 
 // 다국어 지원 설정 (간단한 방식)
 builder.Services.AddCustomLocalization();
-builder.Services.AddScoped<SimpleLocalizationService>();
-builder.Services.AddScoped<SimpleStringLocalizer>();
+builder.Services.AddScoped<AppLocalizationService>();
+builder.Services.AddScoped<AppLocalizer>();
 
 //nsx services
 if (validatorResult.valid)

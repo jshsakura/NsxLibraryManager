@@ -2,7 +2,7 @@ using System.Globalization;
 
 namespace NsxLibraryManager.Services;
 
-public class SimpleLocalizationService
+public class AppLocalizationService
 {
     private readonly Dictionary<string, Dictionary<string, string>> _translations = new()
     {
@@ -20,7 +20,18 @@ public class SimpleLocalizationService
             ["Renamer"] = "Renamer",
             ["Configuration"] = "Configuration",
             ["ScanInputFolder"] = "Scan Input Folder",
-            ["RenameFiles"] = "Rename Files"
+            ["RenameFiles"] = "Rename Files",
+            ["TitleDb"] = "Title DB",
+            ["FileOrganizer"] = "File Organizer",
+            ["LibraryTitles"] = "Library Titles",
+            ["MissingUpdates"] = "Missing Updates",
+            ["MissingDlc"] = "Missing DLC",
+            ["MissingDlcUpdates"] = "Missing DLC Updates",
+            ["Collections"] = "Collections",
+            ["FtpStatus"] = "FTP Status",
+            ["TaskStatus"] = "Task Status",
+            ["DuplicateTitles"] = "Duplicate Titles",
+            ["Language"] = "Language"
         },
         ["ko"] = new Dictionary<string, string>
         {
@@ -36,7 +47,18 @@ public class SimpleLocalizationService
             ["Renamer"] = "이름 변경",
             ["Configuration"] = "옵션",
             ["ScanInputFolder"] = "폴더 검색",
-            ["RenameFiles"] = "파일명 일괄변경"
+            ["RenameFiles"] = "파일명 일괄변경",
+            ["TitleDb"] = "타이틀 DB",
+            ["FileOrganizer"] = "파일 정리",
+            ["LibraryTitles"] = "라이브러리 게임 목록",
+            ["MissingUpdates"] = "업데이트 누락 목록",
+            ["MissingDlc"] = "DLC 누락 목록",
+            ["MissingDlcUpdates"] = "DLC 업데이트 누락 목록",
+            ["Collections"] = "컬렉션",
+            ["FtpStatus"] = "FTP 상태",
+            ["TaskStatus"] = "작업 상태",
+            ["DuplicateTitles"] = "중복 게임 목록",
+            ["Language"] = "언어"
         }
     };
 
@@ -61,11 +83,11 @@ public class SimpleLocalizationService
 }
 
 // IStringLocalizer 대체용 래퍼
-public class SimpleStringLocalizer
+public class AppLocalizer
 {
-    private readonly SimpleLocalizationService _service;
+    private readonly AppLocalizationService _service;
     
-    public SimpleStringLocalizer(SimpleLocalizationService service)
+    public AppLocalizer(AppLocalizationService service)
     {
         _service = service;
     }

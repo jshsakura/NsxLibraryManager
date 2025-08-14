@@ -4,7 +4,7 @@
 @using NsxLibraryManager.Services
 @using System.Globalization
 @inject IStringLocalizer<SharedResource> Localizer
-@inject SimpleStringLocalizer SimpleLocalizer
+@inject AppLocalizer AppLocalizer
 
 <h3>🌍 Localization Test</h3>
 
@@ -29,12 +29,12 @@
 </div>
 
 <div style="background: #e8ffe8; padding: 20px; margin: 10px 0; border-radius: 5px;">
-    <h4>Simple Localizer Test:</h4>
+    <h4>App Localizer Test:</h4>
     @foreach(var key in new[] { "Dashboard", "Games", "Library", "Settings", "Korean", "English" })
     {
-        var value = SimpleLocalizer[key];
+        var value = AppLocalizer[key];
         <p><strong>@key:</strong> "@value" 
-           <span style="color: green">(Simple)</span>
+           <span style="color: green">(App)</span>
         </p>
     }
 </div>

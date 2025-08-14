@@ -4,6 +4,7 @@ using FluentValidation.Results;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Routing;
 using Microsoft.JSInterop;
+using System.Globalization;
 using NsxLibraryManager.Contracts;
 using NsxLibraryManager.Extensions;
 using NsxLibraryManager.Models;
@@ -48,6 +49,14 @@ public partial class Settings
     private string _theme = string.Empty;
     private string _libraryPathValidationMessage = string.Empty;
     
+    // 언어 관련 필드
+    private string _selectedLanguage = "en";
+    private List<LanguageOption> _languages = new()
+    {
+        new LanguageOption { Code = "en", DisplayName = "English" },
+        new LanguageOption { Code = "ko", DisplayName = "한국어" }
+    };
+    
 
     private readonly Dictionary<string, string> _validationErrors = new()
     {
@@ -69,6 +78,10 @@ public partial class Settings
     {
         await base.OnInitializedAsync();
         await LoadConfiguration();
+        
+        // 현재 언어 설정
+        var currentCulture = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
+        _selectedLanguage = _languages.Any(l => l.Code == currentCulture) ? currentCulture : "en";
         var configExists = bool.TryParse(Configuration.GetValue<string>("IsDefaultConfigCreated"), out _);
         if (configExists)
         {
@@ -452,4 +465,42 @@ public partial class Settings
 
     private void ShowTooltip(string message, ElementReference elementReference, TooltipOptions options = null!) =>
         TooltipService.Open(elementReference, message, options);
+    
+    // 언어 관련 메서드들
+    private async Task OnLanguageChanged(object value)
+    {
+        if (value?.ToString() is string newLanguage && newLanguage != _selectedLanguage)
+        {
+            _selectedLanguage = newLanguage;
+            
+            try
+            {
+                // 쿠키에 언어 설정 저장
+                var cookieValue = $"c={newLanguage}|uic={newLanguage}";
+                var cookieName = ".AspNetCore.Culture";
+                
+                await JSRuntime.InvokeVoidAsync("eval", 
+                    $"document.cookie = '{cookieName}={cookieValue}; path=/; max-age=31536000; expires=' + new Date(Date.now() + 31536000000).toUTCString()");
+                
+                // 페이지 새로고침
+                Navigation.NavigateTo("/settings", forceLoad: true);
+            }
+            catch (Exception ex)
+            {
+                ShowNotification(new NotificationMessage
+                {
+                    Severity = NotificationSeverity.Error,
+                    Summary = "Language Change Error",
+                    Detail = ex.Message,
+                    Duration = 5000
+                });
+            }
+        }
+    }
+    
+    public class LanguageOption
+    {
+        public string Code { get; set; } = string.Empty;
+        public string DisplayName { get; set; } = string.Empty;
+    }
 }
