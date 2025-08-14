@@ -29,6 +29,8 @@ public partial class Settings
     [Inject] private ThemeService ThemeService { get; set; } = default!;
     [Inject] private ITitleLibraryService TitleLibraryService { get; set; } = null!;
     [Inject] private DialogService DialogService { get; set; } = default!;
+    [Inject] private IJSRuntime JSRuntime { get; set; } = default!;
+    [Inject] private NavigationManager NavigationManager { get; set; } = default!;
 
     
     private RadzenDataGrid<LibraryLocation> _additionalLibraryPathsGrid = null!;
@@ -483,7 +485,7 @@ public partial class Settings
                     $"document.cookie = '{cookieName}={cookieValue}; path=/; max-age=31536000; expires=' + new Date(Date.now() + 31536000000).toUTCString()");
                 
                 // 페이지 새로고침
-                Navigation.NavigateTo("/settings", forceLoad: true);
+                NavigationManager.NavigateTo("/settings", forceLoad: true);
             }
             catch (Exception ex)
             {
