@@ -1,7 +1,6 @@
 ﻿@page "/gameGrid"
-@using Microsoft.Extensions.Localization
-@using NsxLibraryManager.Resources
-@inject IStringLocalizer<SharedResource> Localizer
+@using NsxLibraryManager.Services
+@inject AppLocalizer Localizer
 
 <PageTitle>@Localizer["Games"] - @Localizer["Grid"]</PageTitle>
 

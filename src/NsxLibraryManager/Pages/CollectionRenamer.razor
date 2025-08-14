@@ -2,9 +2,8 @@
 @using NsxLibraryManager.Core.Models
 @using NsxLibraryManager.Shared.Dto
 @using NsxLibraryManager.Shared.Enums
-@using Microsoft.Extensions.Localization
-@using NsxLibraryManager.Resources
-@inject IStringLocalizer<SharedResource> Localizer
+@using NsxLibraryManager.Services
+@inject AppLocalizer Localizer
 
 <PageTitle>@Localizer["CollectionRenamer"]</PageTitle>
 
