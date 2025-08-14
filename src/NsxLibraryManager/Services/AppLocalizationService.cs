@@ -31,7 +31,15 @@ public class AppLocalizationService
             ["FtpStatus"] = "FTP Status",
             ["TaskStatus"] = "Task Status",
             ["DuplicateTitles"] = "Duplicate Titles",
-            ["Language"] = "Language"
+            ["Language"] = "Language",
+            ["List"] = "List",
+            ["Card"] = "Card",
+            ["SaveConfiguration"] = "Save Configuration",
+            ["DatabasePath"] = "Database Path",
+            ["ExportUserData"] = "Export UserData",
+            ["ImportUserData"] = "Import UserData",
+            ["UITheme"] = "UI Theme",
+            ["Misc"] = "Misc"
         },
         ["ko"] = new Dictionary<string, string>
         {
@@ -58,7 +66,15 @@ public class AppLocalizationService
             ["FtpStatus"] = "FTP 상태",
             ["TaskStatus"] = "작업 상태",
             ["DuplicateTitles"] = "중복 게임 목록",
-            ["Language"] = "언어"
+            ["Language"] = "언어",
+            ["List"] = "목록",
+            ["Card"] = "카드",
+            ["SaveConfiguration"] = "설정 저장",
+            ["DatabasePath"] = "데이터베이스 경로",
+            ["ExportUserData"] = "사용자 데이터 내보내기",
+            ["ImportUserData"] = "사용자 데이터 가져오기",
+            ["UITheme"] = "UI 테마",
+            ["Misc"] = "기타"
         }
     };
 

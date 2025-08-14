@@ -53,6 +53,8 @@ public partial class Settings
     
     // 언어 관련 필드
     private string _selectedLanguage = "en";
+    private string _previousLanguage = "en";
+    private bool _languageChanged = false;
     private List<LanguageOption> _languages = new()
     {
         new LanguageOption { Code = "en", DisplayName = "English" },
@@ -84,6 +86,7 @@ public partial class Settings
         // 현재 언어 설정
         var currentCulture = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
         _selectedLanguage = _languages.Any(l => l.Code == currentCulture) ? currentCulture : "en";
+        _previousLanguage = _selectedLanguage;
         var configExists = bool.TryParse(Configuration.GetValue<string>("IsDefaultConfigCreated"), out _);
         if (configExists)
         {
@@ -143,6 +146,17 @@ public partial class Settings
             Duration = 4000
         });
         _settingsSaved = true;
+        
+        // 언어가 변경되었다면 저장 후 새로고침
+        if (_languageChanged)
+        {
+            _languageChanged = false;
+            _previousLanguage = _selectedLanguage;
+            
+            // 잠시 후 새로고침 (알림이 보이도록)
+            await Task.Delay(1000);
+            NavigationManager.NavigateTo("/settings", forceLoad: true);
+        }
     }
 
     private async Task LoadConfiguration()
@@ -474,6 +488,7 @@ public partial class Settings
         if (value?.ToString() is string newLanguage && newLanguage != _selectedLanguage)
         {
             _selectedLanguage = newLanguage;
+            _languageChanged = (_selectedLanguage != _previousLanguage);
             
             try
             {
@@ -484,8 +499,8 @@ public partial class Settings
                 await JSRuntime.InvokeVoidAsync("eval", 
                     $"document.cookie = '{cookieName}={cookieValue}; path=/; max-age=31536000; expires=' + new Date(Date.now() + 31536000000).toUTCString()");
                 
-                // 페이지 새로고침
-                NavigationManager.NavigateTo("/settings", forceLoad: true);
+                // 설정 저장 후 새로고침하도록 플래그 설정 (즉시 새로고침하지 않음)
+                _settingsSaved = false;
             }
             catch (Exception ex)
             {

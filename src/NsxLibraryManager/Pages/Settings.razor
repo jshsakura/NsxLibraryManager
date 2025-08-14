@@ -21,7 +21,7 @@
     <RadzenRow Gap="1rem">
         <RadzenColumn Size="12" SizeSM="12">
             <RadzenStack>
-                <RadzenFormField Text="Database Path">
+                <RadzenFormField Text="@Localizer["DatabasePath"]">
                     <ChildContent>
                         <RadzenTextBox Disabled="@_databaseFieldDisabled" @bind-Value="@_config.LibraryDatabase" Name="LibraryDatabase"/>
                     </ChildContent>
@@ -36,7 +36,7 @@
                         <div class="rz-fileupload" style="width: 100%">
                             <div class="rz-fileupload-buttonbar">
                                 <a href="/api/download/userdata">
-                                    <RadzenButton ButtonStyle="ButtonStyle.Success" Text="Export UserData" class="rz-m-0"/>
+                                    <RadzenButton ButtonStyle="ButtonStyle.Success" Text="@Localizer["ExportUserData"]" class="rz-m-0"/>
                                 </a>
                                 <text class="rz-text-caption">Only user data is exported (ratings, collections).</text>
                             </div>
@@ -45,7 +45,7 @@
                     </RadzenColumn>
                     <RadzenColumn Size="6">
                         <RadzenUpload Url="/api/upload/userdata"
-                                      ChooseText="Import UserData"
+                                      ChooseText="@Localizer["ImportUserData"]"
                                       Progress=@(args => OnUploadProgress(args, "Single file upload"))
                                       Complete="@OnUploadUserDataComplete" Error="@OnUploadError"
                                       Style="width: 100%;"
@@ -377,13 +377,13 @@
 
     </RadzenRow>
 </RadzenFieldset>
-<RadzenFieldset Text="Misc">
+<RadzenFieldset Text="@Localizer["Misc"]">
     <RadzenRow Gap="1rem">
         <RadzenColumn Size="6">
             <RadzenCard Variant="Variant.Outlined">
                 <RadzenStack Orientation="Orientation.Horizontal" Wrap="FlexWrap.Wrap">
                     <RadzenStack Orientation="Orientation.Vertical" Gap="0.5rem" class="rz-p-sm-2">
-                        <RadzenLabel Text="UI Theme" />
+                        <RadzenLabel Text="@Localizer["UITheme"]" />
                         <RadzenDropDown Name="ThemeDropDown" TValue="string" Value="@ThemeService.Theme" ValueChanged="@ChangeTheme" Data="@Themes.Free" TextProperty=@nameof(Theme.Text) ValueProperty=@nameof(Theme.Value) />
                     </RadzenStack>
                     <RadzenStack Orientation="Orientation.Vertical" Gap="0.5rem" class="rz-p-sm-2">
@@ -400,7 +400,7 @@
 <RadzenRow Gap="1.2rem">
     <RadzenColumn Size="12" SizeSM="12">
         <RadzenRow Style="margin-top: .5rem;" JustifyContent="JustifyContent.Center">
-            <RadzenButton ButtonType="ButtonType.Submit" Variant="Variant.Outlined" Click="@SaveConfiguration" class="rz-ripple">Save Configuration</RadzenButton>
+            <RadzenButton ButtonType="ButtonType.Submit" Variant="Variant.Outlined" Click="@SaveConfiguration" class="rz-ripple">@Localizer["SaveConfiguration"]</RadzenButton>
         </RadzenRow>
     </RadzenColumn>
 </RadzenRow>
