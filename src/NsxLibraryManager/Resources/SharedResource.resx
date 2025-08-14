@@ -24,26 +24,410 @@
   <data name="Settings" xml:space="preserve">
     <value>Settings</value>
   </data>
-  <data name="Korean" xml:space="preserve">
-    <value>한국어</value>
+  <data name="TitleDb" xml:space="preserve">
+    <value>TitleDb</value>
+  </data>
+  <data name="FileOrganizer" xml:space="preserve">
+    <value>FileOrganizer</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Category" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="Region" xml:space="preserve">
+    <value>Region</value>
   </data>
   <data name="English" xml:space="preserve">
     <value>English</value>
   </data>
-  <data name="FilterNameTitleId" xml:space="preserve">
-    <value>Title Id</value>
+  <data name="Korean" xml:space="preserve">
+    <value>한국어</value>
   </data>
-  <data name="DatabasePath" xml:space="preserve">
-    <value>Database Path</value>
+  <data name="SelectLanguage" xml:space="preserve">
+    <value>SelectLanguage</value>
+  </data>
+  <data name="BundleRenamer" xml:space="preserve">
+    <value>BundleRenamer</value>
+  </data>
+  <data name="PackageRenamer" xml:space="preserve">
+    <value>PackageRenamer</value>
+  </data>
+  <data name="CollectionRenamer" xml:space="preserve">
+    <value>CollectionRenamer</value>
+  </data>
+  <data name="DuplicateTitles" xml:space="preserve">
+    <value>DuplicateTitles</value>
+  </data>
+  <data name="MissingUpdates" xml:space="preserve">
+    <value>MissingUpdates</value>
+  </data>
+  <data name="MissingDlc" xml:space="preserve">
+    <value>MissingDlc</value>
+  </data>
+  <data name="MissingDlcUpdates" xml:space="preserve">
+    <value>MissingDlcUpdates</value>
+  </data>
+  <data name="Collections" xml:space="preserve">
+    <value>Collections</value>
+  </data>
+  <data name="FtpStatus" xml:space="preserve">
+    <value>FtpStatus</value>
+  </data>
+  <data name="TaskStatus" xml:space="preserve">
+    <value>TaskStatus</value>
+  </data>
+  <data name="Renamer" xml:space="preserve">
+    <value>Renamer</value>
+  </data>
+  <data name="Configuration" xml:space="preserve">
+    <value>Configuration</value>
+  </data>
+  <data name="ScanInputFolder" xml:space="preserve">
+    <value>Scan Input Folder</value>
+  </data>
+  <data name="RenameFiles" xml:space="preserve">
+    <value>Rename Files</value>
+  </data>
+  <data name="InputPath" xml:space="preserve">
+    <value>InputPath</value>
+  </data>
+  <data name="OutputPath" xml:space="preserve">
+    <value>OutputPath</value>
+  </data>
+  <data name="SourceFile" xml:space="preserve">
+    <value>Source File</value>
+  </data>
+  <data name="Destination" xml:space="preserve">
+    <value>Destination</value>
+  </data>
+  <data name="TitleId" xml:space="preserve">
+    <value>TitleId</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="ErrorMessage" xml:space="preserve">
+    <value>ErrorMessage</value>
+  </data>
+  <data name="Input" xml:space="preserve">
+    <value>Input</value>
+  </data>
+  <data name="Output" xml:space="preserve">
+    <value>Output</value>
+  </data>
+  <data name="BasePath" xml:space="preserve">
+    <value>BasePath</value>
+  </data>
+  <data name="Application" xml:space="preserve">
+    <value>Application</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="DLCs" xml:space="preserve">
+    <value>DLCs</value>
+  </data>
+  <data name="UnknownPlaceholder" xml:space="preserve">
+    <value>Unknown Placeholder</value>
+  </data>
+  <data name="DeleteEmptyFoldersAfterRename" xml:space="preserve">
+    <value>Delete empty folders after rename</value>
+  </data>
+  <data name="RecursiveSubdirectories" xml:space="preserve">
+    <value>Recursive Subdirectories</value>
+  </data>
+  <data name="TryToUseEnglishNaming" xml:space="preserve">
+    <value>Try to use english naming.</value>
+  </data>
+  <data name="TitleNameAndAppNameToTitleCase" xml:space="preserve">
+    <value>TitleName and AppName to TitleCase</value>
+  </data>
+  <data name="TemplateFields" xml:space="preserve">
+    <value>Template Fields</value>
+  </data>
+  <data name="FileOrganizerByBundle" xml:space="preserve">
+    <value>FileOrganizerByBundle</value>
+  </data>
+  <data name="FileOrganizerByPackage" xml:space="preserve">
+    <value>FileOrganizerByPackage</value>
+  </data>
+  <data name="List" xml:space="preserve">
+    <value>List</value>
+  </data>
+  <data name="Card" xml:space="preserve">
+    <value>Card</value>
+  </data>
+  <data name="Grid" xml:space="preserve">
+    <value>Grid</value>
+  </data>
+  <data name="Loading" xml:space="preserve">
+    <value>Loading</value>
+  </data>
+  <data name="NoDataFound" xml:space="preserve">
+    <value>NoDataFound</value>
+  </data>
+  <data name="ProcessingComplete" xml:space="preserve">
+    <value>ProcessingComplete</value>
+  </data>
+  <data name="NSP" xml:space="preserve">
+    <value>NSP</value>
+  </data>
+  <data name="NSZ" xml:space="preserve">
+    <value>NSZ</value>
+  </data>
+  <data name="XCI" xml:space="preserve">
+    <value>XCI</value>
+  </data>
+  <data name="XCZ" xml:space="preserve">
+    <value>XCZ</value>
+  </data>
+  <data name="Publisher" xml:space="preserve">
+    <value>Publisher</value>
+  </data>
+  <data name="Developer" xml:space="preserve">
+    <value>Developer</value>
+  </data>
+  <data name="ReleaseDate" xml:space="preserve">
+    <value>Release Date:</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="Size" xml:space="preserve">
+    <value>Size</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Type:</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="Progress" xml:space="preserve">
+    <value>Progress</value>
+  </data>
+  <data name="Refresh" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="Filter" xml:space="preserve">
+    <value>Filter</value>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>Clear</value>
+  </data>
+  <data name="Reset" xml:space="preserve">
+    <value>Reset</value>
+  </data>
+  <data name="Apply" xml:space="preserve">
+    <value>Apply</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="Open" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="Download" xml:space="preserve">
+    <value>Download</value>
+  </data>
+  <data name="Upload" xml:space="preserve">
+    <value>Upload</value>
+  </data>
+  <data name="Import" xml:space="preserve">
+    <value>Import</value>
+  </data>
+  <data name="Export" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="ScanLibrary" xml:space="preserve">
+    <value>ScanLibrary</value>
+  </data>
+  <data name="RefreshLibrary" xml:space="preserve">
+    <value>Refresh Library</value>
+  </data>
+  <data name="LibraryPath" xml:space="preserve">
+    <value>Library Path</value>
+  </data>
+  <data name="TotalTitles" xml:space="preserve">
+    <value>TotalTitles</value>
+  </data>
+  <data name="TotalSize" xml:space="preserve">
+    <value>TotalSize</value>
+  </data>
+  <data name="GameTitle" xml:space="preserve">
+    <value>GameTitle</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="Screenshots" xml:space="preserve">
+    <value>Screenshots</value>
+  </data>
+  <data name="Icon" xml:space="preserve">
+    <value>Icon</value>
+  </data>
+  <data name="Rating" xml:space="preserve">
+    <value>rating</value>
+  </data>
+  <data name="Players" xml:space="preserve">
+    <value>Players</value>
+  </data>
+  <data name="FileName" xml:space="preserve">
+    <value>FileName</value>
+  </data>
+  <data name="FilePath" xml:space="preserve">
+    <value>FilePath</value>
+  </data>
+  <data name="FileSize" xml:space="preserve">
+    <value>File Size:</value>
+  </data>
+  <data name="LastModified" xml:space="preserve">
+    <value>LastModified</value>
+  </data>
+  <data name="Created" xml:space="preserve">
+    <value>Created</value>
+  </data>
+  <data name="GeneralSettings" xml:space="preserve">
+    <value>GeneralSettings</value>
+  </data>
+  <data name="LibrarySettings" xml:space="preserve">
+    <value>LibrarySettings</value>
+  </data>
+  <data name="FtpSettings" xml:space="preserve">
+    <value>FtpSettings</value>
+  </data>
+  <data name="AdvancedSettings" xml:space="preserve">
+    <value>AdvancedSettings</value>
+  </data>
+  <data name="FtpServer" xml:space="preserve">
+    <value>FtpServer</value>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>Username</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="Port" xml:space="preserve">
+    <value>Port</value>
+  </data>
+  <data name="Connect" xml:space="preserve">
+    <value>Connect</value>
+  </data>
+  <data name="Disconnect" xml:space="preserve">
+    <value>Disconnect</value>
+  </data>
+  <data name="Connected" xml:space="preserve">
+    <value>Connected</value>
+  </data>
+  <data name="Disconnected" xml:space="preserve">
+    <value>Disconnected</value>
+  </data>
+  <data name="TaskName" xml:space="preserve">
+    <value>TaskName</value>
+  </data>
+  <data name="StartTime" xml:space="preserve">
+    <value>StartTime</value>
+  </data>
+  <data name="EndTime" xml:space="preserve">
+    <value>EndTime</value>
+  </data>
+  <data name="Duration" xml:space="preserve">
+    <value>Duration</value>
+  </data>
+  <data name="Completed" xml:space="preserve">
+    <value>Completed</value>
+  </data>
+  <data name="Failed" xml:space="preserve">
+    <value>Failed</value>
+  </data>
+  <data name="Running" xml:space="preserve">
+    <value>Running</value>
+  </data>
+  <data name="Pending" xml:space="preserve">
+    <value>Pending</value>
+  </data>
+  <data name="CreateCollection" xml:space="preserve">
+    <value>CreateCollection</value>
+  </data>
+  <data name="CollectionName" xml:space="preserve">
+    <value>CollectionName</value>
+  </data>
+  <data name="AddToCollection" xml:space="preserve">
+    <value>AddToCollection</value>
+  </data>
+  <data name="RemoveFromCollection" xml:space="preserve">
+    <value>RemoveFromCollection</value>
+  </data>
+  <data name="FieldRequired" xml:space="preserve">
+    <value>FieldRequired</value>
+  </data>
+  <data name="InvalidPath" xml:space="preserve">
+    <value>InvalidPath</value>
+  </data>
+  <data name="PathNotFound" xml:space="preserve">
+    <value>PathNotFound</value>
+  </data>
+  <data name="InvalidFormat" xml:space="preserve">
+    <value>InvalidFormat</value>
+  </data>
+  <data name="Help" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="About" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="Documentation" xml:space="preserve">
+    <value>Documentation</value>
+  </data>
+  <data name="LibraryTitles" xml:space="preserve">
+    <value>LibraryTitles</value>
+  </data>
+  <data name="AreYouSure" xml:space="preserve">
+    <value>AreYouSure</value>
+  </data>
+  <data name="ConfirmDelete" xml:space="preserve">
+    <value>ConfirmDelete</value>
+  </data>
+  <data name="ConfirmRename" xml:space="preserve">
+    <value>ConfirmRename</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>No</value>
   </data>
   <data name="ExportUserData" xml:space="preserve">
     <value>Export User Data</value>
   </data>
   <data name="ImportUserData" xml:space="preserve">
     <value>Import User Data</value>
-  </data>
-  <data name="Keys" xml:space="preserve">
-    <value>Keys</value>
   </data>
   <data name="ProdKeysFile" xml:space="preserve">
     <value>Prod Keys File</value>
@@ -69,14 +453,8 @@
   <data name="AddNewLibraryPath" xml:space="preserve">
     <value>Add New Library Path</value>
   </data>
-  <data name="LibraryPath" xml:space="preserve">
-    <value>Library Path</value>
-  </data>
   <data name="Recursive" xml:space="preserve">
     <value>Recursive</value>
-  </data>
-  <data name="Collection" xml:space="preserve">
-    <value>Collection</value>
   </data>
   <data name="SelectCollection" xml:space="preserve">
     <value>Select collection</value>
@@ -88,9 +466,6 @@ At least one folder must be added to your library.</value>
   </data>
   <data name="LibrarySettingsTitle" xml:space="preserve">
     <value>Library settings</value>
-  </data>
-  <data name="TryToUseEnglishNaming" xml:space="preserve">
-    <value>Try to use english naming.</value>
   </data>
   <data name="ClearPersistentTitles" xml:space="preserve">
     <value>Clear persistent titles</value>
@@ -178,14 +553,8 @@ Most of the time prod.keys is enough to get the package info.</value>
   <data name="Id" xml:space="preserve">
     <value>Id</value>
   </data>
-  <data name="FileName" xml:space="preserve">
-    <value>FileName</value>
-  </data>
   <data name="ScanLibraryTitles" xml:space="preserve">
     <value>Scan Library Titles</value>
-  </data>
-  <data name="RenameFiles" xml:space="preserve">
-    <value>Rename Files</value>
   </data>
   <data name="InputPathLabel" xml:space="preserve">
     <value>Input Path:</value>
@@ -193,38 +562,17 @@ Most of the time prod.keys is enough to get the package info.</value>
   <data name="OutputPathLabel" xml:space="preserve">
     <value>Output Path:</value>
   </data>
-  <data name="SourceFile" xml:space="preserve">
-    <value>Source File</value>
-  </data>
-  <data name="Destination" xml:space="preserve">
-    <value>Destination</value>
-  </data>
-  <data name="Configuration" xml:space="preserve">
-    <value>Configuration</value>
-  </data>
   <data name="FileOrganizerByCollection" xml:space="preserve">
     <value>File Organizer by Collection</value>
   </data>
   <data name="InputPathLibraryPath" xml:space="preserve">
     <value>Input Path (Library Path)</value>
   </data>
-  <data name="UnknownPlaceholder" xml:space="preserve">
-    <value>Unknown Placeholder</value>
-  </data>
   <data name="UnknownPlaceholderDescription" xml:space="preserve">
     <value>This will be used to replace an empty TitleName or AppName when renaming files.</value>
   </data>
-  <data name="DeleteEmptyFoldersAfterRename" xml:space="preserve">
-    <value>Delete empty folders after rename</value>
-  </data>
-  <data name="RecursiveSubdirectories" xml:space="preserve">
-    <value>Recursive Subdirectories</value>
-  </data>
   <data name="BasePathLibraryPath" xml:space="preserve">
     <value>Base Path (Library Path)</value>
-  </data>
-  <data name="TitleNameAndAppNameToTitleCase" xml:space="preserve">
-    <value>TitleName and AppName to TitleCase</value>
   </data>
   <data name="DefaultConfiguration" xml:space="preserve">
     <value>Default Configuration</value>
@@ -232,20 +580,14 @@ Most of the time prod.keys is enough to get the package info.</value>
   <data name="ValidateConfiguration" xml:space="preserve">
     <value>Validate Configuration</value>
   </data>
-  <data name="TemplateFields" xml:space="preserve">
-    <value>Template Fields</value>
-  </data>
   <data name="Before" xml:space="preserve">
     <value>Before:</value>
   </data>
   <data name="After" xml:space="preserve">
-    <value>After:</value>
-  </data>
-  <data name="ScanInputFolder" xml:space="preserve">
-    <value>Scan Input Folder</value>
+    <value>After</value>
   </data>
   <data name="BasicInfo" xml:space="preserve">
-    <value>Basic Info</value>
+    <value>BasicInfo</value>
   </data>
   <data name="NSPPaths" xml:space="preserve">
     <value>NSP Paths</value>
@@ -266,28 +608,28 @@ Most of the time prod.keys is enough to get the package info.</value>
     <value>DLC</value>
   </data>
   <data name="AddNewCollection" xml:space="preserve">
-    <value>Add New Collection</value>
+    <value>AddNewCollection</value>
   </data>
   <data name="CollectionID" xml:space="preserve">
-    <value>Collection ID</value>
+    <value>CollectionID</value>
   </data>
   <data name="TitlesInCollection" xml:space="preserve">
     <value>Titles in Collection</value>
   </data>
   <data name="BaseTitles" xml:space="preserve">
-    <value>Base Titles</value>
+    <value>BaseTitles</value>
   </data>
   <data name="DLCTitles" xml:space="preserve">
-    <value>DLC Titles</value>
+    <value>DLCTitles</value>
   </data>
   <data name="UpdateTitles" xml:space="preserve">
-    <value>Update Titles</value>
+    <value>UpdateTitles</value>
   </data>
   <data name="NameIsRequired" xml:space="preserve">
-    <value>Name is required</value>
+    <value>NameIsRequired</value>
   </data>
   <data name="GamesByCategory" xml:space="preserve">
-    <value>Games by Category</value>
+    <value>GamesByCategory</value>
   </data>
   <data name="ContentDistribution" xml:space="preserve">
     <value>Content Distribution</value>
@@ -304,9 +646,6 @@ Most of the time prod.keys is enough to get the package info.</value>
   <data name="TransferId" xml:space="preserve">
     <value>Transfer Id</value>
   </data>
-  <data name="Completed" xml:space="preserve">
-    <value>Completed</value>
-  </data>
   <data name="TotalBytes" xml:space="preserve">
     <value>Total Bytes</value>
   </data>
@@ -320,16 +659,13 @@ Most of the time prod.keys is enough to get the package info.</value>
     <value>Actions</value>
   </data>
   <data name="EditSelected" xml:space="preserve">
-    <value>Edit Selected</value>
+    <value>EditSelected</value>
   </data>
   <data name="SendSelectedToFTP" xml:space="preserve">
-    <value>Send Selected to FTP</value>
+    <value>SendSelectedToFTP</value>
   </data>
   <data name="ClearSelection" xml:space="preserve">
-    <value>Clear Selection</value>
-  </data>
-  <data name="RefreshLibrary" xml:space="preserve">
-    <value>Refresh Library</value>
+    <value>ClearSelection</value>
   </data>
   <data name="ReloadLibrary" xml:space="preserve">
     <value>Reload Library</value>
@@ -344,7 +680,7 @@ Most of the time prod.keys is enough to get the package info.</value>
     <value>Other Application Id</value>
   </data>
   <data name="AgeRating" xml:space="preserve">
-    <value>Age Rating</value>
+    <value>AgeRating</value>
   </data>
   <data name="PackageType" xml:space="preserve">
     <value>Package Type</value>
@@ -353,10 +689,7 @@ Most of the time prod.keys is enough to get the package info.</value>
     <value>Categories</value>
   </data>
   <data name="DateModified" xml:space="preserve">
-    <value>Date Modified</value>
-  </data>
-  <data name="Players" xml:space="preserve">
-    <value>Players</value>
+    <value>DateModified</value>
   </data>
   <data name="LatestVersion" xml:space="preserve">
     <value>Latest Version</value>
@@ -364,38 +697,26 @@ Most of the time prod.keys is enough to get the package info.</value>
   <data name="UserRating" xml:space="preserve">
     <value>User Rating</value>
   </data>
-  <data name="Created" xml:space="preserve">
-    <value>Created</value>
-  </data>
-  <data name="Edit" xml:space="preserve">
-    <value>Edit</value>
-  </data>
   <data name="OwnedDlcs" xml:space="preserve">
-    <value>Owned Dlcs</value>
+    <value>OwnedDlcs</value>
   </data>
   <data name="AvailableDlcs" xml:space="preserve">
-    <value>Available Dlcs</value>
+    <value>AvailableDlcs</value>
   </data>
   <data name="ShortVersion" xml:space="preserve">
-    <value>Short Version</value>
+    <value>ShortVersion</value>
   </data>
   <data name="ShortLatestVersion" xml:space="preserve">
-    <value>Short Latest Version</value>
+    <value>ShortLatestVersion</value>
   </data>
   <data name="AvailableUpdates" xml:space="preserve">
-    <value>Available Updates</value>
+    <value>AvailableUpdates</value>
   </data>
   <data name="OwnedUpdates" xml:space="preserve">
-    <value>Owned Updates</value>
+    <value>OwnedUpdates</value>
   </data>
   <data name="TaskId" xml:space="preserve">
     <value>Task Id</value>
-  </data>
-  <data name="TaskType" xml:space="preserve">
-    <value>Task Type</value>
-  </data>
-  <data name="TaskStatus" xml:space="preserve">
-    <value>Task Status</value>
   </data>
   <data name="CompletedItems" xml:space="preserve">
     <value>Completed Items</value>
@@ -415,9 +736,6 @@ Most of the time prod.keys is enough to get the package info.</value>
   <data name="NoQueuedTasks" xml:space="preserve">
     <value>No queued tasks</value>
   </data>
-  <data name="ReleaseDate" xml:space="preserve">
-    <value>Release Date:</value>
-  </data>
   <data name="NumberOfPlayers" xml:space="preserve">
     <value>Number of Players:</value>
   </data>
@@ -427,14 +745,8 @@ Most of the time prod.keys is enough to get the package info.</value>
   <data name="ESRBRating" xml:space="preserve">
     <value>ESRB Rating:</value>
   </data>
-  <data name="FileSize" xml:space="preserve">
-    <value>File Size:</value>
-  </data>
   <data name="Languages" xml:space="preserve">
     <value>Languages:</value>
-  </data>
-  <data name="Type" xml:space="preserve">
-    <value>Type:</value>
   </data>
   <data name="InLibrary" xml:space="preserve">
     <value>In Library:</value>
@@ -466,9 +778,6 @@ Most of the time prod.keys is enough to get the package info.</value>
   <data name="RatingContent" xml:space="preserve">
     <value>Rating content</value>
   </data>
-  <data name="Rating" xml:space="preserve">
-    <value>rating</value>
-  </data>
   <data name="Available" xml:space="preserve">
     <value>Available</value>
   </data>
@@ -478,7 +787,49 @@ Most of the time prod.keys is enough to get the package info.</value>
   <data name="File" xml:space="preserve">
     <value>File</value>
   </data>
-  <data name="DLCs" xml:space="preserve">
-    <value>DLCs</value>
+  <data name="SearchByTitleIdOrName" xml:space="preserve">
+    <value>SearchByTitleIdOrName</value>
+  </data>
+  <data name="SelectAllItems" xml:space="preserve">
+    <value>SelectAllItems</value>
+  </data>
+  <data name="SelectItem" xml:space="preserve">
+    <value>SelectItem</value>
+  </data>
+  <data name="FilterByCategory" xml:space="preserve">
+    <value>FilterByCategory</value>
+  </data>
+  <data name="EnterName" xml:space="preserve">
+    <value>EnterName</value>
+  </data>
+  <data name="AddNewRowAfterThisRow" xml:space="preserve">
+    <value>AddNewRowAfterThisRow</value>
+  </data>
+  <data name="EnableWebhook" xml:space="preserve">
+    <value>EnableWebhook</value>
+  </data>
+  <data name="POST" xml:space="preserve">
+    <value>POST</value>
+  </data>
+  <data name="PUT" xml:space="preserve">
+    <value>PUT</value>
+  </data>
+  <data name="GET" xml:space="preserve">
+    <value>GET</value>
+  </data>
+  <data name="DeleteEmptyFoldersTooltip" xml:space="preserve">
+    <value>DeleteEmptyFoldersTooltip</value>
+  </data>
+  <data name="UseEnglishNamingTooltip" xml:space="preserve">
+    <value>UseEnglishNamingTooltip</value>
+  </data>
+  <data name="TitleCaseTooltip" xml:space="preserve">
+    <value>TitleCaseTooltip</value>
+  </data>
+  <data name="EnableWebhookCallsOnLibraryReload" xml:space="preserve">
+    <value>EnableWebhookCallsOnLibraryReload</value>
+  </data>
+  <data name="EnableWebhookCallsOnLibraryRefresh" xml:space="preserve">
+    <value>EnableWebhookCallsOnLibraryRefresh</value>
   </data>
 </root>

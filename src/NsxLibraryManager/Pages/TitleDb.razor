@@ -38,19 +38,19 @@
             <Columns>
                 <RadzenDataGridColumn 
                     Property="ApplicationId" 
-                    Title="ContentType" 
+                    Title="@Localizer["TitleId"]" 
                     Width="90px" />
                 <RadzenDataGridColumn
                     Property="OtherApplicationId"
-                    Title="Other Application Id"
+                    Title="@Localizer["OtherApplicationId"]"
                     Width="90px" />
                 <RadzenDataGridColumn
                     Property="ContentType"
-                    Title="Type"
+                    Title="@Localizer["Type"]"
                     Width="90px" />
                 <RadzenDataGridColumn 
                     Property="TitleName" 
-                    Title="Name" 
+                    Title="@Localizer["Name"]" 
                     Width="300px" >
                     <Template Context="title">
                         <RadzenLink href="javascript:void(0)" Text="@title.TitleName" @onclick="_ => OpenDetails(title)"/>
@@ -58,11 +58,11 @@
                 </RadzenDataGridColumn>
                 <RadzenDataGridColumn
                     Property="NumberOfPlayers"
-                    Title="Players"
+                    Title="@Localizer["Players"]"
                     Width="90px" />
                 <RadzenDataGridColumn
                     Property="LatestVersion"
-                    Title="Version"
+                    Title="@Localizer["Version"]"
                     Width="90px">
                     <Template Context="title">
                         @{
@@ -80,8 +80,8 @@
                 </RadzenDataGridColumn>
                 <RadzenDataGridColumn
                     Property="Publisher"
-                    Title="Publisher"/>
-                <RadzenDataGridColumn Property="Categories" Title="Categories"  Sortable="false" Filterable="true">
+                    Title="@Localizer["Publisher"]"/>
+                <RadzenDataGridColumn Property="Categories" Title="@Localizer["Categories"]"  Sortable="false" Filterable="true">
                     <FilterTemplate>
                         <RadzenDropDown @bind-Value="@_selectedCategories" Style="width:100%;" InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", "filter by Category" }})"
                                         Change=@OnSelectedCategoriesChange Data="@(_categories)"  AllowClear="true" Multiple="true" />

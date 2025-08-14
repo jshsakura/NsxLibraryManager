@@ -75,7 +75,7 @@
                                     <RadzenColumn Size="6">
                                         <RadzenCheckBox Name="DeleteEmptyFolders" 
                                                         @bind-Value="@_settings.DeleteEmptyFolders" 
-                                                        MouseEnter="@(args => ShowTooltip("Once the rename process finishes, all empty folders inside input path will be removed.", args) )"/>
+                                                        MouseEnter="@(args => ShowTooltip(Localizer["DeleteEmptyFoldersTooltip"], args) )"/>
                                         <RadzenLabel Text="@Localizer["DeleteEmptyFoldersAfterRename"]" Component="DeleteEmptyFolders" Style="margin-left: 8px; vertical-align: middle;"/>
                                     </RadzenColumn>
                                     <RadzenColumn Size="6">
@@ -119,13 +119,13 @@
                                     <RadzenColumn Size="6">
                                         <RadzenCheckBox Name="UseEnglishNaming"
                                                         @bind-Value="@_settings.UseEnglishNaming"
-                                                        MouseEnter="@(args => ShowTooltip("For titles in Asia regions (JP, CN, KO, HK) prefer Nswdb for title name", args) )"/>
+                                                        MouseEnter="@(args => ShowTooltip(Localizer["UseEnglishNamingTooltip"], args) )"/>
                                         <RadzenLabel Text="@Localizer["TryToUseEnglishNaming"]" Component="UseEnglishNaming" Style="margin-left: 8px; vertical-align: middle;"/>
                                     </RadzenColumn>
                                     <RadzenColumn Size="6">
                                         <RadzenCheckBox Name="TitlesForceUppercase"
                                                         @bind-Value="@_settings.TitlesForceUppercase"
-                                                        MouseEnter="@(args => ShowTooltip("Convert TitleName and AppName to Title Case when renaming.", args) )"/>
+                                                        MouseEnter="@(args => ShowTooltip(Localizer["TitleCaseTooltip"], args) )"/>
                                         <RadzenLabel Text="@Localizer["TitleNameAndAppNameToTitleCase"]"
                                                      Component="TitlesForceUppercase"
                                                      Style="margin-left: 8px; vertical-align: middle;"/>

@@ -222,7 +222,7 @@
                         <RadzenColumn Size="12" SizeMD="3">
                             <RadzenRow AlignItems="AlignItems.Center">
                                 <RadzenColumn Size="12">
-                                    <RadzenSwitch Name="ReloadWebhook" @bind-Value="@_config.LibraryReloadPostWebhook" Change=@(args => ConfigChanged()) InputAttributes="@(new Dictionary<string, object>() { { "aria-label", Localizer["EnableWebhook"] } })" MouseEnter="@(args => ShowTooltip("Enable webhook calls on library reload", args))"/>
+                                    <RadzenSwitch Name="ReloadWebhook" @bind-Value="@_config.LibraryReloadPostWebhook" Change=@(args => ConfigChanged()) InputAttributes="@(new Dictionary<string, object>() { { "aria-label", Localizer["EnableWebhook"] } })" MouseEnter="@(args => ShowTooltip(Localizer["EnableWebhookCallsOnLibraryReload"], args))"/>
                                     <RadzenLabel Text="@Localizer["LibraryReloadWebhook"]" Component="ReloadWebhook" Style="margin-left: 8px; vertical-align: middle;"/>
                                 </RadzenColumn>
                             </RadzenRow>
@@ -266,7 +266,7 @@
                         <RadzenColumn Size="12" SizeMD="3">
                             <RadzenRow AlignItems="AlignItems.Center">
                                 <RadzenColumn Size="12">
-                                    <RadzenSwitch Name="WebhookRefresh" @bind-Value="@_config.LibraryRefreshPostWebhook" Change=@(args => ConfigChanged()) InputAttributes="@(new Dictionary<string, object>() { { "aria-label", "Enable webhook" } })" MouseEnter="@(args => ShowTooltip("Enable webhook calls on library refresh", args))"/>
+                                    <RadzenSwitch Name="WebhookRefresh" @bind-Value="@_config.LibraryRefreshPostWebhook" Change=@(args => ConfigChanged()) InputAttributes="@(new Dictionary<string, object>() { { "aria-label", Localizer["EnableWebhook"] } })" MouseEnter="@(args => ShowTooltip(Localizer["EnableWebhookCallsOnLibraryRefresh"], args))"/>
                                     <RadzenLabel Text="Library refresh webhook" Component="WebhookRefresh" Style="margin-left: 8px; vertical-align: middle;"/>
                                 </RadzenColumn>
                             </RadzenRow>
