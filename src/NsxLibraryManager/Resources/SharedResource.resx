@@ -345,9 +345,6 @@
   <data name="PackageType" xml:space="preserve">
     <value>Package Type</value>
   </data>
-  <data name="Filename" xml:space="preserve">
-    <value>Filename</value>
-  </data>
   <data name="Categories" xml:space="preserve">
     <value>Categories</value>
   </data>
@@ -365,9 +362,6 @@
   </data>
   <data name="Created" xml:space="preserve">
     <value>Created</value>
-  </data>
-  <data name="LastUpdated" xml:space="preserve">
-    <value>Last Updated</value>
   </data>
   <data name="Edit" xml:space="preserve">
     <value>Edit</value>
