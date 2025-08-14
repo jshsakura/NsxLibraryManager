@@ -14,20 +14,20 @@
     AllowFiltering="false"
     AllowPaging="true"
     PageSize="100"
-    EmptyText="No queued tasks"
+    EmptyText="@Localizer["NoQueuedTasks"]"
     AllowSorting="false">
     <HeaderTemplate>
-        <RadzenButton ButtonStyle="ButtonStyle.Danger" Icon="cleaning_services" Text="Cleanup Old Tasks" Click="@CleanupTasks" MouseEnter="@(args => ShowTooltip(args) )" />
+        <RadzenButton ButtonStyle="ButtonStyle.Danger" Icon="cleaning_services" Text="@Localizer["CleanupOldTasks"]" Click="@CleanupTasks" MouseEnter="@(args => ShowTooltip(args) )" />
     </HeaderTemplate>
     <Columns>
-        <RadzenDataGridColumn Property="Id" Title="Task Id" Width="280px"/>
-        <RadzenDataGridColumn Property="TaskType" Title="Task Type" Width="80px"/>
-        <RadzenDataGridColumn Property="Status" Title="Task Status" Width="100px"/>
-        <RadzenDataGridColumn Property="Progress" Title="Completed Items" Width="130px"/>
-        <RadzenDataGridColumn Property="TotalItems" Title="Total Items" Width="80px"/>
-        <RadzenDataGridColumn Property="ErrorMessage" Title="Error"/>
-        <RadzenDataGridColumn Property="Timestamp" Title="Received Time"/>
-        <RadzenDataGridColumn Property="StartTime" Title="Start Time"/>
-        <RadzenDataGridColumn Property="CompletionTime" Title="Completion Time"/>
+        <RadzenDataGridColumn Property="Id" Title="@Localizer["TaskId"]" Width="280px"/>
+        <RadzenDataGridColumn Property="TaskType" Title="@Localizer["TaskType"]" Width="80px"/>
+        <RadzenDataGridColumn Property="Status" Title="@Localizer["TaskStatus"]" Width="100px"/>
+        <RadzenDataGridColumn Property="Progress" Title="@Localizer["CompletedItems"]" Width="130px"/>
+        <RadzenDataGridColumn Property="TotalItems" Title="@Localizer["TotalItems"]" Width="80px"/>
+        <RadzenDataGridColumn Property="ErrorMessage" Title="@Localizer["ErrorMessage"]"/>
+        <RadzenDataGridColumn Property="Timestamp" Title="@Localizer["ReceivedTime"]"/>
+        <RadzenDataGridColumn Property="StartTime" Title="@Localizer["StartTime"]"/>
+        <RadzenDataGridColumn Property="CompletionTime" Title="@Localizer["CompletionTime"]"/>
     </Columns>
 </RadzenDataGrid>

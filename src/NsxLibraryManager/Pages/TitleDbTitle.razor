@@ -210,33 +210,33 @@
                                 AllowFiltering="true" FilterMode="FilterMode.CheckBoxList" AllowPaging="true" PageSize="100"
                                 ShowPagingSummary="true">
                     <Columns>
-                        <RadzenDataGridColumn Property="ApplicationId" Filterable="true" Title="Title Id" Width="60px" TextAlign="TextAlign.Center" FilterMode="FilterMode.Advanced"/>
-                        <RadzenDataGridColumn Property="TitleName" Filterable="false" Title="Name" Width="120px" TextAlign="TextAlign.Left">
+                        <RadzenDataGridColumn Property="ApplicationId" Filterable="true" Title="@Localizer["TitleId"]" Width="60px" TextAlign="TextAlign.Center" FilterMode="FilterMode.Advanced"/>
+                        <RadzenDataGridColumn Property="TitleName" Filterable="false" Title="@Localizer["Name"]" Width="120px" TextAlign="TextAlign.Left">
                             <Template Context="dlc">
                                 <div style="white-space: normal; word-break: break-word; min-width: 0; max-height: 100px; overflow-y: auto;">
                                     @dlc.TitleName
                                 </div>
                             </Template>
                         </RadzenDataGridColumn>
-                        <RadzenDataGridColumn Property="Size" Filterable="false" Title="Size" Width="30px" TextAlign="TextAlign.Center">
+                        <RadzenDataGridColumn Property="Size" Filterable="false" Title="@Localizer["Size"]" Width="30px" TextAlign="TextAlign.Center">
                             <Template Context="dlc">
                                 @dlc.Size.ToHumanReadableBytes()
                             </Template>
                         </RadzenDataGridColumn>
-                        <RadzenDataGridColumn Property="Version" Filterable="false" Title="Version" Width="30px" TextAlign="TextAlign.Center"/>
+                        <RadzenDataGridColumn Property="Version" Filterable="false" Title="@Localizer["Version"]" Width="30px" TextAlign="TextAlign.Center"/>
                     </Columns>
                 </RadzenDataGrid>
             </RadzenTabsItem>
-            <RadzenTabsItem Text="Updates">
+            <RadzenTabsItem Text="@Localizer["Updates"]">
                 <RadzenDataGrid style="height: 50vh" @ref="_updatesGrid" IsLoading="@_updatesIsLoading" Count="@_updatesCount"
                                 Data="@_updates" LoadData="@LoadUpdateData" AllowSorting="true" AllowColumnResize="true"
                                 AllowFiltering="true" FilterMode="FilterMode.CheckBoxList" AllowPaging="true" PageSize="100"
                                 ShowPagingSummary="true">
                     <Columns>
-                        <RadzenDataGridColumn Property="ApplicationId" Filterable="true" Title="Title Id" Width="60px" TextAlign="TextAlign.Center" FilterMode="FilterMode.Advanced"/>
-                        <RadzenDataGridColumn Property="Date" Filterable="false" Title="Date" Width="30px" TextAlign="TextAlign.Center"/>
-                        <RadzenDataGridColumn Property="Version" Filterable="false" Title="Version" Width="30px" SortOrder="SortOrder.Descending" TextAlign="TextAlign.Center"/>
-                        <RadzenDataGridColumn Property="ShortVersion" Filterable="false" Title="Short Version" Width="30px" SortOrder="SortOrder.Descending" TextAlign="TextAlign.Center"/>
+                        <RadzenDataGridColumn Property="ApplicationId" Filterable="true" Title="@Localizer["TitleId"]" Width="60px" TextAlign="TextAlign.Center" FilterMode="FilterMode.Advanced"/>
+                        <RadzenDataGridColumn Property="Date" Filterable="false" Title="@Localizer["Date"]" Width="30px" TextAlign="TextAlign.Center"/>
+                        <RadzenDataGridColumn Property="Version" Filterable="false" Title="@Localizer["Version"]" Width="30px" SortOrder="SortOrder.Descending" TextAlign="TextAlign.Center"/>
+                        <RadzenDataGridColumn Property="ShortVersion" Filterable="false" Title="@Localizer["ShortVersion"]" Width="30px" SortOrder="SortOrder.Descending" TextAlign="TextAlign.Center"/>
                     </Columns>
                 </RadzenDataGrid>
             </RadzenTabsItem>

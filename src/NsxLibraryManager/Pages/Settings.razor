@@ -12,7 +12,7 @@
     <RadzenColumn Size="12">
         @if (Configuration.GetValue<string>("IsDefaultConfigCreated") == "True")
         {
-            <RadzenText Text="Default configuration created"/>
+            <RadzenText Text="@Localizer["DefaultConfigurationCreated"]"/>
         }
 
     </RadzenColumn>
@@ -53,25 +53,25 @@
                         </RadzenUpload>
                     </RadzenColumn>
                 </RadzenRow>
-                <RadzenFormField Text="Keys">
+                <RadzenFormField Text="@Localizer["Keys"]">
                     <RadzenRow Gap="2rem" RowGap="2rem" class="rz-m-0 rz-m-md-12">
                         <RadzenColumn Size="6">
                             <RadzenStack>
-                                <RadzenFormField AllowFloatingLabel="false" Text="Prod Keys File">
+                                <RadzenFormField AllowFloatingLabel="false" Text="@Localizer["ProdKeysFile"]">
                                     <ChildContent>
                                         <RadzenTextBox Disabled="@_databaseFieldDisabled" @bind-Value="@_config.ProdKeys" Name="ProdKeys"/>
                                     </ChildContent>
                                 </RadzenFormField>
                             </RadzenStack>
                             <RadzenStack>
-                                <RadzenFormField AllowFloatingLabel="false" Text="Title Keys File">
+                                <RadzenFormField AllowFloatingLabel="false" Text="@Localizer["TitleKeysFile"]">
                                     <ChildContent>
                                         <RadzenTextBox Disabled="@_databaseFieldDisabled" @bind-Value="@_config.TitleKeys" Name="TitleKeys"/>
                                     </ChildContent>
                                 </RadzenFormField>
                             </RadzenStack>
                             <RadzenStack>
-                                <RadzenFormField AllowFloatingLabel="false" Text="Console Keys File">
+                                <RadzenFormField AllowFloatingLabel="false" Text="@Localizer["ConsoleKeysFile"]">
                                     <ChildContent>
                                         <RadzenTextBox Disabled="@_databaseFieldDisabled" @bind-Value="@_config.ConsoleKeys" Name="ConsoleKeys"/>
                                     </ChildContent>
@@ -86,19 +86,19 @@
                         </RadzenColumn>
                         <RadzenColumn Size="6">
                             <RadzenCard Variant="Variant.Outlined">
-                                <RadzenUpload id="ddUpload" @ref="_uploadDd" ChooseText="Drag and drop here or click to choose keyfiles"
+                                <RadzenUpload id="ddUpload" @ref="_uploadDd" ChooseText="@Localizer["DragAndDropKeys"]"
                                               Auto="true" Multiple="true" Url="api/upload/keys" InputAttributes="@(new Dictionary<string, object>() { { "aria-label", "select file" } })"
                                               Progress=@(args => OnUploadProgress(args, "Drag and drop files to upload")) Complete="@OnUploadKeysComplete" Error="@OnUploadError" Style="width: 100%"/>
-                                <RadzenButton Text="Remove Current Keys" Click=@(args => ClearKeys()) class="rz-mt-4"/>
+                                <RadzenButton Text="@Localizer["RemoveCurrentKeys"]" Click=@(args => ClearKeys()) class="rz-mt-4"/>
                             </RadzenCard>
                         </RadzenColumn>
                     </RadzenRow>
                 </RadzenFormField>
-                <RadzenFieldset Text="Paths">
+                <RadzenFieldset Text="@Localizer["Paths"]">
                     <RadzenRow Gap="1.2rem">
                         <RadzenColumn Size="12" SizeSM="6">
                             <RadzenStack>
-                                <RadzenFormField Text="Backup Path">
+                                <RadzenFormField Text="@Localizer["BackupPath"]">
                                     <ChildContent>
                                         <RadzenTextBox @bind-Value="@_config.BackupPath"  @oninput="@ConfigChanged"  Name="BackupPath"/>
                                     </ChildContent>
@@ -142,7 +142,7 @@
                                     ShowPagingSummary="true"
                                 >
                                     <HeaderTemplate>
-                                        <RadzenButton ButtonStyle="ButtonStyle.Success" Icon="add_circle" Text="Add New Library Path" Click="@InsertRow" Disabled="@_newRecordInsertDisabled"/>
+                                        <RadzenButton ButtonStyle="ButtonStyle.Success" Icon="add_circle" Text="@Localizer["AddNewLibraryPath"]" Click="@InsertRow" Disabled="@_newRecordInsertDisabled"/>
                                     </HeaderTemplate>
                                     <Columns>
                                         <RadzenDataGridColumn Property="Path" Title="Library Path" Width="280px" SortOrder="SortOrder.Ascending">
@@ -200,7 +200,7 @@
                             <RadzenRow>
                                 <RadzenColumn Size="6">
                                     <RadzenSwitch Name="UseEnglishNaming" @bind-Value="@_config.UseEnglishNaming" Change=@(args => ConfigChanged()) InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", "Switch value" }})" MouseEnter="@(args => ShowTooltip("For titles in Asia regions (JP, CN, KO, HK) prefer Nswdb for title name", args))"/>
-                                    <RadzenLabel Text="Try to use english naming." Component="UseEnglishNaming" Style="margin-left: 8px; vertical-align: middle;"/>
+                                    <RadzenLabel Text="@Localizer["TryToUseEnglishNaming"]" Component="UseEnglishNaming" Style="margin-left: 8px; vertical-align: middle;"/>
                                 </RadzenColumn>
                             </RadzenRow>
                         </RadzenColumn>
@@ -250,7 +250,7 @@
                         <RadzenColumn Size="12" SizeMD="4">
                             <RadzenRow AlignItems="AlignItems.Center">
                                 <RadzenColumn Size="12">
-                                    <RadzenLabel Text="Request method:" Component="WebhookRequestMethod" Style="display: block; margin-bottom: 8px;"/>
+                                    <RadzenLabel Text="@Localizer["RequestMethod"]" Component="WebhookRequestMethod" Style="display: block; margin-bottom: 8px;"/>
                                     <RadzenRadioButtonList @bind-Value="@_config.LibraryReloadWebhookRequestMethod" TValue="int" Change=@(args => ConfigChanged()) Disabled="@(!_config.LibraryReloadPostWebhook)">
                                         <Items>
                                             <RadzenRadioButtonListItem Text="POST" Value="@Convert.ToInt32(WebhookHttpMethod.Post)"/>
@@ -294,7 +294,7 @@
                         <RadzenColumn Size="12" SizeMD="4">
                             <RadzenRow AlignItems="AlignItems.Center">
                                 <RadzenColumn Size="12">
-                                    <RadzenLabel Text="Request method:" Component="WebhookRequestRefreshMethod" Style="display: block; margin-bottom: 8px;"/>
+                                    <RadzenLabel Text="@Localizer["RequestMethod"]" Component="WebhookRequestRefreshMethod" Style="display: block; margin-bottom: 8px;"/>
                                     <RadzenRadioButtonList @bind-Value="@_config.LibraryRefreshWebhookRequestMethod" TValue="int" Change=@(args => ConfigChanged()) Disabled="@(!_config.LibraryRefreshPostWebhook)">
                                         <Items>
                                             <RadzenRadioButtonListItem Text="POST" Value="1"/>
@@ -313,7 +313,7 @@
     </RadzenRow>
 </RadzenFieldset>
 
-<RadzenFieldset Text="Download Settings" >
+<RadzenFieldset Text="@Localizer["DownloadSettings"]" >
     <RadzenRow Gap="1.2rem">
         <RadzenColumn Size="12" SizeSM="6">
             <RadzenStack>
@@ -335,7 +335,7 @@
         </RadzenColumn>
         <RadzenColumn Size="12" SizeSM="6">
             <RadzenStack>
-                <RadzenFormField Text="TitleDb Version">
+                <RadzenFormField Text="@Localizer["TitleDbVersion"]">
                     <ChildContent>
                         <RadzenTextBox @bind-Value="@_config.DownloadSettings.VersionUrl" @oninput="@ConfigChanged" ></RadzenTextBox>
                     </ChildContent>
@@ -345,7 +345,7 @@
                             <div class="rz-message rz-messages-error">@_validationErrors["DownloadSettings.VersionUrl"]</div>    
                         }
                         <div class="rz-text-caption">
-                            Url for the version file for SQL-Titledb.
+                            @Localizer["TitleDbVersionDescription"]
                         </div>                            
                     </Helper>
                 </RadzenFormField>
@@ -355,7 +355,7 @@
     <RadzenRow Gap="1.2rem">
         <RadzenColumn Size="12" SizeSM="12">
             <RadzenStack>
-                <RadzenFormField Text="Title Db Path">
+                <RadzenFormField Text="@Localizer["TitleDbPath"]">
                     <ChildContent>
                         <RadzenTextBox @bind-Value="@_config.TitleDatabase" Disabled="true"></RadzenTextBox>
                     </ChildContent>
@@ -365,7 +365,7 @@
                             <div class="rz-message rz-messages-error">@_validationErrors["DownloadSettings.TitleDbPath"]</div>    
                         }
                         <div class="rz-text-caption">
-                            Location of SQL-TitleDb.
+                            @Localizer["TitleDbPathDescription"]
                         </div>                             
                     </Helper>
                 </RadzenFormField>

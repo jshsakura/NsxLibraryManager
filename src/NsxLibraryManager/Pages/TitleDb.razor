@@ -34,7 +34,7 @@
                         LogicalFilterOperator="LogicalFilterOperator.And" 
                         style="height: 90vh">
             <HeaderTemplate>
-                <RadzenText TextStyle="TextStyle.Caption">Db Version: @_dbVersion - Last updated @_lastUpdated</RadzenText>
+                <RadzenText TextStyle="TextStyle.Caption">@Localizer["DbVersion"] @_dbVersion - @Localizer["LastUpdated"] @_lastUpdated</RadzenText>
             </HeaderTemplate>
             <Columns>
                 <RadzenDataGridColumn 

@@ -16,26 +16,26 @@
                         AllowColumnResize="true" PagerHorizontalAlign="HorizontalAlign.Center" ColumnWidth="200px" AllowColumnPicking="true"
                         IsLoading="@_isLoading" AllowColumnReorder="true" PageSizeOptions="@_pageSizeOptions" ShowPagingSummary="true" style="height: 95vh">
             <HeaderTemplate>
-                <RadzenButton Text="Scan Input Folder" Click="@LoadFiles" ButtonStyle="ButtonStyle.Primary" Disabled="@_scanInputButtonDisabled" class=".rz-shadow-2"/>
-                <RadzenButton Text="Rename Files" Click="@RenameFiles" ButtonStyle="ButtonStyle.Danger" Disabled="@_renameButtonDisabled"  class=".rz-shadow-2"/>
-                <RadzenText TextStyle="TextStyle.Caption">Input Path: @_inputPathDisplay</RadzenText> |
-                <RadzenText TextStyle="TextStyle.Caption">Output Path: @_outputPathDisplay </RadzenText>
+                <RadzenButton Text="@Localizer["ScanInputFolder"]" Click="@LoadFiles" ButtonStyle="ButtonStyle.Primary" Disabled="@_scanInputButtonDisabled" class=".rz-shadow-2"/>
+                <RadzenButton Text="@Localizer["RenameFiles"]" Click="@RenameFiles" ButtonStyle="ButtonStyle.Danger" Disabled="@_renameButtonDisabled"  class=".rz-shadow-2"/>
+                <RadzenText TextStyle="TextStyle.Caption">@Localizer["InputPathLabel"] @_inputPathDisplay</RadzenText> |
+                <RadzenText TextStyle="TextStyle.Caption">@Localizer["OutputPathLabel"] @_outputPathDisplay </RadzenText>
             </HeaderTemplate>
             <Columns>
-                <RadzenDataGridColumn TItem="RenameTitleDto" Property="SourceFileName" Title="Source File" Width="200px">
+                <RadzenDataGridColumn TItem="RenameTitleDto" Property="SourceFileName" Title="@Localizer["SourceFile"]" Width="200px">
                     <Template Context="renameTitle">
                         <p style="white-space:pre-wrap">@renameTitle.SourceFileName</p>
                     </Template>
                 </RadzenDataGridColumn>
-                <RadzenDataGridColumn TItem="RenameTitleDto" Property="DestinationFileName" Title="Destination" Width="200px">
+                <RadzenDataGridColumn TItem="RenameTitleDto" Property="DestinationFileName" Title="@Localizer["Destination"]" Width="200px">
                     <Template Context="renameTitle">
                         <p style="white-space:pre-wrap">@renameTitle.DestinationFileName</p>
                     </Template>
                 </RadzenDataGridColumn>
-                <RadzenDataGridColumn TItem="RenameTitleDto" Property="TitleId" Title="Title Id" Width="100px"/>
-                <RadzenDataGridColumn TItem="RenameTitleDto" Property="TitleName" Title="Name" Width="100px"/>
-                <RadzenDataGridColumn TItem="RenameTitleDto" Property="Error" Title="Error" Width="50px" FormatString="{0}" FormatProvider="@_myBooleanProvider"/>
-                <RadzenDataGridColumn TItem="RenameTitleDto" Property="ErrorMessage" Title="Error Message" Width="200px">
+                <RadzenDataGridColumn TItem="RenameTitleDto" Property="TitleId" Title="@Localizer["TitleId"]" Width="100px"/>
+                <RadzenDataGridColumn TItem="RenameTitleDto" Property="TitleName" Title="@Localizer["Name"]" Width="100px"/>
+                <RadzenDataGridColumn TItem="RenameTitleDto" Property="Error" Title="@Localizer["Error"]" Width="50px" FormatString="{0}" FormatProvider="@_myBooleanProvider"/>
+                <RadzenDataGridColumn TItem="RenameTitleDto" Property="ErrorMessage" Title="@Localizer["ErrorMessage"]" Width="200px">
                     <Template Context="renameTitle">
                         <p style="white-space:pre-wrap">@renameTitle.ErrorMessage</p>
                     </Template>
@@ -50,11 +50,11 @@
 <RadzenTabsItem Text="Configuration">
 <RadzenStack Style="padding-bottom: .5rem ">
 
-    <RenamerFieldSet Text="Basic Info" AllowCollapse="true" Visible="true">
+    <RenamerFieldSet Text="@Localizer["BasicInfo"]" AllowCollapse="true" Visible="true">
         <RadzenRow Gap="1rem">
             <RadzenColumn Size="12" SizeSM="6">
-                <RenamerFieldSet Text="Input">
-                    <RadzenFormField Text="Input Path" Variant="@Variant" Style="width: 100%; padding: 1px">
+                <RenamerFieldSet Text="@Localizer["Input"]">
+                    <RadzenFormField Text="@Localizer["InputPath"]" Variant="@Variant" Style="width: 100%; padding: 1px">
                         <ChildContent>
                             <RadzenTextBox @bind-Value="@_settings.InputPath" id="InputPath" Name="InputPath"
                                            Style="font-family: monospace;"
@@ -65,14 +65,14 @@
                             <div class="rz-message rz-messages-error ">@_validationErrors["InputPath"]</div>
                         </Helper>
                     </RadzenFormField>
-                    <RadzenFormField Text="Unkown Placeholder" Variant="@Variant" Style="width: 100%; padding: 1px">
+                    <RadzenFormField Text="@Localizer["UnknownPlaceholder"]" Variant="@Variant" Style="width: 100%; padding: 1px">
                         <ChildContent>
                             <RadzenTextBox @bind-Value="@_settings.UnknownPlaceholder" id="UnknownPlaceholder" Name="UnknownPlaceholder"
                                            Style="font-family: monospace;"
                             />
                         </ChildContent>
                         <Helper>
-                            <RadzenText TextStyle="TextStyle.Caption">This will be used to replace an empty TitleName or AppName when renaming files.</RadzenText>
+                            <RadzenText TextStyle="TextStyle.Caption">@Localizer["UnknownPlaceholderDescription"]</RadzenText>
 
                         </Helper>
                     </RadzenFormField>
@@ -81,16 +81,16 @@
                             <RadzenCheckBox Name="DeleteEmptyFolders"
                                             @bind-Value="@_settings.DeleteEmptyFolders"
                                             MouseEnter="@(args => ShowTooltip("Once the rename process finishes, all empty folders inside input path will be removed.", args) )"/>
-                            <RadzenLabel Text="Delete empty folders after rename" Component="DeleteEmptyFolders" Style="margin-left: 8px; vertical-align: middle;"/>
+                            <RadzenLabel Text="@Localizer["DeleteEmptyFoldersAfterRename"]" Component="DeleteEmptyFolders" Style="margin-left: 8px; vertical-align: middle;"/>
                         </RadzenColumn>
                         <RadzenColumn Size="6">
                             <RadzenCheckBox Name="Recusive" @bind-Value="@_settings.Recursive"/>
-                            <RadzenLabel Text="Recursive Subdirectories" Component="Recusive" Style="margin-left: 8px; vertical-align: middle;"/>
+                            <RadzenLabel Text="@Localizer["RecursiveSubdirectories"]" Component="Recusive" Style="margin-left: 8px; vertical-align: middle;"/>
                         </RadzenColumn>
                     </RadzenRow>
                 </RenamerFieldSet>
-                <RenamerFieldSet Text="Output">
-                    <RadzenFormField Text="Base Path" Variant="@Variant" Style="width: 100%; padding: 1px">
+                <RenamerFieldSet Text="@Localizer["Output"]">
+                    <RadzenFormField Text="@Localizer["BasePath"]" Variant="@Variant" Style="width: 100%; padding: 1px">
                         <ChildContent>
                             <RadzenTextBox @bind-Value="@_settings.OutputBasePath" id="OutputBasePath" Name="OutputBasePath"
                                            Style="font-family: monospace;"
@@ -106,13 +106,13 @@
                             <RadzenCheckBox Name="UseEnglishNaming"
                                             @bind-Value="@_settings.UseEnglishNaming"
                                             MouseEnter="@(args => ShowTooltip("For titles in Asia regions (JP, CN, KO, HK) prefer Nswdb for title name", args) )"/>
-                            <RadzenLabel Text="Try to use english naming." Component="UseEnglishNaming" Style="margin-left: 8px; vertical-align: middle;"/>
+                            <RadzenLabel Text="@Localizer["TryToUseEnglishNaming"]" Component="UseEnglishNaming" Style="margin-left: 8px; vertical-align: middle;"/>
                         </RadzenColumn>
                         <RadzenColumn Size="6">
                             <RadzenCheckBox Name="TitlesForceUppercase"
                                             @bind-Value="@_settings.TitlesForceUppercase"
                                             MouseEnter="@(args => ShowTooltip("Convert TitleName and AppName to Title Case when renaming.", args) )"/>
-                            <RadzenLabel Text="TitleName and AppName to TitleCase"
+                            <RadzenLabel Text="@Localizer["TitleNameAndAppNameToTitleCase"]"
                                          Component="TitlesForceUppercase"
                                          Style="margin-left: 8px; vertical-align: middle;"/>
                         </RadzenColumn>
@@ -120,13 +120,13 @@
 
                 </RenamerFieldSet>
                 <RadzenRow Style="margin-top: .5rem;" JustifyContent="JustifyContent.Center">
-                    <RadzenButton Variant="Variant.Outlined" ButtonStyle="ButtonStyle.Light" Click="@LoadDefaultTemplate" class="rz-ripple">Default Configuration</RadzenButton>
-                    <RadzenButton Variant="Variant.Outlined" ButtonStyle="ButtonStyle.Success" Click="@ValidateConfiguration" class="rz-ripple">Validate Configuration</RadzenButton>
-                    <RadzenButton Variant="Variant.Outlined" Click="@SaveConfiguration" class="rz-ripple">Save Configuration</RadzenButton>
+                    <RadzenButton Variant="Variant.Outlined" ButtonStyle="ButtonStyle.Light" Click="@LoadDefaultTemplate" class="rz-ripple">@Localizer["DefaultConfiguration"]</RadzenButton>
+                    <RadzenButton Variant="Variant.Outlined" ButtonStyle="ButtonStyle.Success" Click="@ValidateConfiguration" class="rz-ripple">@Localizer["ValidateConfiguration"]</RadzenButton>
+                    <RadzenButton Variant="Variant.Outlined" Click="@SaveConfiguration" class="rz-ripple">@Localizer["SaveConfiguration"]</RadzenButton>
                 </RadzenRow>
             </RadzenColumn>
             <RadzenColumn Size="12" SizeSM="6">
-                <RenamerFieldSet Text="Template Fields">
+                <RenamerFieldSet Text="@Localizer["TemplateFields"]">
                     <RadzenRow Gap="0.1rem" Style="padding-bottom: .1rem">
                         <RadzenColumn class="rz-p-2" Style="text-align: center; padding: 0 !important;">
                             <RadzenButton Text="@_templateFieldMappings[TemplateField.BasePath]" Shade="Shade.Lighter" Disabled="@_fragmentButtonDisabled"
@@ -189,13 +189,13 @@
                 </RenamerFieldSet>
                 <RenamerFieldSet Text="@_sampleResultLabel">
                     <RadzenRow Gap="0.1rem">
-                        <RadzenColumn Size="1">Before:</RadzenColumn>
+                        <RadzenColumn Size="1">@Localizer["Before"]</RadzenColumn>
                         <RadzenColumn Size="11">
                             <RadzenText Style="font-family: monospace; font-size: .7rem" Text="@_sampleBefore"/>
                         </RadzenColumn>
                     </RadzenRow>
                     <RadzenRow Gap="0.1rem">
-                        <RadzenColumn Size="1">After:</RadzenColumn>
+                        <RadzenColumn Size="1">@Localizer["After"]</RadzenColumn>
                         <RadzenColumn Size="11">
                             <RadzenText Style="font-family: monospace; font-size: .7rem" Text="@_sampleAfter"/>
                         </RadzenColumn>
@@ -212,21 +212,21 @@
 <div Class="rz-p-0">
     <RadzenRow Gap="1rem">
         <RadzenColumn Size="12" SizeSM="6">
-            <RenamerFieldSet Text="NSP Paths">
-                <RadzenFormField Text="Base" Variant="@Variant" Style="width: 100%; padding: 1px">
+            <RenamerFieldSet Text="@Localizer["NSPPaths"]">
+                <RadzenFormField Text="@Localizer["Base"]" Variant="@Variant" Style="width: 100%; padding: 1px">
                     <RadzenTextBox @bind-Value="@_templateFields[TitlePackageType.NspBase].Value" id="NspBase" Name="NspBase"
                                    Style="font-family: monospace;"
                                    @oninput="@(args => OnTemplateFieldInput(TitlePackageType.NspBase, args.Value?.ToString()))"
                                    @onclick="@(args => OnTemplateFieldClick(TitlePackageType.NspBase, args))"/>
                 </RadzenFormField>
-                <RadzenFormField Text="DLC" Variant="@Variant" Style="width: 100%; padding: 1px">
+                <RadzenFormField Text="@Localizer["DLC"]" Variant="@Variant" Style="width: 100%; padding: 1px">
                     <RadzenTextBox @bind-Value="@_templateFields[TitlePackageType.NspDlc].Value" id="NspDlc" Name="NspDlc"
                                    Style="font-family: monospace;"
                                    @oninput="@(args => OnTemplateFieldInput(TitlePackageType.NspDlc, args.Value?.ToString()))"
                                    @onclick="@(args => OnTemplateFieldClick(TitlePackageType.NspDlc, args))"/>
 
                 </RadzenFormField>
-                <RadzenFormField Text="Update" Variant="@Variant" Style="width: 100%; padding: 1px">
+                <RadzenFormField Text="@Localizer["Update"]" Variant="@Variant" Style="width: 100%; padding: 1px">
                     <RadzenTextBox @bind-Value="@_templateFields[TitlePackageType.NspUpdate].Value" id="NspUpdate" Name="NspUpdate"
                                    Style="font-family: monospace;"
                                    @oninput="@(args => OnTemplateFieldInput(TitlePackageType.NspUpdate, args.Value?.ToString()))"
@@ -235,21 +235,21 @@
             </RenamerFieldSet>
         </RadzenColumn>
         <RadzenColumn Size="12" SizeSM="6">
-            <RenamerFieldSet Text="NSZ Paths">
+            <RenamerFieldSet Text="@Localizer["NSZPaths"]">
 
-                <RadzenFormField Text="Base" Variant="@Variant" Style="width: 100%; padding: 1px">
+                <RadzenFormField Text="@Localizer["Base"]" Variant="@Variant" Style="width: 100%; padding: 1px">
                     <RadzenTextBox @bind-Value="@_templateFields[TitlePackageType.NszBase].Value" id="NszBase" Name="NszBase"
                                    Style="font-family: monospace;"
                                    @oninput="@(args => OnTemplateFieldInput(TitlePackageType.NszBase, args.Value?.ToString()))"
                                    @onclick="@(args => OnTemplateFieldClick(TitlePackageType.NszBase, args))"/>
                 </RadzenFormField>
-                <RadzenFormField Text="DLC" Variant="@Variant" Style="width: 100%; padding: 1px">
+                <RadzenFormField Text="@Localizer["DLC"]" Variant="@Variant" Style="width: 100%; padding: 1px">
                     <RadzenTextBox @bind-Value="@_templateFields[TitlePackageType.NszDlc].Value" id="NszDlc" Name="NszDlc"
                                    Style="font-family: monospace;"
                                    @oninput="@(args => OnTemplateFieldInput(TitlePackageType.NszDlc, args.Value?.ToString()))"
                                    @onclick="@(args => OnTemplateFieldClick(TitlePackageType.NszDlc, args))"/>
                 </RadzenFormField>
-                <RadzenFormField Text="Update" Variant="@Variant" Style="width: 100%; padding: 1px">
+                <RadzenFormField Text="@Localizer["Update"]" Variant="@Variant" Style="width: 100%; padding: 1px">
                     <RadzenTextBox @bind-Value="@_templateFields[TitlePackageType.NszUpdate].Value" id="NszUpdate" Name="NszUpdate"
                                    Style="font-family: monospace;"
                                    @oninput="@(args => OnTemplateFieldInput(TitlePackageType.NszUpdate, args.Value?.ToString()))"
@@ -260,20 +260,20 @@
     </RadzenRow>
     <RadzenRow Gap="1rem">
         <RadzenColumn Size="12" SizeSM="6">
-            <RenamerFieldSet Text="XCI Paths">
-                <RadzenFormField Text="Base" Variant="@Variant" Style="width: 100%; padding: 1px">
+            <RenamerFieldSet Text="@Localizer["XCIPaths"]">
+                <RadzenFormField Text="@Localizer["Base"]" Variant="@Variant" Style="width: 100%; padding: 1px">
                     <RadzenTextBox @bind-Value="@_templateFields[TitlePackageType.XciBase].Value" id="XciBase" Name="XciBase"
                                    Style="font-family: monospace;"
                                    @oninput="@(args => OnTemplateFieldInput(TitlePackageType.XciBase, args.Value?.ToString()))"
                                    @onclick="@(args => OnTemplateFieldClick(TitlePackageType.XciBase, args))"/>
                 </RadzenFormField>
-                <RadzenFormField Text="DLC" Variant="@Variant" Style="width: 100%; padding: 1px">
+                <RadzenFormField Text="@Localizer["DLC"]" Variant="@Variant" Style="width: 100%; padding: 1px">
                     <RadzenTextBox @bind-Value="@_templateFields[TitlePackageType.XciDlc].Value" id="XciDlc" Name="XciDlc"
                                    Style="font-family: monospace;"
                                    @oninput="@(args => OnTemplateFieldInput(TitlePackageType.XciDlc, args.Value?.ToString()))"
                                    @onclick="@(args => OnTemplateFieldClick(TitlePackageType.XciDlc, args))"/>
                 </RadzenFormField>
-                <RadzenFormField Text="Update" Variant="@Variant" Style="width: 100%; padding: 1px">
+                <RadzenFormField Text="@Localizer["Update"]" Variant="@Variant" Style="width: 100%; padding: 1px">
                     <RadzenTextBox @bind-Value="@_templateFields[TitlePackageType.XciUpdate].Value" id="XciUpdate" Name="XciUpdate"
                                    Style="font-family: monospace;"
                                    @oninput="@(args => OnTemplateFieldInput(TitlePackageType.XciUpdate, args.Value?.ToString()))"
@@ -282,21 +282,21 @@
             </RenamerFieldSet>
         </RadzenColumn>
         <RadzenColumn Size="12" SizeSM="6">
-            <RenamerFieldSet Text="XCZ Paths">
+            <RenamerFieldSet Text="@Localizer["XCZPaths"]">
 
-                <RadzenFormField Text="Base" Variant="@Variant" Style="width: 100%; padding: 1px">
+                <RadzenFormField Text="@Localizer["Base"]" Variant="@Variant" Style="width: 100%; padding: 1px">
                     <RadzenTextBox @bind-Value="@_templateFields[TitlePackageType.XczBase].Value" id="XczBase" Name="XczBase"
                                    Style="font-family: monospace;"
                                    @oninput="@(args => OnTemplateFieldInput(TitlePackageType.XczBase, args.Value?.ToString()))"
                                    @onclick="@(args => OnTemplateFieldClick(TitlePackageType.XczBase, args))"/>
                 </RadzenFormField>
-                <RadzenFormField Text="DLC" Variant="@Variant" Style="width: 100%; padding: 1px">
+                <RadzenFormField Text="@Localizer["DLC"]" Variant="@Variant" Style="width: 100%; padding: 1px">
                     <RadzenTextBox @bind-Value="@_templateFields[TitlePackageType.XczDlc].Value" id="XczDlc" Name="XczDlc"
                                    Style="font-family: monospace;"
                                    @oninput="@(args => OnTemplateFieldInput(TitlePackageType.XczDlc, args.Value?.ToString()))"
                                    @onclick="@(args => OnTemplateFieldClick(TitlePackageType.XczDlc, args))"/>
                 </RadzenFormField>
-                <RadzenFormField Text="Update" Variant="@Variant" Style="width: 100%; padding: 1px">
+                <RadzenFormField Text="@Localizer["Update"]" Variant="@Variant" Style="width: 100%; padding: 1px">
                     <RadzenTextBox @bind-Value="@_templateFields[TitlePackageType.XczUpdate].Value" id="XczUpdate" Name="XczUpdate"
                                    Style="font-family: monospace;"
                                    @oninput="@(args => OnTemplateFieldInput(TitlePackageType.XczUpdate, args.Value?.ToString()))"

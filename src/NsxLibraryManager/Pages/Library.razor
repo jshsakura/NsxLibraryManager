@@ -13,7 +13,7 @@
                 <RadzenText TextStyle="TextStyle.Subtitle1">@Localizer["LibraryPath"]: <strong>@_libraryPath</strong></RadzenText>
             </RadzenColumn>
             <RadzenColumn Size="6" Style="text-align: right">
-                <RadzenText TextStyle="TextStyle.Subtitle1"> <strong>@_baseCount</strong> Games, <strong>@_patchCount</strong> Updates and <strong>@_dlcCount</strong> DLCs in library </RadzenText>
+                <RadzenText TextStyle="TextStyle.Subtitle1"> <strong>@_baseCount</strong> @Localizer["Games"], <strong>@_patchCount</strong> @Localizer["Updates"] and <strong>@_dlcCount</strong> @Localizer["DLCs"] @Localizer["GamesInLibrary"] </RadzenText>
             </RadzenColumn>
         </RadzenRow>
     </RadzenStack>
@@ -46,19 +46,19 @@
             ShowPagingSummary="true" 
             style="height: 89vh">
             <HeaderTemplate>
-                <RadzenSplitButton Variant="Variant.Flat" ButtonStyle="ButtonStyle.Secondary" Shade="Shade.Light" AlwaysOpenPopup="true" DropDownIcon="keyboard_double_arrow_down" Click=@(args => OnClickActions(args, "Actions")) Text="Actions" Disabled="@ActionsDisabled">
+                <RadzenSplitButton Variant="Variant.Flat" ButtonStyle="ButtonStyle.Secondary" Shade="Shade.Light" AlwaysOpenPopup="true" DropDownIcon="keyboard_double_arrow_down" Click=@(args => OnClickActions(args, "Actions")) Text="@Localizer["Actions"]" Disabled="@ActionsDisabled">
                     <ChildContent>
-                        <RadzenSplitButtonItem Text="Edit Selected" Value="EditSelected" Icon="edit"/>
-                        <RadzenSplitButtonItem Text="Send Selected to FTP" Value="FtpSelected" Icon="publish" />
-                        <RadzenSplitButtonItem Text="Clear Selection" Value="ClearSelected" Icon="clear_all" />
+                        <RadzenSplitButtonItem Text="@Localizer["EditSelected"]" Value="EditSelected" Icon="edit"/>
+                        <RadzenSplitButtonItem Text="@Localizer["SendSelectedToFTP"]" Value="FtpSelected" Icon="publish" />
+                        <RadzenSplitButtonItem Text="@Localizer["ClearSelection"]" Value="ClearSelected" Icon="clear_all" />
                     </ChildContent>
                 </RadzenSplitButton> |
-                <RadzenButton Click="@(_ => RefreshLibrary())" Text="Refresh Library" ButtonStyle="ButtonStyle.Primary" class=".rz-shadow-2"/>
-                <RadzenButton Click="@(_ => ReloadLibrary())" Text="Reload Library" ButtonStyle="ButtonStyle.Danger" class=".rz-shadow-2"/>
-                <RadzenText TextStyle="TextStyle.Caption">Last updated @_lastUpdated</RadzenText>
+                <RadzenButton Click="@(_ => RefreshLibrary())" Text="@Localizer["RefreshLibrary"]" ButtonStyle="ButtonStyle.Primary" class=".rz-shadow-2"/>
+                <RadzenButton Click="@(_ => ReloadLibrary())" Text="@Localizer["ReloadLibrary"]" ButtonStyle="ButtonStyle.Danger" class=".rz-shadow-2"/>
+                <RadzenText TextStyle="TextStyle.Caption">@Localizer["LastUpdated"] @_lastUpdated</RadzenText>
             </HeaderTemplate>
             <Columns>
-                <RadzenDataGridColumn Title="Select" UniqueID="Select" Width="60px" Sortable="false" Filterable="false" Visible="false" >
+                <RadzenDataGridColumn Title="@Localizer["Select"]" UniqueID="Select" Width="60px" Sortable="false" Filterable="false" Visible="false" >
                     <HeaderTemplate>
                         <RadzenCheckBox TabIndex="-1" TriState="false" TValue="bool?" InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", "Select all items" }})"
                                         Value="@(_selectedTitles == null || _selectedTitles?.Any() != true ? false : !_libraryTitles.All(i => _selectedTitles.Contains(i)) ? null : _libraryTitles.Any(i => _selectedTitles.Contains(i)))"
@@ -69,14 +69,14 @@
                                         TValue="bool" Change=@(args => { _grid.SelectRow(data); }) />
                     </Template>
                 </RadzenDataGridColumn>
-                <RadzenDataGridColumn Property="ApplicationId" Title="Title Id" Width="150px"/>
-                <RadzenDataGridColumn Property="OtherApplicationId" Title="Other Application Id" Width="150px" Visible="false"/>
-                <RadzenDataGridColumn Property="TitleName" SortOrder="SortOrder.Ascending" Title="Name" Width="300px">
+                <RadzenDataGridColumn Property="ApplicationId" Title="@Localizer["TitleId"]" Width="150px"/>
+                <RadzenDataGridColumn Property="OtherApplicationId" Title="@Localizer["OtherApplicationId"]" Width="150px" Visible="false"/>
+                <RadzenDataGridColumn Property="TitleName" SortOrder="SortOrder.Ascending" Title="@Localizer["Name"]" Width="300px">
                     <Template Context="libraryTitle">
                         <RadzenLink href="javascript:void(0)" Text="@libraryTitle.TitleName" @onclick="_ => OpenDetails(libraryTitle)"/>
                     </Template>
                 </RadzenDataGridColumn>
-                <RadzenDataGridColumn Property="Version" Title="Version" Visible="false" Width="100px">
+                <RadzenDataGridColumn Property="Version" Title="@Localizer["Version"]" Visible="false" Width="100px">
                     <Template Context="libraryTitle">
                         @{
                             var shortVer = (libraryTitle.Version.ToString() ?? string.Empty).VersionShifted();
@@ -92,24 +92,24 @@
 
                     </Template>
                 </RadzenDataGridColumn>
-                <RadzenDataGridColumn Property="Collection.Name" Title="Collection" Visible="false"/>
+                <RadzenDataGridColumn Property="Collection.Name" Title="@Localizer["Collection"]" Visible="false"/>
 
-                <RadzenDataGridColumn Property="Publisher" Title="Publisher"/>
-                <RadzenDataGridColumn Property="ContentType" Title="Type" Width="80px"/>
-                <RadzenDataGridColumn Property="Rating" Title="Age Rating" Visible="false" Width="80px">
+                <RadzenDataGridColumn Property="Publisher" Title="@Localizer["Publisher"]"/>
+                <RadzenDataGridColumn Property="ContentType" Title="@Localizer["Type"]" Width="80px"/>
+                <RadzenDataGridColumn Property="Rating" Title="@Localizer["AgeRating"]" Visible="false" Width="80px">
                     <Template Context="libraryTitle">
                         @(libraryTitle?.Rating.AgeRating(AgeRatingAgency))
                     </Template>
                 </RadzenDataGridColumn>
-                <RadzenDataGridColumn Property="PackageType" Title="Package Type" Visible="false" Width="130px"/>
-                <RadzenDataGridColumn Property="FileName" Title="Filename" Width="250px">
+                <RadzenDataGridColumn Property="PackageType" Title="@Localizer["PackageType"]" Visible="false" Width="130px"/>
+                <RadzenDataGridColumn Property="FileName" Title="@Localizer["Filename"]" Width="250px">
                     <Template Context="libraryTitle">
                         <div style="white-space: normal; word-break: break-word; min-width: 0; max-height: 100px; overflow-y: auto;">
                             @libraryTitle.FileName
                         </div>
                     </Template>
                 </RadzenDataGridColumn>
-                <RadzenDataGridColumn Property="Categories" Title="Categories" Sortable="false" Filterable="true">
+                <RadzenDataGridColumn Property="Categories" Title="@Localizer["Categories"]" Sortable="false" Filterable="true">
                     <FilterTemplate>
                         <RadzenDropDown @bind-Value="@_selectedCategories" Style="width:100%;" InputAttributes="@(new Dictionary<string, object>() { { "aria-label", "filter by Category" } })"
                                         Change=@OnSelectedCategoriesChange Data="@(_categories)" AllowClear="true" Multiple="true"/>
@@ -121,16 +121,16 @@
                         }
                     </Template>
                 </RadzenDataGridColumn>
-                <RadzenDataGridColumn Property="Size" Title="Size" Width="100px">
+                <RadzenDataGridColumn Property="Size" Title="@Localizer["Size"]" Width="100px">
                     <Template Context="libraryTitle">
                         @libraryTitle.Size.ToHumanReadableBytes();
                     </Template>
                 </RadzenDataGridColumn>
-                <RadzenDataGridColumn Property="Region" Title="Region" Visible="false" Width="110px"/>
-                <RadzenDataGridColumn Property="ReleaseDate" Title="Release Date" FormatString="{0:d}" Width="110px"/>
-                <RadzenDataGridColumn Property="LastWriteTime" Title="Date Modified" FormatString="{0:d}" Visible="false" Width="110px"/>
-                <RadzenDataGridColumn Property="NumberOfPlayers" Title="Players" Width="50px" Visible="false"/>
-                <RadzenDataGridColumn Property="LatestVersion" Title="Latest Version" Visible="false" Width="50px">
+                <RadzenDataGridColumn Property="Region" Title="@Localizer["Region"]" Visible="false" Width="110px"/>
+                <RadzenDataGridColumn Property="ReleaseDate" Title="@Localizer["ReleaseDate"]" FormatString="{0:d}" Width="110px"/>
+                <RadzenDataGridColumn Property="LastWriteTime" Title="@Localizer["DateModified"]" FormatString="{0:d}" Visible="false" Width="110px"/>
+                <RadzenDataGridColumn Property="NumberOfPlayers" Title="@Localizer["Players"]" Width="50px" Visible="false"/>
+                <RadzenDataGridColumn Property="LatestVersion" Title="@Localizer["LatestVersion"]" Visible="false" Width="50px">
                     <Template Context="libraryTitle">
                         @{
                             var shortVer = (libraryTitle.LatestVersion.ToString() ?? string.Empty).VersionShifted();
@@ -145,16 +145,16 @@
                         }
                     </Template>
                 </RadzenDataGridColumn>
-                <RadzenDataGridColumn Property="UserRating" Title="User Rating" Width="100px" Visible="false">
+                <RadzenDataGridColumn Property="UserRating" Title="@Localizer["UserRating"]" Width="100px" Visible="false">
                     <Template Context="libraryTitle">
                         <RadzenRating TValue="int" Value="@libraryTitle.UserRating" Change=@(args => OnUserRatingChange(args, libraryTitle))  />
 
                     </Template>
                 </RadzenDataGridColumn>
-                <RadzenDataGridColumn Property="CreatedAt" Title="Created" Width="100px" Visible="false"/>
-                <RadzenDataGridColumn Property="UpdatedAt" Title="Last Updated" Width="100px" Visible="false"/>
+                <RadzenDataGridColumn Property="CreatedAt" Title="@Localizer["Created"]" Width="100px" Visible="false"/>
+                <RadzenDataGridColumn Property="UpdatedAt" Title="@Localizer["LastUpdated"]" Width="100px" Visible="false"/>
 
-                <RadzenDataGridColumn Title="Edit" UniqueID="Edit" Visible="false" Reorderable="false" Filterable="false" Sortable="false" TextAlign="TextAlign.Right" Frozen="true" FrozenPosition="FrozenColumnPosition.Right" Width="80px">
+                <RadzenDataGridColumn Title="@Localizer["Edit"]" UniqueID="Edit" Visible="false" Reorderable="false" Filterable="false" Sortable="false" TextAlign="TextAlign.Right" Frozen="true" FrozenPosition="FrozenColumnPosition.Right" Width="80px">
                     <Template Context="libraryTitle">
                         <RadzenButton Icon="edit" ButtonStyle="ButtonStyle.Light" Variant="Variant.Flat" Size="ButtonSize.Medium" class="rz-my-1 rz-ms-1" Click="@(args => EditRow(libraryTitle))" @onclick:stopPropagation="true"/>
                     </Template>

@@ -39,7 +39,12 @@ public class AppLocalizationService
             ["ExportUserData"] = "Export UserData",
             ["ImportUserData"] = "Import UserData",
             ["UITheme"] = "UI Theme",
-            ["Misc"] = "Misc"
+            ["Misc"] = "Misc",
+            ["GamesByCategory"] = "Games by Category",
+            ["ContentDistribution"] = "Content Distribution",
+            ["PackageTypeDistribution"] = "Package Type Distribution",
+            ["TopPublishers"] = "Top Publishers",
+            ["Content"] = "Content"
         },
         ["ko"] = new Dictionary<string, string>
         {
@@ -74,7 +79,12 @@ public class AppLocalizationService
             ["ExportUserData"] = "사용자 데이터 내보내기",
             ["ImportUserData"] = "사용자 데이터 가져오기",
             ["UITheme"] = "UI 테마",
-            ["Misc"] = "기타"
+            ["Misc"] = "기타",
+            ["GamesByCategory"] = "카테고리별 게임",
+            ["ContentDistribution"] = "콘텐츠 분포",
+            ["PackageTypeDistribution"] = "패키지 유형 분포",
+            ["TopPublishers"] = "주요 퍼블리셔",
+            ["Content"] = "콘텐츠"
         }
     };
 

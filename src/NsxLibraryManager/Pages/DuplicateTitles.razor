@@ -7,7 +7,7 @@
 <PageTitle>@Localizer["DuplicateTitles"]</PageTitle>
 <RadzenTabs @bind-SelectedIndex="@selectedTabIndex">
     <Tabs>
-        <RadzenTabsItem Text="Duplicates Base">
+        <RadzenTabsItem Text="@Localizer["DuplicatesBase"]">
             <RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" Wrap="FlexWrap.Wrap" Gap="1rem">
                 <RadzenDataGrid 
                     @ref="_duplicateBaseTitlesGrid" 
@@ -34,16 +34,16 @@
                     style="height: 89vh">
                     <HeaderTemplate>
                         <RadzenButton Text="@_baseSelectTitlesText" Click="@SelectDuplicates" ButtonStyle="ButtonStyle.Info" class=".rz-shadow-2"/>
-                        <RadzenButton Text="Delete Selected Titles" Click="@DeleteDuplicates"  ButtonStyle="ButtonStyle.Danger" class=".rz-shadow-2"/>
-                        <RadzenText TextStyle="TextStyle.Caption">Backup Path: @_backupPath</RadzenText>
+                        <RadzenButton Text="@Localizer["DeleteSelectedTitles"]" Click="@DeleteDuplicates"  ButtonStyle="ButtonStyle.Danger" class=".rz-shadow-2"/>
+                        <RadzenText TextStyle="TextStyle.Caption">@Localizer["BackupPathLabel"] @_backupPath</RadzenText>
                     </HeaderTemplate>
                     <Columns>
 
-                        <RadzenDataGridColumn Property="Id" Title="Id" Width="50px"/>
-                        <RadzenDataGridColumn Property="ApplicationId" Title="Title Id" Width="100px"/>
-                        <RadzenDataGridColumn Property="TitleName" Title="Name"/>
-                        <RadzenDataGridColumn Property="Version" Title="Version" Width="100px"/>
-                        <RadzenDataGridColumn Property="FileName" Title="FileName" Width="300px">
+                        <RadzenDataGridColumn Property="Id" Title="@Localizer["Id"]" Width="50px"/>
+                        <RadzenDataGridColumn Property="ApplicationId" Title="@Localizer["TitleId"]" Width="100px"/>
+                        <RadzenDataGridColumn Property="TitleName" Title="@Localizer["Name"]"/>
+                        <RadzenDataGridColumn Property="Version" Title="@Localizer["Version"]" Width="100px"/>
+                        <RadzenDataGridColumn Property="FileName" Title="@Localizer["FileName"]" Width="300px">
                             <Template Context="libraryTitle">
                                 <div style="white-space: normal; word-break: break-word; min-width: 0; max-height: 100px; overflow-y: auto;">
                                     @libraryTitle.FileName
@@ -54,7 +54,7 @@
                 </RadzenDataGrid>
             </RadzenStack>
         </RadzenTabsItem>
-        <RadzenTabsItem Text="Duplicates Updates">
+        <RadzenTabsItem Text="@Localizer["DuplicatesUpdates"]">
             <RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" Wrap="FlexWrap.Wrap" Gap="1rem">
                 <RadzenDataGrid
                     @ref="_duplicateUpdatesTitlesGrid"
@@ -81,15 +81,15 @@
                     style="height: 89vh">
                     <HeaderTemplate>
                         <RadzenButton Text="@_updatesSelectTitlesText" Click="@SelectDuplicates" ButtonStyle="ButtonStyle.Info" class=".rz-shadow-2"/>
-                        <RadzenButton Text="Delete Selected Titles" Click="@DeleteDuplicates"  ButtonStyle="ButtonStyle.Danger" class=".rz-shadow-2"/>
-                        <RadzenText TextStyle="TextStyle.Caption">Backup Path: @_backupPath</RadzenText>                   
+                        <RadzenButton Text="@Localizer["DeleteSelectedTitles"]" Click="@DeleteDuplicates"  ButtonStyle="ButtonStyle.Danger" class=".rz-shadow-2"/>
+                        <RadzenText TextStyle="TextStyle.Caption">@Localizer["BackupPathLabel"] @_backupPath</RadzenText>                   
                     </HeaderTemplate>
                     <Columns>
-                        <RadzenDataGridColumn Property="Id" Title="Id" Width="50px"/>
-                        <RadzenDataGridColumn Property="ApplicationId" Title="Title Id" Width="100px"/>
-                        <RadzenDataGridColumn Property="TitleName" Title="Name" />
-                        <RadzenDataGridColumn Property="Version" Title="Version" Width="100px"/>
-                        <RadzenDataGridColumn Property="FileName" Title="FileName" Width="300px">
+                        <RadzenDataGridColumn Property="Id" Title="@Localizer["Id"]" Width="50px"/>
+                        <RadzenDataGridColumn Property="ApplicationId" Title="@Localizer["TitleId"]" Width="100px"/>
+                        <RadzenDataGridColumn Property="TitleName" Title="@Localizer["Name"]" />
+                        <RadzenDataGridColumn Property="Version" Title="@Localizer["Version"]" Width="100px"/>
+                        <RadzenDataGridColumn Property="FileName" Title="@Localizer["FileName"]" Width="300px">
                             <Template Context="libraryTitle">
                                 <div style="white-space: normal; word-break: break-word; min-width: 0; max-height: 100px; overflow-y: auto;">
                                     @libraryTitle.FileName
@@ -100,7 +100,7 @@
                 </RadzenDataGrid>
             </RadzenStack>
         </RadzenTabsItem>
-        <RadzenTabsItem Text="Duplicates DLC">
+        <RadzenTabsItem Text="@Localizer["DuplicatesDLC"]">
             <RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" Wrap="FlexWrap.Wrap" Gap="1rem">
                 <RadzenDataGrid
                     @ref="_duplicateDlcTitlesGrid"
@@ -127,15 +127,15 @@
                     style="height: 89vh">
                     <HeaderTemplate>
                         <RadzenButton Text="@_dlcSelectTitlesText" Click="@SelectDuplicates" ButtonStyle="ButtonStyle.Info" class=".rz-shadow-2"/>
-                        <RadzenButton Text="Delete Selected Titles" Click="@DeleteDuplicates"  ButtonStyle="ButtonStyle.Danger" class=".rz-shadow-2"/>
-                        <RadzenText TextStyle="TextStyle.Caption">Backup Path: @_backupPath</RadzenText>                    
+                        <RadzenButton Text="@Localizer["DeleteSelectedTitles"]" Click="@DeleteDuplicates"  ButtonStyle="ButtonStyle.Danger" class=".rz-shadow-2"/>
+                        <RadzenText TextStyle="TextStyle.Caption">@Localizer["BackupPathLabel"] @_backupPath</RadzenText>                    
                     </HeaderTemplate>
                     <Columns>
-                        <RadzenDataGridColumn Property="Id" Title="Id" Width="50px"/>
-                        <RadzenDataGridColumn Property="ApplicationId" Title="Title Id" Width="100px"/>
-                        <RadzenDataGridColumn Property="TitleName" Title="Name" />
-                        <RadzenDataGridColumn Property="Version" Title="Version" Width="100px"/>
-                        <RadzenDataGridColumn Property="FileName" Title="FileName" Width="300px">
+                        <RadzenDataGridColumn Property="Id" Title="@Localizer["Id"]" Width="50px"/>
+                        <RadzenDataGridColumn Property="ApplicationId" Title="@Localizer["TitleId"]" Width="100px"/>
+                        <RadzenDataGridColumn Property="TitleName" Title="@Localizer["Name"]" />
+                        <RadzenDataGridColumn Property="Version" Title="@Localizer["Version"]" Width="100px"/>
+                        <RadzenDataGridColumn Property="FileName" Title="@Localizer["FileName"]" Width="300px">
                             <Template Context="libraryTitle">
                                 <div style="white-space: normal; word-break: break-word; min-width: 0; max-height: 100px; overflow-y: auto;">
                                     @libraryTitle.FileName

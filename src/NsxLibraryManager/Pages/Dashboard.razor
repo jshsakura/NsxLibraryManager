@@ -10,9 +10,9 @@
 </RadzenRow>
 <RadzenRow Gap="5px">
     <RadzenColumn Size="6" class="bg-body bg-opacity-10">
-        <RadzenText TextStyle="TextStyle.Subtitle1" TextAlign="TextAlign.Center" Style="margin-bottom: 0">Games by Category</RadzenText>
+        <RadzenText TextStyle="TextStyle.Subtitle1" TextAlign="TextAlign.Center" Style="margin-bottom: 0">@Localizer["GamesByCategory"]</RadzenText>
         <RadzenChart style="height: 400px">
-            <RadzenBarSeries Data="@_categories" CategoryProperty="Category" LineType="LineType.Dashed" ValueProperty="Count" Title="Games">
+            <RadzenBarSeries Data="@_categories" CategoryProperty="Category" LineType="LineType.Dashed" ValueProperty="Count" Title="@Localizer["Games"]">
                 <RadzenLegend Visible="false"/>
                 <RadzenSeriesDataLabels Visible="@ShowDataLabels"/>
             </RadzenBarSeries>
@@ -24,10 +24,10 @@
         </RadzenChart>
     </RadzenColumn>
     <RadzenColumn Size="6" class="bg-body bg-opacity-10">
-        <RadzenText TextStyle="TextStyle.Subtitle1" TextAlign="TextAlign.Center" Style="margin-bottom: 0">Content Distribution</RadzenText>
+        <RadzenText TextStyle="TextStyle.Subtitle1" TextAlign="TextAlign.Center" Style="margin-bottom: 0">@Localizer["ContentDistribution"]</RadzenText>
 
         <RadzenChart ColorScheme="@ColorScheme.Divergent" style="height: 400px">
-            <RadzenPieSeries Data="@_contentDistribution" Title="Content" CategoryProperty="Type" ValueProperty="Count">
+            <RadzenPieSeries Data="@_contentDistribution" Title="@Localizer["Content"]" CategoryProperty="Type" ValueProperty="Count">
                 <RadzenSeriesDataLabels Visible="true"/>
             </RadzenPieSeries>
         </RadzenChart>
@@ -47,17 +47,17 @@
                 </ChildContent>
                 <TitleTemplate>
                     <div class="rz-donut-content">
-                        <div>Package Type Distribution</div>
+                        <div>@Localizer["PackageTypeDistribution"]</div>
                     </div>
                 </TitleTemplate>
             </RadzenDonutSeries>
         </RadzenChart>
     </RadzenColumn>
     <RadzenColumn Size="6" class="bg-body bg-opacity-10">
-        <RadzenText TextStyle="TextStyle.Subtitle1" TextAlign="TextAlign.Center" Style="margin-bottom: 0">Top Publishers</RadzenText>
+        <RadzenText TextStyle="TextStyle.Subtitle1" TextAlign="TextAlign.Center" Style="margin-bottom: 0">@Localizer["TopPublishers"]</RadzenText>
         <RadzenChart ColorScheme="ColorScheme.Divergent" style="height: 400px">
 
-                <RadzenBarSeries Data="@_publishers" CategoryProperty="Publisher" LineType="LineType.Dashed" ValueProperty="Count" Title="Games">
+                <RadzenBarSeries Data="@_publishers" CategoryProperty="Publisher" LineType="LineType.Dashed" ValueProperty="Count" Title="@Localizer["Games"]">
                     <RadzenLegend Visible="false"/>
                     <RadzenSeriesDataLabels Visible="@ShowDataLabels"/>
                 </RadzenBarSeries>

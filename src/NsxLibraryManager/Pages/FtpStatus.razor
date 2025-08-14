@@ -14,22 +14,22 @@
     AllowFiltering="false" 
     AllowPaging="true" 
     PageSize="100"
-    EmptyText="No queued transfers"
+    EmptyText="@Localizer["NoQueuedTransfers"]"
     AllowSorting="false">
     <Columns>
-        <RadzenDataGridColumn Property="TransferId" Title="Transfer Id" />
-        <RadzenDataGridColumn Property="Filename" Title="File Name" />
-        <RadzenDataGridColumn Property="ProgressPercentage" Title="Completed">
+        <RadzenDataGridColumn Property="TransferId" Title="@Localizer["TransferId"]" />
+        <RadzenDataGridColumn Property="Filename" Title="@Localizer["FileName"]" />
+        <RadzenDataGridColumn Property="ProgressPercentage" Title="@Localizer["Completed"]">
             <Template Context="ftpStatus">
                 @($"{ftpStatus.ProgressPercentage:0.00}%")
             </Template>
         </RadzenDataGridColumn>
-        <RadzenDataGridColumn Property="TotalBytes" Title="Total Bytes">
+        <RadzenDataGridColumn Property="TotalBytes" Title="@Localizer["TotalBytes"]">
             <Template Context="ftpStatus">
                 @ftpStatus.TotalBytes.ToHumanReadableBytes()
             </Template>
         </RadzenDataGridColumn>
-        <RadzenDataGridColumn Property="TransferredBytes" Title="Transferred Bytes" >
+        <RadzenDataGridColumn Property="TransferredBytes" Title="@Localizer["TransferredBytes"]" >
             <Template Context="ftpStatus">
                 @ftpStatus.TransferredBytes.ToHumanReadableBytes()
             </Template>
