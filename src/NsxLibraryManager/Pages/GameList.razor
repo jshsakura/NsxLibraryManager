@@ -7,8 +7,8 @@
 <PageTitle>@Localizer["Games"] - @Localizer["List"]</PageTitle>
 
 <RadzenCard>
-    <RadzenText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">@Localizer["Filter"] @Localizer["Name"] @Localizer["TitleId"]</RadzenText>
-    <RadzenTextBox @oninput=@(args => OnFilterChange(args.Value?.ToString())) Style="width: 100%" aria-label="Search by TitleId Or Name" />
+    <RadzenText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">@Localizer["FilterByNameAndTitleId"]</RadzenText>
+    <RadzenTextBox @oninput=@(args => OnFilterChange(args.Value?.ToString())) Style="width: 100%" aria-label="@Localizer["FilterByNameAndTitleId"]" />
 </RadzenCard>
 
 <RadzenDataList IsLoading="@_isLoading" 

@@ -153,7 +153,17 @@ public class AppLocalizationService
             ["TotalItems"] = "Total Items",
             ["ReceivedTime"] = "Received Time",
             ["StartTime"] = "Start Time",
-            ["CompletionTime"] = "Completion Time"
+            ["CompletionTime"] = "Completion Time",
+            ["FilterByNameAndTitleId"] = "Filter by Name and Title ID",
+            ["Nsuid"] = "Nsuid",
+            ["Category"] = "Category",
+            ["RatingContent"] = "Rating Content",
+            ["DLC"] = "DLC",
+            ["Available"] = "Available",
+            ["LatestUpdate"] = "Latest Update",
+            ["File"] = "File",
+            ["DbVersion"] = "Db Version",
+            ["ContentType"] = "Content Type"
         },
         ["ko"] = new Dictionary<string, string>
         {
@@ -302,7 +312,17 @@ public class AppLocalizationService
             ["TotalItems"] = "총 항목",
             ["ReceivedTime"] = "수신 시간",
             ["StartTime"] = "시작 시간",
-            ["CompletionTime"] = "완료 시간"
+            ["CompletionTime"] = "완료 시간",
+            ["FilterByNameAndTitleId"] = "제목 및 타이틀 ID로 필터",
+            ["Nsuid"] = "Nsuid",
+            ["Category"] = "카테고리",
+            ["RatingContent"] = "등급 내용",
+            ["DLC"] = "DLC",
+            ["Available"] = "사용 가능",
+            ["LatestUpdate"] = "최신 업데이트",
+            ["File"] = "파일",
+            ["DbVersion"] = "DB 버전",
+            ["ContentType"] = "콘텐츠 유형"
         }
     };
 
