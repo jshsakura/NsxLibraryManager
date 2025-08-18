@@ -461,11 +461,6 @@
   <data name="SelectCollection" xml:space="preserve">
     <value>Select collection</value>
   </data>
-  <data name="LibrarySettingsDesc" xml:space="preserve">
-    <value>To manage libraries across multiple locations, add each folder individually.
-Optionally assign a specific collection to any folder location—files added there will automatically join that collection.
-At least one folder must be added to your library.</value>
-  </data>
   <data name="LibrarySettingsTitle" xml:space="preserve">
     <value>Library settings</value>
   </data>
@@ -846,29 +841,8 @@ Most of the time prod.keys is enough to get the package info.</value>
   <data name="Cleaner" xml:space="preserve">
     <value>Cleaner</value>
   </data>
-  <data name="DatabaseChangeWarning" xml:space="preserve">
-    <value>Can't change database while app is running, change it in config.json and restart the app.</value>
-  </data>
-  <data name="OnlyUserDataExported" xml:space="preserve">
-    <value>Only user data is exported (ratings, collections).</value>
-  </data>
-  <data name="KeysDescription" xml:space="preserve">
-    <value>Missing keys will be derived from existing keys if possible, keys are necessary to read the nsp packages, if no keys are provided system will try to load them from the path if no keys are found there either the file name will be used to get the title info from titledb, but any operation that needs to identify a title will be limited. Most of the time prod.keys is enough to get the package info.</value>
-  </data>
-  <data name="BackupPathDescription" xml:space="preserve">
-    <value>Location where the deleted files will be placed, when removing duplicates.</value>
-  </data>
   <data name="LibrarySettingsDesc" xml:space="preserve">
     <value>To manage libraries across multiple locations, add each folder individually. Optionally assign a specific collection to any folder location—files added there will automatically join that collection. At least one folder must be added to your library.</value>
-  </data>
-  <data name="WebhookUrlDescription" xml:space="preserve">
-    <value>use a fully qualified URI including scheme (http or https), port, userinfo etc.</value>
-  </data>
-  <data name="TitleDbUrlDescription" xml:space="preserve">
-    <value>Where to get the SQL-TitleDb.</value>
-  </data>
-  <data name="LibraryRefreshWebhook" xml:space="preserve">
-    <value>Library refresh webhook</value>
   </data>
   <data name="TitleDbUrlLabel" xml:space="preserve">
     <value>TitleDb Url</value>

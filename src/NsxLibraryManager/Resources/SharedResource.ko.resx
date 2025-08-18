@@ -473,11 +473,6 @@
   <data name="SelectCollection" xml:space="preserve">
     <value>컬렉션 선택</value>
   </data>
-  <data name="LibrarySettingsDesc" xml:space="preserve">
-    <value>여러 위치의 라이브러리를 관리하려면 각 폴더를 개별적으로 추가하세요.
-선택적으로 특정 컬렉션을 폴더 위치에 할당할 수 있습니다. 해당 위치에 추가된 파일은 자동으로 해당 컬렉션에 포함됩니다.
-라이브러리에 최소 하나의 폴더는 추가되어야 합니다.</value>
-  </data>
   <data name="LibrarySettingsTitle" xml:space="preserve">
     <value>라이브러리 설정</value>
   </data>
@@ -863,29 +858,8 @@
   <data name="Cleaner" xml:space="preserve">
     <value>정리 도구</value>
   </data>
-  <data name="DatabaseChangeWarning" xml:space="preserve">
-    <value>앱이 실행 중일 때는 데이터베이스를 변경할 수 없습니다. config.json에서 변경하고 앱을 다시 시작하세요.</value>
-  </data>
-  <data name="OnlyUserDataExported" xml:space="preserve">
-    <value>사용자 데이터만 내보내집니다 (평점, 컬렉션).</value>
-  </data>
-  <data name="KeysDescription" xml:space="preserve">
-    <value>누락된 키는 가능한 경우 기존 키에서 파생됩니다. 키는 nsp 패키지를 읽는 데 필요하며, 키가 제공되지 않으면 시스템이 경로에서 로드를 시도합니다. 키를 찾을 수 없으면 파일 이름을 사용하여 titledb에서 타이틀 정보를 가져오지만, 타이틀을 식별해야 하는 모든 작업이 제한됩니다. 대부분의 경우 prod.keys만으로도 패키지 정보를 얻을 수 있습니다.</value>
-  </data>
-  <data name="BackupPathDescription" xml:space="preserve">
-    <value>중복 항목을 제거할 때 삭제된 파일이 배치될 위치입니다.</value>
-  </data>
   <data name="LibrarySettingsDesc" xml:space="preserve">
     <value>여러 위치에서 라이브러리를 관리하려면 각 폴더를 개별적으로 추가하세요. 선택적으로 폴더 위치에 특정 컬렉션을 할당할 수 있습니다. 거기에 추가된 파일은 자동으로 해당 컬렉션에 참여합니다. 라이브러리에 최소 하나의 폴더를 추가해야 합니다.</value>
-  </data>
-  <data name="WebhookUrlDescription" xml:space="preserve">
-    <value>스키마(http 또는 https), 포트, 사용자 정보 등을 포함한 완전한 URI를 사용하세요.</value>
-  </data>
-  <data name="TitleDbUrlDescription" xml:space="preserve">
-    <value>SQL-TitleDb를 가져올 위치입니다.</value>
-  </data>
-  <data name="LibraryRefreshWebhook" xml:space="preserve">
-    <value>라이브러리 새로고침 웹훅</value>
   </data>
   <data name="TitleDbUrlLabel" xml:space="preserve">
     <value>TitleDb URL</value>
