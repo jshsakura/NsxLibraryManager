@@ -27,7 +27,7 @@
                     </ChildContent>
                     <Helper>
                         <div class="rz-text-caption">
-                            <text>Can't change database while app is running, change it in config.json and restart the app.</text>
+                            <text>@Localizer["DatabaseChangeWarning"]</text>
                         </div>
                     </Helper>
                 </RadzenFormField>
@@ -267,14 +267,14 @@
                             <RadzenRow AlignItems="AlignItems.Center">
                                 <RadzenColumn Size="12">
                                     <RadzenSwitch Name="WebhookRefresh" @bind-Value="@_config.LibraryRefreshPostWebhook" Change=@(args => ConfigChanged()) InputAttributes="@(new Dictionary<string, object>() { { "aria-label", Localizer["EnableWebhook"] } })" MouseEnter="@(args => ShowTooltip(Localizer["EnableWebhookCallsOnLibraryRefresh"], args))"/>
-                                    <RadzenLabel Text="Library refresh webhook" Component="WebhookRefresh" Style="margin-left: 8px; vertical-align: middle;"/>
+                                    <RadzenLabel Text="@Localizer["LibraryRefreshWebhook"]" Component="WebhookRefresh" Style="margin-left: 8px; vertical-align: middle;"/>
                                 </RadzenColumn>
                             </RadzenRow>
                         </RadzenColumn>
                         <RadzenColumn Size="12" SizeMD="5">
                             <RadzenRow AlignItems="AlignItems.Center">
                                 <RadzenColumn Size="12">
-                                    <RadzenFormField Text="Webhook URL" Style="width: 100%;">
+                                    <RadzenFormField Text="@Localizer["WebhookURL"]" Style="width: 100%;">
                                         <ChildContent>
                                             <RadzenTextBox Placeholder="Webhook URL" Name="RefreshWebhookUrl" @bind-Value="@_config.LibraryRefreshWebhookUrl" Change=@(args => ConfigChanged()) Style="width: 100%;" Disabled="@(!_config.LibraryRefreshPostWebhook)"/>
                                         </ChildContent>
@@ -297,9 +297,9 @@
                                     <RadzenLabel Text="@Localizer["RequestMethod"]" Component="WebhookRequestRefreshMethod" Style="display: block; margin-bottom: 8px;"/>
                                     <RadzenRadioButtonList @bind-Value="@_config.LibraryRefreshWebhookRequestMethod" TValue="int" Change=@(args => ConfigChanged()) Disabled="@(!_config.LibraryRefreshPostWebhook)">
                                         <Items>
-                                            <RadzenRadioButtonListItem Text="POST" Value="1"/>
-                                            <RadzenRadioButtonListItem Text="PUT" Value="2"/>
-                                            <RadzenRadioButtonListItem Text="GET" Value="3"/>
+                                            <RadzenRadioButtonListItem Text="@Localizer["POST"]" Value="1"/>
+                                            <RadzenRadioButtonListItem Text="@Localizer["PUT"]" Value="2"/>
+                                            <RadzenRadioButtonListItem Text="@Localizer["GET"]" Value="3"/>
                                         </Items>
                                     </RadzenRadioButtonList>
                                 </RadzenColumn>
@@ -317,7 +317,7 @@
     <RadzenRow Gap="1.2rem">
         <RadzenColumn Size="12" SizeSM="6">
             <RadzenStack>
-                <RadzenFormField Text="TitleDb Url">
+                <RadzenFormField Text="@Localizer["TitleDbUrlLabel"]">
                     <ChildContent>
                         <RadzenTextBox @bind-Value="@_config.DownloadSettings.TitleDbUrl" @oninput="@ConfigChanged" ></RadzenTextBox>
                     </ChildContent>

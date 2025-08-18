@@ -42,7 +42,7 @@
                     </RadzenRow>
                     <RadzenRow>
                         <RadzenColumn Style="border-bottom: 1px solid #5f5f5f;">
-                            <RadzenText Text="Nsuid" Style="font-weight: bold"/>
+                            <RadzenText Text="@Localizer["Nsuid"]" Style="font-weight: bold"/>
                             <RadzenText Text="@game.NsuId.ToString()"/>
                         </RadzenColumn>
                         <RadzenColumn Style="border-bottom: 1px solid #5f5f5f;">
@@ -79,7 +79,7 @@
                     </RadzenRow>
                     <RadzenRow>
                         <RadzenColumn Style="border-bottom: 1px solid #5f5f5f;">
-                            <RadzenText Text="DLC" Style="font-weight: bold"/>
+                            <RadzenText Text="@Localizer["DLC"]" Style="font-weight: bold"/>
                             <RadzenText Text="@($"{Localizer["Owned"]}: {game.OwnedDlcCount} - {Localizer["Available"]}: {game.DlcCount}")" Style="font-weight: bold"/>
                         </RadzenColumn>
                         <RadzenColumn Style="border-bottom: 1px solid #5f5f5f;">
